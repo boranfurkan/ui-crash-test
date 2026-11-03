@@ -9,9 +9,9 @@ import { performance } from 'node:perf_hooks';
 import { RULE_IDS, analyzerSource } from '@ngocanhnckh/renderlint';
 // @ts-expect-error The pinned JavaScript comparator has no TypeScript declarations.
 import { renderlint } from '@ngocanhnckh/renderlint/playwright';
-import { comparisonCases, comparisonSourceFiles } from '../src/comparison/cases.ts';
-import { comparisonHTML, comparisonMarkdown, comparisonSummary, type Observation } from '../src/comparison/report.ts';
-import { nativeAssertions } from '../src/comparison/native.ts';
+import { comparisonCases, comparisonSourceFiles } from "./comparison/cases.ts";
+import { comparisonHTML, comparisonMarkdown, comparisonSummary, type Observation } from "./comparison/report.ts";
+import { nativeAssertions } from "./comparison/native.ts";
 import { measureAction, type ActionRule } from '../src/core/action-rule.ts';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
@@ -23,7 +23,7 @@ const rules = Object.fromEntries(RULE_IDS.map((rule: string) => [rule, layoutRul
 const cases = comparisonCases();
 const catalog = cases.map(({ prepare, ...item }) => item);
 await writeFile(resolve(directory, 'case-catalog.json'), JSON.stringify(catalog, null, 2) + '\n');
-const sourcePaths = [...new Set(['scripts/compare.ts', 'src/comparison/native.ts', 'src/comparison/cases.ts', 'src/comparison/report.ts', 'src/core/action-rule.ts', 'src/controls/cases.ts', 'src/scenario/replay.ts', 'src/scenario/config.ts', 'package-lock.json', 'COMPARISON-PLAN.md', 'node_modules/@ngocanhnckh/renderlint/src/live.js', 'node_modules/@ngocanhnckh/renderlint/src/integrations/playwright.js', ...comparisonSourceFiles()])].sort();
+const sourcePaths = [...new Set(['scripts/compare.ts', 'scripts/comparison/native.ts', 'scripts/comparison/cases.ts', 'scripts/comparison/report.ts', 'src/core/action-rule.ts', 'fixtures/controls/cases.ts', 'src/scenario/replay.ts', 'src/scenario/config.ts', 'package-lock.json', 'docs/research/comparison-plan.md', 'fixtures/corpus/member-inputs.json', 'fixtures/corpus/cart-input.json', 'fixtures/compat-app/cart-candidate.css', 'node_modules/@ngocanhnckh/renderlint/src/live.js', 'node_modules/@ngocanhnckh/renderlint/src/integrations/playwright.js', ...comparisonSourceFiles()])].sort();
 const hashes = () => Promise.all(sourcePaths.map(async path => ({ path, sha256: createHash('sha256').update(await readFile(resolve(root, path))).digest('hex') })));
 const sources = await hashes();
 const sourceHash = createHash('sha256').update(JSON.stringify({ sources, catalog })).digest('hex');

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { measureAction } from '../src/core/action-rule.ts';
-import { CONTROL_RULE, RULE_CONTROLS, mountControl } from '../src/controls/cases.ts';
+import { CONTROL_RULE, RULE_CONTROLS, mountControl } from "../fixtures/controls/cases.ts";
 
 test.use({ viewport: { width: 600, height: 400 } });
 for (const control of RULE_CONTROLS) {

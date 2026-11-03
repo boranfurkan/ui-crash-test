@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0-rc.1 — 3 November 2026
+
+- Add opt-in horizontal `text-fit`, plus `measureText` and the generic `measureRule` API. Keep the existing action rule as the default.
+- Carry selected-rule measurement through diagnosis, confirmation, valid reduction and executed standalone replay. Generic exports attach `rule-finding`; existing action exports remain readable.
+- Detect and reduce the unchanged Holo Grails saved-name clipping case: 3/3 confirmations, 262 → 83 bytes, detached regression execution and browser-only wrapping verification.
+- Add explicit healthy/failed/unsupported text controls, including wrapping/ellipsis policy, ancestor clips, transforms and unsupported 3D/masks/writing modes.
+- Prepare the separate public npm SDK with canonical personal-repository metadata; the demo/source workspace remains protected from accidental root publication.
+
+
 ## 0.2.0-rc.2 — 3 November 2026
 
 - Add `ui-crash-test doctor` and the library `checkScenario` API: validate config/inputs, read declared sources, launch Chromium and prove the normal-data control before a campaign. No stress measurement, reduction, export or artifact writes. Ready exits 0; blocked exits 2, including a failing normal control.

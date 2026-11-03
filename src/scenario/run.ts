@@ -22,7 +22,7 @@ export async function runScenario<T extends Json>(config: ScenarioConfig<T>, opt
   const parsed = new URL(appURL);
   if (!['http:', 'https:'].includes(parsed.protocol) || parsed.username || parsed.password) throw new Error('Use an HTTP application URL without embedded credentials.');
   const emit = options.onProgress ?? (() => {});
-  const engineFiles = ['scenario/config', 'scenario/renderer', 'scenario/replay', 'scenario/reduce', 'scenario/run', 'scenario/export', 'scenario/runtime', 'core/regression', 'core/action-rule'];
+  const engineFiles = ['scenario/config', 'scenario/renderer', 'scenario/replay', 'scenario/reduce', 'scenario/run', 'scenario/export', 'scenario/runtime', 'core/regression', 'core/action-rule', 'core/text-rule', 'core/rules'];
   const sourcePaths = [...new Set(config.sourceFiles)].sort().map(path => ({ label: path, file: resolve(root, path) }));
   sourcePaths.push(...engineFiles.map(path => ({ label: `engine/${path}${runtimeExtension}`, file: runtimePath(path) })));
   const snapshotSources = () => Promise.all(sourcePaths.map(async ({ label, file }) => ({ path: label, sha256: createHash('sha256').update(await readFile(file)).digest('hex') })));

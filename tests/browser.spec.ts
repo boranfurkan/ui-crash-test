@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { measureAction } from '../src/core/action-rule.ts';
-import { RULE, WORST_CASE, cloneInput } from '../src/shared/model.ts';
+import { measureRule } from '../src/core/rules.ts';
+import { RULE, WORST_CASE, cloneInput } from "../src/demo/model.ts";
 import { compatBaseline, compatScenarios } from '../scenarios/compat.ts';
 import { preparePage, viewportFor } from '../src/scenario/replay.ts';
 
@@ -72,7 +73,7 @@ test('a real portal dialog remains usable with long content at constrained heigh
   await page.setViewportSize(viewportFor(config.recipe, input));
   await preparePage(page, baseURL!, config.recipe, input);
   const action = page.locator(config.recipe.rule.target);
-  expect((await measureAction(page, config.recipe.rule)).status).toBe('passed');
+  expect((await measureRule(page, config.recipe.rule)).status).toBe('passed');
   // Radix portals its dialog outside the fixture main. The declared boundary follows the portal.
   expect(await action.evaluate(element => !!element.closest('main'))).toBe(false);
   await action.click();
@@ -84,7 +85,7 @@ test('a table with a long valid email allows horizontal scrolling without being 
   const input = config.cases(42)[3].input;
   await page.setViewportSize(viewportFor(config.recipe, input));
   await preparePage(page, baseURL!, config.recipe, input);
-  expect((await measureAction(page, config.recipe.rule)).status).toBe('passed');
+  expect((await measureRule(page, config.recipe.rule)).status).toBe('passed');
   expect(await page.evaluate(() => Array.from(document.querySelectorAll('*')).some(element => element.scrollLeft > 0))).toBe(true);
 });
 

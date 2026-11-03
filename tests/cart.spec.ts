@@ -5,6 +5,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import cart from '../scenarios/cart-preview.ts';
+if (cart.recipe.rule.kind === 'text-fit') throw new Error('Cart investigation expects its declared action rule.');
+const cartRule = cart.recipe.rule;
 import member from '../scenarios/member-list.ts';
 import { preparePage, viewportFor } from '../src/scenario/replay.ts';
 import { measureAction } from '../src/core/action-rule.ts';
@@ -15,22 +17,22 @@ test('pinned cart checkout is below a landscape viewport; independent actionabil
   await page.setViewportSize(viewportFor(cart.recipe, input));
   await preparePage(page, baseURL!, cart.recipe, input);
   const action = page.locator(cart.recipe.rule.target);
-  const finding = await measureAction(page, cart.recipe.rule);
+  const finding = await measureAction(page, cartRule);
   expect(finding.status).toBe('failed');
   expect(finding.signature).toContain('|outside-viewport');
   await expect(action).not.toBeInViewport();
   await expect(action.click({ trial: true, timeout: 700 })).rejects.toThrow();
-  await page.addStyleTag({ content: await readFile(new URL('../examples/cart-investigation/proposed-fix.css', import.meta.url), 'utf8') });
+  await page.addStyleTag({ content: await readFile(new URL('../fixtures/compat-app/cart-candidate.css', import.meta.url), 'utf8') });
   await action.scrollIntoViewIfNeeded();
   await expect(action).toBeInViewport({ ratio: 1 });
-  expect((await measureAction(page, cart.recipe.rule)).status).toBe('passed');
+  expect((await measureAction(page, cartRule)).status).toBe('passed');
   await action.click({ trial: true });
 });
 
 test('cart header assets and real provider state reproduce without external image requests', async ({ page, baseURL, context }) => {
   await context.route('https://res.cloudinary.com/**', route => route.abort());
   await preparePage(page, baseURL!, cart.recipe, cart.baseline);
-  expect((await measureAction(page, cart.recipe.rule)).status).toBe('passed');
+  expect((await measureAction(page, cartRule)).status).toBe('passed');
   expect(await page.locator('img').evaluateAll(images => images.length > 0 && images.every(image => (image as HTMLImageElement).complete && (image as HTMLImageElement).naturalWidth > 0))).toBe(true);
   await expect(page.locator('.cart-count')).toHaveText(String(cart.baseline.products.length));
 });

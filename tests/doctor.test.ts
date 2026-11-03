@@ -69,3 +69,11 @@ test('an invalid discovery viewport is rejected before campaign setup or artifac
   assert.match(diagnosis.checks[0].message, /viewport/);
   await assert.rejects(runScenario(bad), /viewport/);
 });
+
+
+test('text-fit is an explicit rule and rejects action-only options or unknown kinds', () => {
+  const rule = { kind: 'text-fit' as const, id: 'name-fit', target: 'h1', boundary: 'header' };
+  assert.doesNotThrow(() => validateRecipe({ ...vue.recipe, rule }));
+  assert.throws(() => validateRecipe({ ...vue.recipe, rule: { ...rule, kind: 'typo' as never } }), /rule kinds/);
+  assert.throws(() => validateRecipe({ ...vue.recipe, rule: { ...rule, requireViewportCenter: true } as never }), /action rules only/);
+});

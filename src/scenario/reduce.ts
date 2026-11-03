@@ -1,10 +1,10 @@
-import type { ActionFinding } from '../core/action-rule.ts';
+import type { RuleFinding } from '../core/rules.ts';
 import type { Json, ScenarioConfig } from './config.ts';
 
 export const complexity = (input: Json) => Buffer.byteLength(JSON.stringify(input), 'utf8');
-export type ScenarioReduction<T extends Json = Json> = { input: T; initialBytes: number; finalBytes: number; evaluations: number; budget: number; complete: boolean; steps: { label: string; accepted: boolean; status: ActionFinding['status']; reason: string; bytes: number }[] };
+export type ScenarioReduction<T extends Json = Json> = { input: T; initialBytes: number; finalBytes: number; evaluations: number; budget: number; complete: boolean; steps: { label: string; accepted: boolean; status: RuleFinding['status']; reason: string; bytes: number }[] };
 
-export async function reduceScenario<T extends Json>(config: ScenarioConfig<T>, original: T, signature: string, evaluate: (input: T) => Promise<ActionFinding>, budget = 30): Promise<ScenarioReduction<T>> {
+export async function reduceScenario<T extends Json>(config: ScenarioConfig<T>, original: T, signature: string, evaluate: (input: T) => Promise<RuleFinding>, budget = 30): Promise<ScenarioReduction<T>> {
   let current = structuredClone(original), evaluations = 0, complete = false;
   const steps: ScenarioReduction<T>['steps'] = [];
   const seen = new Set([JSON.stringify(current)]);

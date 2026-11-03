@@ -3,13 +3,13 @@ import { resolve } from 'node:path';
 import { scenarioCases, type Json, type ScenarioConfig } from './config.ts';
 import { viewportFor } from './replay.ts';
 import { ScenarioRenderer } from './renderer.ts';
-import type { ActionFinding } from '../core/action-rule.ts';
+import type { RuleFinding } from '../core/rules.ts';
 
 export type DoctorCheck = { id: string; status: 'passed' | 'failed' | 'warning'; message: string };
 export type DoctorReport = {
   schemaVersion: 1; createdAt: string; status: 'ready' | 'blocked';
   node: string; browser?: string; root: string; appURL?: string;
-  checks: DoctorCheck[]; baseline?: ActionFinding;
+  checks: DoctorCheck[]; baseline?: RuleFinding;
 };
 export type DoctorOptions = { root?: string; appURL?: string; seed?: number };
 
@@ -41,7 +41,7 @@ export async function checkScenario<T extends Json>(config: ScenarioConfig<T>, o
     stage = 'baseline';
     report.baseline = await renderer.evaluate(config.baseline);
     if (report.baseline.status !== 'passed') throw new Error(`Normal-data control is ${report.baseline.status}: ${report.baseline.reason}`);
-    check(stage, 'Normal-data input was rendered and proved; the declared action passed after setup.');
+    check(stage, 'Normal-data input was rendered and proved; the declared rule passed after setup.');
     report.status = 'ready';
   } catch (error) {
     const reason = error instanceof Error ? error.message : String(error);

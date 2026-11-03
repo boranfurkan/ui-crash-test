@@ -1,0 +1,23 @@
+name: Reproducible UI rule issue
+description: Report an incorrect result or an adapter/setup blocker.
+body:
+  - type: textarea
+    id: requirement
+    attributes:
+      label: Requirement and expected result
+      description: State the action or required text, permitted scrolling/hover and whether truncation is intended.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Smallest reproducible config and synthetic input
+      description: Include doctor output and the finding/report where useful. Omit secrets and private app source.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Package, Node, Chromium and operating-system versions
+    validations:
+      required: true

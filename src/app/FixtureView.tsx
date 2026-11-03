@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { assertValidInput, type CaseInput, type Layout } from '../shared/model.ts';
+import { assertValidInput, type CaseInput, type Layout } from "../demo/model.ts";
 import { MemberList } from './MemberList.tsx';
 
 export function FixtureView() {

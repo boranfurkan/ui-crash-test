@@ -2,8 +2,8 @@ import type { IncomingMessage, ServerResponse } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { resolve, sep, extname, basename } from 'node:path';
-import { BASELINE, WORST_CASE, cloneInput } from '../shared/model.ts';
-import type { RunStatus } from '../shared/report.ts';
+import { BASELINE, WORST_CASE, cloneInput } from "../demo/model.ts";
+import type { RunStatus } from "../demo/report.ts";
 import { compatBaseline } from '../../scenarios/compat.ts';
 import { externalScenarios } from '../../scenarios/index.ts';
 import { cartBaseline } from '../../scenarios/cart-preview.ts';
@@ -28,10 +28,10 @@ export function createApi(root: string) {
           reportURL = `/artifacts/${id}/report.html`;
         } catch (error) {
           if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-          try { report = JSON.parse(await readFile(resolve(root, 'examples/controls/report.json'), 'utf8')); reportURL = '/examples/controls/report.html'; }
+          try { report = JSON.parse(await readFile(resolve(root, 'docs/evidence/controls/report.json'), 'utf8')); reportURL = '/docs/evidence/controls/report.json'; }
           catch (fallback) { if ((fallback as NodeJS.ErrnoException).code === 'ENOENT') return json(res, 200, { available: false }); throw fallback; }
         }
-        const sources = await Promise.all(['src/core/action-rule.ts', 'src/controls/cases.ts'].map(async path => ({ path, sha256: createHash('sha256').update(await readFile(resolve(root, path))).digest('hex') })));
+        const sources = await Promise.all(['src/core/action-rule.ts', 'fixtures/controls/cases.ts'].map(async path => ({ path, sha256: createHash('sha256').update(await readFile(resolve(root, path))).digest('hex') })));
         const currentHash = createHash('sha256').update(JSON.stringify(sources)).digest('hex');
         return json(res, 200, { available: true, reportURL, summary: report.summary, createdAt: report.createdAt, stale: report.sourceHash !== currentHash });
       }
@@ -93,7 +93,7 @@ export function createApi(root: string) {
         if (status.state === 'running' || scenarioStatus.state === 'running') return json(res, 409, { error: 'A campaign is already running.' });
         status = { state: 'running', phase: 'Starting Chromium', events: [] };
         json(res, 202, { accepted: true });
-        void import('../core/campaign.ts').then(async ({ runCampaign }) => {
+        void import("../demo/campaign.ts").then(async ({ runCampaign }) => {
           const report = await runCampaign({ root, baseURL: `http://${host}`, seed, width, onProgress: event => { status.phase = event.phase; status.events.push(event); } });
           status.state = 'completed'; status.phase = report.regression?.verified ? 'Regression verified' : report.outcome === 'inconclusive' ? 'Some cases inconclusive' : 'No failure discovered'; status.runId = report.id;
         }).catch(error => { status.state = 'error'; status.phase = 'Run stopped'; status.error = String(error); });

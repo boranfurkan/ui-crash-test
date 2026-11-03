@@ -1,5 +1,5 @@
-import { BASELINE, RULE, cloneInput, primaryMember, TARGET_ID, validateInput, type CaseInput } from '../src/shared/model.ts';
-import { generateScenarios } from '../src/core/generate.ts';
+import { BASELINE, RULE, cloneInput, primaryMember, TARGET_ID, validateInput, type CaseInput } from "../src/demo/model.ts";
+import { generateScenarios } from "../src/demo/generate.ts";
 import { defineScenario, type BrowserRecipe } from '../src/scenario/config.ts';
 
 export function memberRecipe(layout: 'broken' | 'fixed' = 'broken'): BrowserRecipe {

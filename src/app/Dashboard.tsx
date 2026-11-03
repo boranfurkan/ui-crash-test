@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { primaryMember } from '../shared/model.ts';
-import type { CampaignReport, RunStatus } from '../shared/report.ts';
+import { primaryMember } from "../demo/model.ts";
+import type { CampaignReport, RunStatus } from "../demo/report.ts";
 import { ScenarioPanel } from './ScenarioPanel.tsx';
 
 function Icon({ kind, size = 18 }: { kind: 'arrow' | 'grid' | 'file' | 'code' | 'play' | 'check' | 'download' | 'external' | 'terminal' | 'bolt'; size?: number }) {
@@ -110,7 +110,7 @@ export function Dashboard() {
     <aside className="sidebar"><a href="/" className="brand"><span className="brand-icon"><Icon kind="arrow" size={24}/></span><span>UI Crash Test<span className="brand-version">EXPERIMENT 001</span></span></a>
       <div className="sidebar-label">WORKSPACE</div><nav aria-label="Workspace"><button className={view === 'overview' ? 'active' : ''} onClick={() => setView('overview')}><Icon kind="grid"/>Overview<span className="nav-key">01</span></button><button disabled={!report?.reduced} className={view === 'case' ? 'active' : ''} onClick={() => setView('case')}><Icon kind="file"/>Saved case{report?.reduced && <span className="nav-count">1</span>}</button><button disabled={!report?.regression} className={view === 'test' ? 'active' : ''} onClick={() => setView('test')}><Icon kind="code"/>Regression{report?.regression?.verified && <i className="nav-dot"/>}</button></nav>
       <div className="sidebar-fixture"><div className="sidebar-label">TEST SURFACE</div><span className="fixture-symbol">M</span><strong>Member list</strong><small>Browser-side JSON fixture</small><div className="sidebar-rule"><span>01</span> Action stays reachable</div></div>
-      <div className="sidebar-bottom"><div><i className={`dot ${running ? 'busy' : 'pass'}`}/>{running ? 'Experiment running' : 'Local workspace'}</div><span>Chromium · no cloud service</span><div className="sidebar-command"><Icon kind="terminal" size={15}/><code>npm run crash</code></div><small>Local RC 0.2.0-rc.2</small></div>
+      <div className="sidebar-bottom"><div><i className={`dot ${running ? 'busy' : 'pass'}`}/>{running ? 'Experiment running' : 'Local workspace'}</div><span>Chromium · no cloud service</span><div className="sidebar-command"><Icon kind="terminal" size={15}/><code>npm run crash</code></div><small>Local RC 0.3.0-rc.1</small></div>
     </aside>
     <div className="main-area"><header className="topbar"><div><span>Workspace</span><b>/</b>Member list</div><span className="topbar-status"><i className="dot pass"/>LOCAL EXPERIMENT</span></header>
       <main className="main-content"><div className="page-heading"><div><div className="eyebrow"><span className="eyebrow-square"/> CONTENT RESILIENCE / 001</div><h1>{view === 'case' ? 'A case worth keeping.' : view === 'test' ? 'Make the fix stick.' : 'Find the breaking point.'}</h1><p>{view === 'case' ? 'The actual reduced input, ready to replay.' : view === 'test' ? 'One exported test. Verified against both layout variants.' : 'Realistic data. A real browser. A smaller example of what broke.'}</p></div><button className="primary-button" disabled={running} onClick={() => void run()}>{running ? <span className="spinner"/> : <Icon kind="play" size={16}/>} {running ? 'Running experiment' : report ? 'Run again' : 'Run crash test'}<span className="button-arrow">↗</span></button></div>
@@ -126,7 +126,7 @@ export function Dashboard() {
       {view === 'overview' && <ScenarioPanel/>}
       <section className="run-settings"><div><Icon kind="terminal" size={16}/><strong>Campaign settings</strong></div><label htmlFor="campaign-seed">Seed <input id="campaign-seed" value={seed} inputMode="numeric" disabled={running} onChange={event => setSeed(event.target.value)}/></label><span>Container <b>360px</b></span><span>Browser <b>Chromium</b></span><span className="settings-right">Curated + generated · 1 rule</span></section>
       {status.events.length > 0 && <details className="execution-log"><summary>Execution log <span>{status.events.length} events</span></summary><div>{status.events.map((event, index) => <p key={index}><time>{event.time.slice(11, 19)}</time><b>{event.phase}</b>{event.message}</p>)}</div></details>}
-      <footer className="page-footer"><span><i className="dot"/>Local, inspectable, repeatable.</span><span>Configurable scenarios · one explicit rule per scenario · local RC 0.2.0-rc.2</span></footer>
+      <footer className="page-footer"><span><i className="dot"/>Local, inspectable, repeatable.</span><span>Configurable scenarios · one explicit rule per scenario · local RC 0.3.0-rc.1</span></footer>
       </main>
     </div>
   </div>;

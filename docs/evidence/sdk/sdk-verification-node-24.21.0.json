@@ -1,0 +1,63 @@
+{
+  "createdAt": "2026-11-03T14:27:13.588Z",
+  "node": "v24.21.0",
+  "platform": "darwin",
+  "version": "0.3.0-rc.1",
+  "isolatedInstall": true,
+  "tarballIntegrity": "sha512-IE6vfw8dd03YC7nok7GvzVQokVnzQB9diNQOvWZKl/yl/FECagKbxSk2SUR1IOsPhzQJ+HglW+K+9fELAnXjVQ==",
+  "doctor": {
+    "readyExit": 0,
+    "missingSourceExit": 2,
+    "missingTargetExit": 2,
+    "failingBaselineExit": 2,
+    "sourceWarning": true,
+    "noArtifactsWritten": true,
+    "humanOutput": true
+  },
+  "consumerPackageType": "No type field; TypeScript config loading verified.",
+  "cli": {
+    "binInstalled": true,
+    "help": true,
+    "version": true,
+    "init": true,
+    "preservesExistingConfig": true,
+    "passingExit": 0,
+    "failureExit": 1,
+    "setupErrorExit": 2
+  },
+  "libraryImport": true,
+  "libraryDoctor": true,
+  "explicitApplicationRoot": true,
+  "externalOutputDirectory": true,
+  "verificationLinkRemoved": true,
+  "compiledReplayVerified": true,
+  "compiledRuleMatchesRuntime": true,
+  "textFitReplayVerified": true,
+  "textFitConfirmation": {
+    "attempts": 3,
+    "failures": 3
+  },
+  "textFitSignature": "required-name-fits|[data-member-id=\"member-primary\"] .member-name|[data-member-id=\"member-primary\"]|horizontal-text-overflow",
+  "normal": {
+    "checked": 1,
+    "failed": 0,
+    "passed": 1,
+    "inconclusive": 0,
+    "valid": 1
+  },
+  "confirmed": {
+    "checked": 1,
+    "failed": 1,
+    "passed": 0,
+    "inconclusive": 0,
+    "valid": 1
+  },
+  "packageDependencies": {
+    "fflate": "0.8.3",
+    "tsx": "4.23.15"
+  },
+  "peerDependencies": {
+    "@playwright/test": "1.64.1"
+  },
+  "private": false
+}

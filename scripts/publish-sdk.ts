@@ -1,0 +1,20 @@
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
+import { spawnSync } from 'node:child_process';
+import { parseArgs } from 'node:util';
+
+const { values } = parseArgs({ options: { 'dry-run': { type: 'boolean' } } });
+const root = fileURLToPath(new URL('..', import.meta.url));
+const pkg = JSON.parse(await readFile(resolve(root, 'package.json'), 'utf8'));
+const info = JSON.parse(await readFile(resolve(root, 'artifacts/sdk-package.json'), 'utf8'));
+if (info.version !== pkg.version || info.private !== false || info.filename !== `${pkg.name}-${pkg.version}.tgz`) throw new Error('Build and verify the publishable SDK candidate first; package metadata is stale or private.');
+const tarball = resolve(root, '..', info.filename);
+const integrity = 'sha512-' + createHash('sha512').update(await readFile(tarball)).digest('base64');
+if (integrity !== info.integrity) throw new Error('The SDK tarball changed after packing. Refusing to publish unverified bytes.');
+const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+const args = ['publish', tarball, '--access', 'public', '--tag', pkg.version.includes('-') ? 'next' : 'latest', '--ignore-scripts', '--cache', resolve(root, 'artifacts/npm-cache'), ...(values['dry-run'] ? ['--dry-run'] : [])];
+const result = spawnSync(npm, args, { cwd: root, stdio: 'inherit', shell: process.platform === 'win32' });
+if (result.error) throw result.error;
+process.exitCode = result.status ?? 2;

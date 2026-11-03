@@ -1,0 +1,973 @@
+{
+  "schemaVersion": 1,
+  "outcome": "failure",
+  "id": "run-20261103t001120267z-66e850",
+  "createdAt": "2026-11-03T00:11:22.570Z",
+  "seed": 42,
+  "durationMs": 6498,
+  "environment": {
+    "browser": "156.0.8078.4",
+    "node": "v24.21.0",
+    "sourceHash": "b6b7be092de51456",
+    "viewport": {
+      "width": 1000,
+      "height": 900
+    }
+  },
+  "summary": {
+    "checked": 14,
+    "failed": 5,
+    "passed": 9,
+    "inconclusive": 0,
+    "valid": 14
+  },
+  "baseline": {
+    "input": {
+      "containerWidth": 360,
+      "members": [
+        {
+          "id": "member-primary",
+          "name": "Maya Chen",
+          "email": "maya@orbit.test",
+          "role": "Owner",
+          "status": "active",
+          "avatar": "sage"
+        },
+        {
+          "id": "member-second",
+          "name": "Alex Morgan",
+          "email": "alex@orbit.test",
+          "role": "Member",
+          "status": "active",
+          "avatar": "sand"
+        },
+        {
+          "id": "member-third",
+          "name": "Noor Ali",
+          "email": "noor@orbit.test",
+          "role": "Viewer",
+          "status": "active",
+          "avatar": "lilac"
+        }
+      ]
+    },
+    "finding": {
+      "status": "passed",
+      "signature": "action-reachable|[data-member-id=\"member-primary\"] [data-action]|[data-member-id=\"member-primary\"]|passed",
+      "overflowPx": 0,
+      "contained": true,
+      "receivesEvents": true,
+      "reason": "The action is inside its row and receives pointer events at its center.",
+      "targetRect": {
+        "x": 637,
+        "y": 116.09375,
+        "width": 28,
+        "height": 28,
+        "right": 665,
+        "bottom": 144.09375
+      },
+      "boundaryRect": {
+        "x": 321,
+        "y": 97,
+        "width": 358,
+        "height": 67.1875,
+        "right": 679,
+        "bottom": 164.1875
+      }
+    }
+  },
+  "original": {
+    "input": {
+      "containerWidth": 360,
+      "members": [
+        {
+          "id": "member-primary",
+          "name": "Alexandria Konstantinopoulou-Wiśniewska",
+          "email": "alexandria.konstantinopoulou@northwind.example.test",
+          "role": "Owner",
+          "status": "invited",
+          "avatar": "sage"
+        },
+        {
+          "id": "member-second",
+          "name": "Alex Morgan",
+          "email": "alex@orbit.test",
+          "role": "Member",
+          "status": "active",
+          "avatar": "sand"
+        },
+        {
+          "id": "member-third",
+          "name": "Noor Ali",
+          "email": "noor@orbit.test",
+          "role": "Viewer",
+          "status": "active",
+          "avatar": "lilac"
+        }
+      ]
+    },
+    "finding": {
+      "status": "failed",
+      "signature": "action-reachable|[data-member-id=\"member-primary\"] [data-action]|[data-member-id=\"member-primary\"]|outside-boundary",
+      "overflowPx": 85.6,
+      "contained": false,
+      "receivesEvents": false,
+      "reason": "The action extends 86px outside its row.",
+      "targetRect": {
+        "x": 736.5625,
+        "y": 116.09375,
+        "width": 28,
+        "height": 28,
+        "right": 764.5625,
+        "bottom": 144.09375
+      },
+      "boundaryRect": {
+        "x": 321,
+        "y": 97,
+        "width": 358,
+        "height": 67.1875,
+        "right": 679,
+        "bottom": 164.1875
+      }
+    },
+    "name": "Compound name + pending invitation"
+  },
+  "reduced": {
+    "input": {
+      "containerWidth": 360,
+      "members": [
+        {
+          "id": "member-primary",
+          "name": "Alexandria Konstantinopoulou-Wiśniewska",
+          "email": "a@b.co",
+          "role": null,
+          "status": "invited",
+          "avatar": null
+        }
+      ]
+    },
+    "finding": {
+      "status": "failed",
+      "signature": "action-reachable|[data-member-id=\"member-primary\"] [data-action]|[data-member-id=\"member-primary\"]|outside-boundary",
+      "overflowPx": 25.7,
+      "contained": false,
+      "receivesEvents": false,
+      "reason": "The action extends 26px outside its row.",
+      "targetRect": {
+        "x": 676.71875,
+        "y": 116.09375,
+        "width": 28,
+        "height": 28,
+        "right": 704.71875,
+        "bottom": 144.09375
+      },
+      "boundaryRect": {
+        "x": 321,
+        "y": 97,
+        "width": 358,
+        "height": 67.1875,
+        "right": 679,
+        "bottom": 164.1875
+      }
+    }
+  },
+  "reduction": {
+    "input": {
+      "containerWidth": 360,
+      "members": [
+        {
+          "id": "member-primary",
+          "name": "Alexandria Konstantinopoulou-Wiśniewska",
+          "email": "a@b.co",
+          "role": null,
+          "status": "invited",
+          "avatar": null
+        }
+      ]
+    },
+    "steps": [
+      {
+        "label": "Remove unrelated member",
+        "accepted": true,
+        "status": "failed",
+        "complexity": 363,
+        "reason": "The action extends 86px outside its row."
+      },
+      {
+        "label": "Remove unrelated member",
+        "accepted": true,
+        "status": "failed",
+        "complexity": 220,
+        "reason": "The action extends 86px outside its row."
+      },
+      {
+        "label": "Remove optional avatar",
+        "accepted": true,
+        "status": "failed",
+        "complexity": 210,
+        "reason": "The action extends 44px outside its row."
+      },
+      {
+        "label": "Remove optional role",
+        "accepted": true,
+        "status": "failed",
+        "complexity": 200,
+        "reason": "The action extends 44px outside its row."
+      },
+      {
+        "label": "Use the simpler active state",
+        "accepted": false,
+        "status": "passed",
+        "complexity": 190,
+        "reason": "The action is inside its row and receives pointer events at its center."
+      },
+      {
+        "label": "Use a short valid email",
+        "accepted": true,
+        "status": "failed",
+        "complexity": 155,
+        "reason": "The action extends 26px outside its row."
+      },
+      {
+        "label": "Try shorter name: Jo",
+        "accepted": false,
+        "status": "passed",
+        "complexity": 118,
+        "reason": "The action is inside its row and receives pointer events at its center."
+      },
+      {
+        "label": "Try shorter name: Maya Chen",
+        "accepted": false,
+        "status": "passed",
+        "complexity": 125,
+        "reason": "The action is inside its row and receives pointer events at its center."
+      },
+      {
+        "label": "Try shorter name: Alexandria",
+        "accepted": false,
+        "status": "passed",
+        "complexity": 126,
+        "reason": "The action is inside its row and receives pointer events at its center."
+      },
+      {
+        "label": "Try shorter name: Konstantin Oberhauser",
+        "accepted": false,
+        "status": "passed",
+        "complexity": 137,
+        "reason": "The action is inside its row and receives pointer events at its center."
+      },
+      {
+        "label": "Try shorter name: Aleksandra Wiśniewska",
+        "accepted": false,
+        "status": "passed",
+        "complexity": 137,
+        "reason": "The action is inside its row and receives pointer events at its center."
+      },
+      {
+        "label": "Try shorter name: Konstantinopoulou-Wiśniewska",
+        "accepted": false,
+        "status": "passed",
+        "complexity": 144,
+        "reason": "The action is inside its row and receives pointer events at its center."
+      }
+    ],
+    "evaluations": 12,
+    "budget": 30,
+    "complete": true,
+    "initialComplexity": 509,
+    "finalComplexity": 155
+  },
+  "confirmation": {
+    "attempts": 3,
+    "failures": 3,
+    "fixed": {
+      "status": "passed",
+      "signature": "action-reachable|[data-member-id=\"member-primary\"] [data-action]|[data-member-id=\"member-primary\"]|passed",
+      "overflowPx": 0,
+      "contained": true,
+      "receivesEvents": true,
+      "reason": "The action is inside its row and receives pointer events at its center.",
+      "targetRect": {
+        "x": 637,
+        "y": 116.09375,
+        "width": 28,
+        "height": 28,
+        "right": 665,
+        "bottom": 144.09375
+      },
+      "boundaryRect": {
+        "x": 321,
+        "y": 97,
+        "width": 358,
+        "height": 67.1875,
+        "right": 679,
+        "bottom": 164.1875
+      }
+    }
+  },
+  "regression": {
+    "broken": {
+      "passed": 0,
+      "failed": 1
+    },
+    "fixed": {
+      "passed": 1,
+      "failed": 0
+    },
+    "verified": true
+  },
+  "discovery": [
+    {
+      "name": "Compound name + pending invitation",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Alexandria Konstantinopoulou-Wiśniewska",
+            "email": "alexandria.konstantinopoulou@northwind.example.test",
+            "role": "Owner",
+            "status": "invited",
+            "avatar": "sage"
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "curated",
+      "status": "failed",
+      "reason": "The action extends 86px outside its row."
+    },
+    {
+      "name": "Long email address",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Maya Chen",
+            "email": "bartholomew.fitzgerald@northwind-industries.example.test",
+            "role": "Owner",
+            "status": "active",
+            "avatar": "sage"
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "curated",
+      "status": "failed",
+      "reason": "The action extends 74px outside its row."
+    },
+    {
+      "name": "One-letter name",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "J",
+            "email": "maya@orbit.test",
+            "role": "Owner",
+            "status": "active",
+            "avatar": "sage"
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "curated",
+      "status": "passed",
+      "reason": "The action is inside its row and receives pointer events at its center."
+    },
+    {
+      "name": "Missing avatar and role",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Jo",
+            "email": "maya@orbit.test",
+            "role": null,
+            "status": "active",
+            "avatar": null
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "curated",
+      "status": "passed",
+      "reason": "The action is inside its row and receives pointer events at its center."
+    },
+    {
+      "name": "Vietnamese diacritics",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Đặng Thị Ngọc Hân",
+            "email": "maya@orbit.test",
+            "role": "Owner",
+            "status": "active",
+            "avatar": "sage"
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "curated",
+      "status": "passed",
+      "reason": "The action is inside its row and receives pointer events at its center."
+    },
+    {
+      "name": "Emoji grapheme in a name",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "👩🏽‍💻 Priya",
+            "email": "maya@orbit.test",
+            "role": "Owner",
+            "status": "active",
+            "avatar": "sage"
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "curated",
+      "status": "passed",
+      "reason": "The action is inside its row and receives pointer events at its center."
+    },
+    {
+      "name": "Seeded combination 1",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Aleksandra Wiśniewska-Kowalczyk",
+            "email": "a@b.co",
+            "role": "Owner",
+            "status": "invited",
+            "avatar": "lilac"
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "generated",
+      "status": "failed",
+      "reason": "The action extends 24px outside its row."
+    },
+    {
+      "name": "Seeded combination 2",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Jo",
+            "email": "a@b.co",
+            "role": "Viewer",
+            "status": "invited",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "generated",
+      "status": "passed",
+      "reason": "The action is inside its row and receives pointer events at its center."
+    },
+    {
+      "name": "Seeded combination 3",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Alexandria Konstantinopoulou-Wiśniewska",
+            "email": "maya@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "generated",
+      "status": "failed",
+      "reason": "The action extends 35px outside its row."
+    },
+    {
+      "name": "Seeded combination 4",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Maya Chen",
+            "email": "a@b.co",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "generated",
+      "status": "passed",
+      "reason": "The action is inside its row and receives pointer events at its center."
+    },
+    {
+      "name": "Seeded combination 5",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Maya Chen",
+            "email": "ops@sub.department.example.test",
+            "role": "Viewer",
+            "status": "invited",
+            "avatar": null
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "generated",
+      "status": "passed",
+      "reason": "The action is inside its row and receives pointer events at its center."
+    },
+    {
+      "name": "Seeded combination 6",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Aleksandra Wiśniewska-Kowalczyk",
+            "email": "maya@orbit.test",
+            "role": "Viewer",
+            "status": "invited",
+            "avatar": null
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "generated",
+      "status": "passed",
+      "reason": "The action is inside its row and receives pointer events at its center."
+    },
+    {
+      "name": "Seeded combination 7",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Alexandria Konstantinopoulou-Wiśniewska",
+            "email": "a@b.co",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "generated",
+      "status": "failed",
+      "reason": "The action extends 35px outside its row."
+    },
+    {
+      "name": "Seeded combination 8",
+      "input": {
+        "containerWidth": 360,
+        "members": [
+          {
+            "id": "member-primary",
+            "name": "Konstantin Oberhauser",
+            "email": "maya@orbit.test",
+            "role": null,
+            "status": "invited",
+            "avatar": null
+          },
+          {
+            "id": "member-second",
+            "name": "Alex Morgan",
+            "email": "alex@orbit.test",
+            "role": "Member",
+            "status": "active",
+            "avatar": "sand"
+          },
+          {
+            "id": "member-third",
+            "name": "Noor Ali",
+            "email": "noor@orbit.test",
+            "role": "Viewer",
+            "status": "active",
+            "avatar": "lilac"
+          }
+        ]
+      },
+      "origin": "generated",
+      "status": "passed",
+      "reason": "The action is inside its row and receives pointer events at its center."
+    }
+  ],
+  "events": [
+    {
+      "time": "2026-11-03T00:11:20.267Z",
+      "phase": "Control",
+      "message": "Starting a fresh Chromium context for the normal-data control."
+    },
+    {
+      "time": "2026-11-03T00:11:20.561Z",
+      "phase": "Discover",
+      "message": "1/14 · Compound name + pending invitation"
+    },
+    {
+      "time": "2026-11-03T00:11:20.704Z",
+      "phase": "Discover",
+      "message": "2/14 · Long email address"
+    },
+    {
+      "time": "2026-11-03T00:11:20.849Z",
+      "phase": "Discover",
+      "message": "3/14 · One-letter name"
+    },
+    {
+      "time": "2026-11-03T00:11:20.991Z",
+      "phase": "Discover",
+      "message": "4/14 · Missing avatar and role"
+    },
+    {
+      "time": "2026-11-03T00:11:21.132Z",
+      "phase": "Discover",
+      "message": "5/14 · Vietnamese diacritics"
+    },
+    {
+      "time": "2026-11-03T00:11:21.271Z",
+      "phase": "Discover",
+      "message": "6/14 · Emoji grapheme in a name"
+    },
+    {
+      "time": "2026-11-03T00:11:21.413Z",
+      "phase": "Discover",
+      "message": "7/14 · Seeded combination 1"
+    },
+    {
+      "time": "2026-11-03T00:11:21.556Z",
+      "phase": "Discover",
+      "message": "8/14 · Seeded combination 2"
+    },
+    {
+      "time": "2026-11-03T00:11:21.715Z",
+      "phase": "Discover",
+      "message": "9/14 · Seeded combination 3"
+    },
+    {
+      "time": "2026-11-03T00:11:21.859Z",
+      "phase": "Discover",
+      "message": "10/14 · Seeded combination 4"
+    },
+    {
+      "time": "2026-11-03T00:11:21.999Z",
+      "phase": "Discover",
+      "message": "11/14 · Seeded combination 5"
+    },
+    {
+      "time": "2026-11-03T00:11:22.140Z",
+      "phase": "Discover",
+      "message": "12/14 · Seeded combination 6"
+    },
+    {
+      "time": "2026-11-03T00:11:22.285Z",
+      "phase": "Discover",
+      "message": "13/14 · Seeded combination 7"
+    },
+    {
+      "time": "2026-11-03T00:11:22.426Z",
+      "phase": "Discover",
+      "message": "14/14 · Seeded combination 8"
+    },
+    {
+      "time": "2026-11-03T00:11:22.570Z",
+      "phase": "Confirm",
+      "message": "Replaying the original failure in three fresh browser contexts."
+    },
+    {
+      "time": "2026-11-03T00:11:23.090Z",
+      "phase": "Reduce",
+      "message": "Removing unrelated data while preserving validity and the declared failure."
+    },
+    {
+      "time": "2026-11-03T00:11:23.249Z",
+      "phase": "Reduce",
+      "message": "Kept · Remove unrelated member"
+    },
+    {
+      "time": "2026-11-03T00:11:23.393Z",
+      "phase": "Reduce",
+      "message": "Kept · Remove unrelated member"
+    },
+    {
+      "time": "2026-11-03T00:11:23.535Z",
+      "phase": "Reduce",
+      "message": "Kept · Remove optional avatar"
+    },
+    {
+      "time": "2026-11-03T00:11:23.676Z",
+      "phase": "Reduce",
+      "message": "Kept · Remove optional role"
+    },
+    {
+      "time": "2026-11-03T00:11:23.820Z",
+      "phase": "Reduce",
+      "message": "Rejected · Use the simpler active state"
+    },
+    {
+      "time": "2026-11-03T00:11:23.962Z",
+      "phase": "Reduce",
+      "message": "Kept · Use a short valid email"
+    },
+    {
+      "time": "2026-11-03T00:11:24.103Z",
+      "phase": "Reduce",
+      "message": "Rejected · Try shorter name: Jo"
+    },
+    {
+      "time": "2026-11-03T00:11:24.246Z",
+      "phase": "Reduce",
+      "message": "Rejected · Try shorter name: Maya Chen"
+    },
+    {
+      "time": "2026-11-03T00:11:24.387Z",
+      "phase": "Reduce",
+      "message": "Rejected · Try shorter name: Alexandria"
+    },
+    {
+      "time": "2026-11-03T00:11:24.530Z",
+      "phase": "Reduce",
+      "message": "Rejected · Try shorter name: Konstantin Oberhauser"
+    },
+    {
+      "time": "2026-11-03T00:11:24.672Z",
+      "phase": "Reduce",
+      "message": "Rejected · Try shorter name: Aleksandra Wiśniewska"
+    },
+    {
+      "time": "2026-11-03T00:11:24.814Z",
+      "phase": "Reduce",
+      "message": "Rejected · Try shorter name: Konstantinopoulou-Wiśniewska"
+    },
+    {
+      "time": "2026-11-03T00:11:25.257Z",
+      "phase": "Verify",
+      "message": "Executing the exported Playwright test against the original layout (expect red)."
+    },
+    {
+      "time": "2026-11-03T00:11:26.038Z",
+      "phase": "Verify",
+      "message": "Executing that same exported test against the fixed layout (expect green)."
+    },
+    {
+      "time": "2026-11-03T00:11:26.765Z",
+      "phase": "Complete",
+      "message": "Saved case, screenshots and exported test verified."
+    }
+  ]
+}

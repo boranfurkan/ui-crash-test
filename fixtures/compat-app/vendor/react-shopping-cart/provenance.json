@@ -1,0 +1,63 @@
+{
+  "repository": "https://github.com/sivadass/react-shopping-cart",
+  "commit": "0e867f1caf6abd7114aab6ae704a2824064e84e0",
+  "license": "MIT",
+  "scope": "Unmodified product card, header, cart preview, providers, storage hook, and original SCSS. Mounted by local API fixture harnesses; this is not the full upstream app.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "gitBlob": "dfdb07476bfffac68805f50949ee8fb63a8c5c70",
+      "sha256": "f6ee51963aec7cf75eb19b320f6b0cffb26403efcca73124dc0bb8d17d64f10c"
+    },
+    {
+      "path": "src/assets/scss/base/_reset.scss",
+      "gitBlob": "5b86c219f7fd6b679336062fe111f17411b5c0f4",
+      "sha256": "71435980004e2a1843d54fbf0e11ce77b058646388b07ff231e1fe109d6e02b2"
+    },
+    {
+      "path": "src/assets/scss/base/_variables.scss",
+      "gitBlob": "0b91c3776dfeeef70dff99265d3bcc6d8ca71d44",
+      "sha256": "bed9abc2d2e034903a624dd9967130f41499a914097f33923960326d390d4c0a"
+    },
+    {
+      "path": "src/assets/scss/components/_header.scss",
+      "gitBlob": "ab356d1dfcb00972240a88d158ffe6ec9bf44aac",
+      "sha256": "67f5a1a7d0725823e55143d32ecdef9efbed03e3126cf1db377df6dec6638678"
+    },
+    {
+      "path": "src/assets/scss/components/_product.scss",
+      "gitBlob": "1628219f46cb0f7b152a044089c99abebdfbb3a9",
+      "sha256": "f690b001bfc472752e707b0dfa432fac202178f8dee94ed588c7cc3863fc0287"
+    },
+    {
+      "path": "src/components/CartPreview.jsx",
+      "gitBlob": "88720e8f7c38232528e6198f81a224305e12472c",
+      "sha256": "fbb2197991cbbc40ffc90ba34ca865175d5c61781bfe33eccdef800d6288f68f"
+    },
+    {
+      "path": "src/components/Header.jsx",
+      "gitBlob": "f4097eea94b53fdaf0f4278ceaadb478a8601536",
+      "sha256": "24a42489f98985a0d230ce82267e7c6be6152f2cc3647aea33113b0618afd4f1"
+    },
+    {
+      "path": "src/components/Product.jsx",
+      "gitBlob": "85288fd2ae353f2799475ca3546dcc831c50a3c7",
+      "sha256": "c54f6f2123c117a59ac2c5cfd12623975720c16fece272f44864a460ec5a65b1"
+    },
+    {
+      "path": "src/contexts/cart.jsx",
+      "gitBlob": "eb58aa69e3cb404fde4f2bc95fff561c90116041",
+      "sha256": "1c04100fc69d325a01adc71e5826a3850c6b91f0655531cd9a574a5713313627"
+    },
+    {
+      "path": "src/contexts/common.jsx",
+      "gitBlob": "5628eb174dbae077a79abab48cf6606af98b7f40",
+      "sha256": "b5bc954057fdd2e5d2b6d8e0459b19ef246fd39acb8d420230114584b1ed11c5"
+    },
+    {
+      "path": "src/hooks/useLocalStorage.js",
+      "gitBlob": "1d6ed3cae109aaaa7fc2f09a5ca7c120ddb4e902",
+      "sha256": "38d2caecc22b5183c61a3f3c8d0f9812190409b3e66872da3c1a08a94b747f56"
+    }
+  ]
+}

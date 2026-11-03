@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-03T01:16:15.752Z",
+  "runId": "run-cart-preview-1793668389600-8c0051",
+  "browser": "156.0.8078.4",
+  "sourceHash": "872c2a6e131c303c54c55bb611616a1c2fbfa0073f54f3e70d5d0c137d7c8957",
+  "patchSHA256": "774c20e28b16599554f255a8766c16afa5509a40b89bd491e4fffd851f9b7aba",
+  "original": {
+    "status": "failed",
+    "signature": "cart-checkout-reachable|.cart-preview.active .action-block button|.cart-preview.active|outside-viewport",
+    "overflowPx": 0,
+    "contained": true,
+    "receivesEvents": false,
+    "reason": "The action center is outside the viewport despite the declared viewport requirement.",
+    "targetRect": {
+      "x": 281,
+      "y": 399,
+      "width": 326,
+      "height": 36,
+      "right": 607,
+      "bottom": 435
+    },
+    "boundaryRect": {
+      "x": 264,
+      "y": 64,
+      "width": 360,
+      "height": 388,
+      "right": 624,
+      "bottom": 452
+    }
+  },
+  "originalTrialClick": false,
+  "originalBox": {
+    "x": 281,
+    "y": 399,
+    "width": 326,
+    "height": 36
+  },
+  "viewport": {
+    "width": 640,
+    "height": 320
+  },
+  "fixed": {
+    "status": "passed",
+    "signature": "cart-checkout-reachable|.cart-preview.active .action-block button|.cart-preview.active|passed",
+    "overflowPx": 0,
+    "contained": true,
+    "receivesEvents": true,
+    "reason": "The action is inside its declared region and receives pointer events at its center.",
+    "targetRect": {
+      "x": 281,
+      "y": 235,
+      "width": 326,
+      "height": 36,
+      "right": 607,
+      "bottom": 271
+    },
+    "boundaryRect": {
+      "x": 264,
+      "y": 64,
+      "width": 360,
+      "height": 224,
+      "right": 624,
+      "bottom": 288
+    }
+  },
+  "fixedTrialClick": true,
+  "verification": [
+    {
+      "name": "Baseline",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Landscape phone viewport",
+      "viewport": {
+        "width": 640,
+        "height": 320
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Tall mobile viewport",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Narrow phone viewport",
+      "viewport": {
+        "width": 320,
+        "height": 600
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Short desktop window",
+      "viewport": {
+        "width": 1000,
+        "height": 280
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Long valid product name",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Five cart products",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Seeded viewport 1",
+      "viewport": {
+        "width": 640,
+        "height": 280
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Seeded viewport 2",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Seeded viewport 3",
+      "viewport": {
+        "width": 390,
+        "height": 390
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Seeded viewport 4",
+      "viewport": {
+        "width": 640,
+        "height": 600
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Seeded viewport 5",
+      "viewport": {
+        "width": 320,
+        "height": 390
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Seeded viewport 6",
+      "viewport": {
+        "width": 390,
+        "height": 390
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Seeded viewport 7",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Seeded viewport 8",
+      "viewport": {
+        "width": 320,
+        "height": 280
+      },
+      "status": "passed",
+      "trialClick": true
+    },
+    {
+      "name": "Reduced saved case",
+      "viewport": {
+        "width": 640,
+        "height": 320
+      },
+      "status": "passed",
+      "trialClick": true
+    }
+  ],
+  "caveat": "Pinned 2021 upstream source mounted in a local harness. This is not a finding against the current deployed site. The candidate patch is injected only in verification pages and has not been applied to upstream source."
+}

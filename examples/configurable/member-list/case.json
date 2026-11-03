@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "input": {
+    "containerWidth": 360,
+    "members": [
+      {
+        "id": "member-primary",
+        "name": "Alexandria Konstantinopoulou-Wiśniewska",
+        "email": "a@b.co",
+        "role": null,
+        "status": "invited",
+        "avatar": null
+      }
+    ]
+  },
+  "recipe": {
+    "path": "/fixture?layout=broken",
+    "query": {
+      "width": "/containerWidth"
+    },
+    "viewport": {
+      "width": 1000,
+      "height": 900
+    },
+    "fixtures": [
+      {
+        "url": "**/api/members?*"
+      }
+    ],
+    "ready": "[data-fixture-stage][data-ready=\"true\"]",
+    "proofs": [
+      {
+        "selector": "[data-fixture-stage][data-ready=\"true\"]",
+        "kind": "jsonAttribute",
+        "attribute": "data-input"
+      }
+    ],
+    "screenshot": "[data-fixture-stage]",
+    "rule": {
+      "id": "action-reachable",
+      "target": "[data-member-id=\"member-primary\"] [data-action]",
+      "boundary": "[data-member-id=\"member-primary\"]",
+      "description": "The member action stays inside its row and can receive pointer events."
+    }
+  },
+  "failureSignature": "action-reachable|[data-member-id=\"member-primary\"] [data-action]|[data-member-id=\"member-primary\"]|outside-boundary",
+  "scenario": {
+    "id": "member-list",
+    "name": "Member list · reference defect",
+    "description": "The primary member action must remain contained and receive pointer events.",
+    "provenance": {
+      "kind": "reference-fixture",
+      "intentionalDefect": true,
+      "scope": "Original local demonstration; serves as a failing control for the configurable runner."
+    }
+  },
+  "environment": {
+    "browser": "156.0.8078.4",
+    "node": "v24.21.0",
+    "sourceHash": "bd4d15d7ac66d68318d4945f8eb558916e5f512d687103b49ec8fd77deea55d5",
+    "sources": [
+      {
+        "path": "scenarios/member-list.ts",
+        "sha256": "a04f7e57daf43fd58b8596a2416a771d0600fabfc5346e7019c08ede5b41532d"
+      },
+      {
+        "path": "src/app/FixtureView.tsx",
+        "sha256": "04c473a22914559962041eab607f69f69b6981ec92edac452166e47160e5727a"
+      },
+      {
+        "path": "src/app/MemberList.tsx",
+        "sha256": "e004edc0bf13fc4f54f7a5b05d63f03cf224620e180d83a474b00712c243ecf3"
+      },
+      {
+        "path": "src/app/styles.css",
+        "sha256": "c578a476fcd04b49e9aa6fd30b76d9be402ac09ff78c9ced4668e9965cee1d60"
+      },
+      {
+        "path": "src/core/action-rule.ts",
+        "sha256": "7f87209c1adb1f631ef153db9d5e82be283711d7a2f28586f1e1a9e181c48c0c"
+      },
+      {
+        "path": "src/scenario/config.ts",
+        "sha256": "51d33982aa2a316228e585f73a3780b29f17bcc63330fa16e57625617c59420f"
+      },
+      {
+        "path": "src/scenario/reduce.ts",
+        "sha256": "a1d04ba3bd1792718565a1bd45c5b9c76a0e348e64e20c2e2daf3b8e801a7475"
+      },
+      {
+        "path": "src/scenario/renderer.ts",
+        "sha256": "2347ec4e43800104f29234a27df631cfa90e725db8a05d279f6f469b2ae284ce"
+      },
+      {
+        "path": "src/scenario/replay.ts",
+        "sha256": "de193994e2220b4a020b94d7d8d559fe6e41625ccb5e4c0e32f715afcb0ef3f8"
+      }
+    ]
+  },
+  "seed": 42,
+  "appURL": "http://127.0.0.1:53460"
+}

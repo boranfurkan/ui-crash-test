@@ -1,0 +1,32 @@
+[
+  {
+    "file": "logo.png",
+    "url": "https://res.cloudinary.com/sivadass/image/upload/v1493547373/dummy-logo/Veggy.png",
+    "sha256": "9fc32bdd513200af256c9143e756422d29ab697e660e99d3c1ec1679a89ad5e8",
+    "bytes": 3429
+  },
+  {
+    "file": "bag.png",
+    "url": "https://res.cloudinary.com/sivadass/image/upload/v1493548928/icons/bag.png",
+    "sha256": "e8d0874e1903ce65927045467414502a9c9688ac9c636dd2e9872671533f4d98",
+    "bytes": 1352
+  },
+  {
+    "file": "search-green.png",
+    "url": "https://res.cloudinary.com/sivadass/image/upload/v1494756966/icons/search-green.png",
+    "sha256": "18a1ff07e44ba48adbed28a0016fe04d8c7dd98500a66dd8adeeeb3235476616",
+    "bytes": 1361
+  },
+  {
+    "file": "back.png",
+    "url": "https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png",
+    "sha256": "0ac3cfd162d4ed1ceb5791a2d8017b9f824a00b33758cf32c6ca3a3abf95aa16",
+    "bytes": 1129
+  },
+  {
+    "file": "search.png",
+    "url": "https://res.cloudinary.com/sivadass/image/upload/v1494692031/icons/search.png",
+    "sha256": "c05d7a60d31efede3ea1791d33f8f7aaf88e77360722baf19a2aec4690c034e2",
+    "bytes": 1182
+  }
+]

@@ -1,0 +1,28 @@
+import type { ActionFinding } from '../core/action-rule.ts';
+import type { Json } from './config.ts';
+import type { ScenarioReduction } from './reduce.ts';
+
+export type ScenarioReport = {
+  schemaVersion: 2; id: string; createdAt: string; seed: number; durationMs: number;
+  scenario: { id: string; name: string; description: string; provenance: Record<string, Json> };
+  outcome: 'failure' | 'no-failure' | 'inconclusive';
+  appURL: string;
+  environment: { browser: string; node: string; sourceHash: string; sources: { path: string; sha256: string }[] };
+  baseline: { input: Json; finding: ActionFinding };
+  discovery: { name: string; origin: 'curated' | 'generated'; input: Json; finding: ActionFinding }[];
+  summary: { checked: number; failed: number; passed: number; inconclusive: number; valid: number };
+  original: { input: Json; finding: ActionFinding; name: string } | null;
+  reduced: { input: Json; finding: ActionFinding } | null;
+  reduction: ScenarioReduction | null;
+  confirmation: { attempts: number; failures: number } | null;
+  regression: { passed: number; failed: number; reproduced: boolean } | null;
+  screenshots?: string[];
+};
+
+export function scenarioHTML(report: ScenarioReport) {
+  const e = (value: unknown) => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]!);
+  const image = (file: string, title: string) => `<figure><figcaption>${e(title)}</figcaption><img src="${file}" alt="${e(title)}"/></figure>`;
+  const savedImages = report.screenshots ?? ['baseline.png', ...(report.original ? ['original.png', 'reduced.png'] : report.discovery.length ? ['sample.png'] : [])];
+  const evidence = [['baseline.png', 'Normal-data control'], ...(report.original ? [['original.png', 'Original failure'], ['reduced.png', 'Reduced failure']] : [['sample.png', 'First stress case · ' + (report.discovery[0]?.finding.status ?? 'not evaluated')]])].filter(([file]) => savedImages.includes(file)).map(([file, title]) => image(file, title)).join('');
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>${e(report.scenario.name)} · UI Crash Test</title><style>body{margin:0;background:#f5f4ed;color:#183c2c;font:16px/1.6 system-ui}main{max-width:1100px;padding:40px 24px;margin:auto}h1{font-size:36px;line-height:1.2}p{max-width:85ch}a{color:#285e43}section{margin:32px 0}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:12px 8px;border-bottom:1px solid #d8ddd4;vertical-align:top}figure{margin:20px 0;padding:16px;background:white;border:1px solid #d8ddd4;border-radius:12px}figcaption{font-weight:600;margin-bottom:12px}img{display:block;max-width:100%;max-height:600px;object-fit:contain;object-position:left top}pre{overflow:auto;padding:16px;background:#e8ece3;border-radius:8px;font-size:13px}code{overflow-wrap:anywhere}.passed{color:#276b47}.failed{color:#a13d20}.inconclusive{color:#725b12}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:20px}.scroll{overflow:auto}</style></head><body><main><a href="/">← UI Crash Test</a><p>CONFIGURABLE SCENARIO · ${e(report.createdAt)}</p><h1>${e(report.scenario.name)}</h1><p>${e(report.scenario.description)}</p><h2 class="${report.outcome === 'failure' ? 'failed' : report.outcome === 'inconclusive' ? 'inconclusive' : 'passed'}">${report.outcome === 'failure' ? 'Confirmed action failure' : report.outcome === 'inconclusive' ? 'Experiment inconclusive' : 'No action failure found'}</h2><p>${report.summary.checked} valid cases checked · ${report.summary.passed} passed · ${report.summary.failed} failed · ${report.summary.inconclusive} inconclusive. This evaluates one declared action rule, not overall component correctness.</p><p>Baseline: <strong>${e(report.baseline.finding.status)}</strong> — ${e(report.baseline.finding.reason)}</p><div class="grid">${evidence || '<p>No screenshot was captured. Read the baseline or setup finding above.</p>'}</div>${report.original ? `<section><h2>Confirmed in ${report.confirmation?.failures}/${report.confirmation?.attempts} fresh contexts</h2><p>Exported replay: ${report.regression?.reproduced ? 'same failure verified by executing the saved Playwright test' : 'not verified'}. No repair was attempted.</p><p><a href="replay-bundle.zip" download>Download regression bundle</a></p><p>Reduction: ${report.reduction?.initialBytes} → ${report.reduction?.finalBytes} bytes, ${report.reduction?.evaluations} probes. Best found under configured candidates and budget.</p><pre>${e(JSON.stringify(report.reduced?.input, null, 2))}</pre><details><summary>Reduction trail</summary><pre>${e(JSON.stringify(report.reduction?.steps, null, 2))}</pre></details></section>` : '<p>No failing regression was generated.</p>'}<section><h2>All supplied cases</h2><div class="scroll"><table><thead><tr><th>Case</th><th>Result</th><th>Evidence</th></tr></thead><tbody>${report.discovery.map(item => `<tr><td>${e(item.name)}<br/><small>${e(item.origin)}</small></td><td class="${item.finding.status}">${e(item.finding.status)}</td><td>${e(item.finding.reason)}</td></tr>`).join('')}</tbody></table></div></section><section><h2>Source and scope</h2><pre>${e(JSON.stringify(report.scenario.provenance, null, 2))}</pre><p>Chromium ${e(report.environment.browser)} · Node ${e(report.environment.node)} · seed ${report.seed} · ${(report.durationMs / 1000).toFixed(1)}s</p><p>Source fingerprint: <code>${e(report.environment.sourceHash)}</code>. Per-file hashes and exact fixtures are in <a href="report.json">report.json</a>.</p></section></main></body></html>`;
+}

@@ -1,0 +1,1560 @@
+[
+  {
+    "id": "control-normal",
+    "name": "Ordinary contained action",
+    "group": "control",
+    "category": "healthy",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-ellipsis",
+    "name": "Intentional text ellipsis",
+    "group": "control",
+    "category": "healthy",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><p style=\"width:100px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis\">International customer collection with a deliberately long display name</p><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-decoration",
+    "name": "Intentional decoration over button",
+    "group": "control",
+    "category": "healthy",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button><i class=\"overlay\" style=\"pointer-events:none;opacity:.3\"></i></div></body></html>"
+  },
+  {
+    "id": "control-child-hit",
+    "name": "Icon child receives the hit",
+    "group": "control",
+    "category": "healthy",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action style=\"padding:0\"><span style=\"display:block;width:100%;height:100%;padding:8px\">↗ Review</span></button></div></body></html>"
+  },
+  {
+    "id": "control-transformed",
+    "name": "Translated containing component",
+    "group": "control",
+    "category": "healthy",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}[data-boundary]{transform:translate(40px,20px)}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-tolerance",
+    "name": "Subpixel edge tolerance",
+    "group": "control",
+    "category": "healthy",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}[data-action]{left:159.5px}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-horizontal-scroll",
+    "name": "Allowed horizontal scrolling",
+    "group": "control",
+    "category": "healthy",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div style=\"width:280px;overflow:auto\"><div data-boundary style=\"width:700px\"><button data-action style=\"left:570px\">Review</button></div></div></body></html>"
+  },
+  {
+    "id": "control-vertical-scroll",
+    "name": "Allowed nested vertical scrolling",
+    "group": "control",
+    "category": "healthy",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div style=\"height:120px;width:280px;overflow:auto\"><div data-boundary style=\"height:700px\"><button data-action style=\"top:570px\">Review</button></div></div></body></html>"
+  },
+  {
+    "id": "control-portal",
+    "name": "Portal with the correct boundary",
+    "group": "control",
+    "category": "healthy",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><main id=\"app\">Application shell</main><div id=\"portal\" data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-aria-opt-in",
+    "name": "Descendant opts out of inherited ARIA disabled state",
+    "group": "control",
+    "category": "healthy",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary aria-disabled=\"true\"><div aria-disabled=\"false\"><button data-action>Review</button></div></div></body></html>"
+  },
+  {
+    "id": "control-outside",
+    "name": "Action outside its declared region",
+    "group": "control",
+    "category": "defect",
+    "expectedForOurRule": "failed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}[data-action]{left:220px}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-overlay",
+    "name": "Pointer-blocking overlay",
+    "group": "control",
+    "category": "defect",
+    "expectedForOurRule": "failed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button><div class=\"overlay\"></div></div></body></html>"
+  },
+  {
+    "id": "control-transparent-overlay",
+    "name": "Transparent intercepting overlay",
+    "group": "control",
+    "category": "defect",
+    "expectedForOurRule": "failed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button><div class=\"overlay\" style=\"opacity:0\"></div></div></body></html>"
+  },
+  {
+    "id": "control-clip-center",
+    "name": "Ancestor clips the action center",
+    "group": "control",
+    "category": "defect",
+    "expectedForOurRule": "failed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div style=\"width:180px;overflow:hidden\"><div data-boundary><button data-action>Review</button></div></div></body></html>"
+  },
+  {
+    "id": "control-pointer-events",
+    "name": "Pointer events disabled on the action",
+    "group": "control",
+    "category": "defect",
+    "expectedForOurRule": "failed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}[data-action]{pointer-events:none}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-disabled",
+    "name": "Native disabled action",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action disabled>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-disabled-fieldset",
+    "name": "Disabled through a fieldset",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><fieldset disabled><button data-action>Review</button></fieldset></div></body></html>"
+  },
+  {
+    "id": "control-aria-disabled",
+    "name": "ARIA-disabled action",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action aria-disabled=\"true\">Review</button></div></body></html>"
+  },
+  {
+    "id": "control-aria-disabled-ancestor",
+    "name": "ARIA-disabled ancestor",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary aria-disabled=\"true\"><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-inert",
+    "name": "Inert application region",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary inert><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-hidden",
+    "name": "Hidden action",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}[data-action]{visibility:hidden}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-transparent-parent",
+    "name": "Fully transparent ancestor",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}[data-boundary]{opacity:0}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-collapsed",
+    "name": "Collapsed action",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}[data-action]{width:0;height:0;padding:0}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-missing",
+    "name": "Missing target",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary></div></body></html>"
+  },
+  {
+    "id": "control-duplicate",
+    "name": "Ambiguous target",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>One</button><button data-action>Two</button></div></body></html>"
+  },
+  {
+    "id": "control-duplicate-boundary",
+    "name": "Ambiguous boundary",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div><div data-boundary></div></body></html>"
+  },
+  {
+    "id": "control-portal-wrong-boundary",
+    "name": "Portal with an app-shell boundary",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><main data-boundary>Application shell</main><button data-action style=\"left:350px;top:80px\">Review</button></body></html>"
+  },
+  {
+    "id": "control-offscreen",
+    "name": "Unscrolled off-screen action",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}[data-boundary]{margin-top:800px}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-required-viewport",
+    "name": "Explicit viewport requirement violated",
+    "group": "control",
+    "category": "defect",
+    "expectedForOurRule": "failed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]",
+      "requireViewportCenter": true
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}[data-boundary]{position:fixed;top:700px}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-invalid-selector",
+    "name": "Invalid CSS selector",
+    "group": "control",
+    "category": "uncertain",
+    "expectedForOurRule": "inconclusive",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button></div></body></html>"
+  },
+  {
+    "id": "control-partial-clip",
+    "name": "Partial clipping away from center",
+    "group": "control",
+    "category": "limitation",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div style=\"width:225px;overflow:hidden\"><div data-boundary><button data-action>Review</button></div></div></body></html>"
+  },
+  {
+    "id": "control-corner-overlay",
+    "name": "Overlay covers only a corner",
+    "group": "control",
+    "category": "limitation",
+    "expectedForOurRule": "passed",
+    "viewport": {
+      "width": 600,
+      "height": 400
+    },
+    "rule": {
+      "id": "control-action",
+      "target": "[data-action]",
+      "boundary": "[data-boundary]"
+    },
+    "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><style>\n*{box-sizing:border-box}body{margin:0;padding:32px;background:#f2f3ec;color:#203e2d;font:14px system-ui}h1{font-size:18px;margin:0 0 24px}p{margin:0} [data-boundary]{position:relative;width:260px;height:100px;border:1px solid #bccbbb;background:white} [data-action]{position:absolute;left:140px;top:30px;width:100px;height:36px;border:0;border-radius:4px;background:#326248;color:white;font:14px system-ui;cursor:pointer}.overlay{position:absolute;left:140px;top:30px;width:100px;height:36px;background:#d7ddcf;z-index:2}\n</style></head><body><h1>Action measurement control</h1><div data-boundary><button data-action>Review</button><div class=\"overlay\" style=\"width:15px;height:15px\"></div></div></body></html>"
+  },
+  {
+    "id": "member-normal",
+    "name": "Member reference · normal control",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 1000,
+      "height": 900
+    },
+    "rule": {
+      "id": "action-reachable",
+      "target": "[data-member-id=\"member-primary\"] [data-action]",
+      "boundary": "[data-member-id=\"member-primary\"]",
+      "description": "The member action stays inside its row and can receive pointer events."
+    },
+    "recipe": {
+      "path": "/fixture?layout=broken",
+      "query": {
+        "width": "/containerWidth"
+      },
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "fixtures": [
+        {
+          "url": "**/api/members?*"
+        }
+      ],
+      "ready": "[data-fixture-stage][data-ready=\"true\"]",
+      "proofs": [
+        {
+          "selector": "[data-fixture-stage][data-ready=\"true\"]",
+          "kind": "jsonAttribute",
+          "attribute": "data-input"
+        }
+      ],
+      "screenshot": "[data-fixture-stage]",
+      "rule": {
+        "id": "action-reachable",
+        "target": "[data-member-id=\"member-primary\"] [data-action]",
+        "boundary": "[data-member-id=\"member-primary\"]",
+        "description": "The member action stays inside its row and can receive pointer events."
+      }
+    },
+    "input": {
+      "containerWidth": 360,
+      "members": [
+        {
+          "id": "member-primary",
+          "name": "Maya Chen",
+          "email": "maya@orbit.test",
+          "role": "Owner",
+          "status": "active",
+          "avatar": "sage"
+        },
+        {
+          "id": "member-second",
+          "name": "Alex Morgan",
+          "email": "alex@orbit.test",
+          "role": "Member",
+          "status": "active",
+          "avatar": "sand"
+        },
+        {
+          "id": "member-third",
+          "name": "Noor Ali",
+          "email": "noor@orbit.test",
+          "role": "Viewer",
+          "status": "active",
+          "avatar": "lilac"
+        }
+      ]
+    }
+  },
+  {
+    "id": "member-original",
+    "name": "Member reference · original valid failure",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 1000,
+      "height": 900
+    },
+    "rule": {
+      "id": "action-reachable",
+      "target": "[data-member-id=\"member-primary\"] [data-action]",
+      "boundary": "[data-member-id=\"member-primary\"]",
+      "description": "The member action stays inside its row and can receive pointer events."
+    },
+    "recipe": {
+      "path": "/fixture?layout=broken",
+      "query": {
+        "width": "/containerWidth"
+      },
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "fixtures": [
+        {
+          "url": "**/api/members?*"
+        }
+      ],
+      "ready": "[data-fixture-stage][data-ready=\"true\"]",
+      "proofs": [
+        {
+          "selector": "[data-fixture-stage][data-ready=\"true\"]",
+          "kind": "jsonAttribute",
+          "attribute": "data-input"
+        }
+      ],
+      "screenshot": "[data-fixture-stage]",
+      "rule": {
+        "id": "action-reachable",
+        "target": "[data-member-id=\"member-primary\"] [data-action]",
+        "boundary": "[data-member-id=\"member-primary\"]",
+        "description": "The member action stays inside its row and can receive pointer events."
+      }
+    },
+    "input": {
+      "containerWidth": 360,
+      "members": [
+        {
+          "id": "member-primary",
+          "name": "Alexandria Konstantinopoulou-Wiśniewska",
+          "email": "alexandria.konstantinopoulou@northwind.example.test",
+          "role": "Owner",
+          "status": "invited",
+          "avatar": "sage"
+        },
+        {
+          "id": "member-second",
+          "name": "Alex Morgan",
+          "email": "alex@orbit.test",
+          "role": "Member",
+          "status": "active",
+          "avatar": "sand"
+        },
+        {
+          "id": "member-third",
+          "name": "Noor Ali",
+          "email": "noor@orbit.test",
+          "role": "Viewer",
+          "status": "active",
+          "avatar": "lilac"
+        }
+      ]
+    }
+  },
+  {
+    "id": "member-reduced",
+    "name": "Member reference · reduced failure",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 1000,
+      "height": 900
+    },
+    "rule": {
+      "id": "action-reachable",
+      "target": "[data-member-id=\"member-primary\"] [data-action]",
+      "boundary": "[data-member-id=\"member-primary\"]",
+      "description": "The member action stays inside its row and can receive pointer events."
+    },
+    "recipe": {
+      "path": "/fixture?layout=broken",
+      "query": {
+        "width": "/containerWidth"
+      },
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "fixtures": [
+        {
+          "url": "**/api/members?*"
+        }
+      ],
+      "ready": "[data-fixture-stage][data-ready=\"true\"]",
+      "proofs": [
+        {
+          "selector": "[data-fixture-stage][data-ready=\"true\"]",
+          "kind": "jsonAttribute",
+          "attribute": "data-input"
+        }
+      ],
+      "screenshot": "[data-fixture-stage]",
+      "rule": {
+        "id": "action-reachable",
+        "target": "[data-member-id=\"member-primary\"] [data-action]",
+        "boundary": "[data-member-id=\"member-primary\"]",
+        "description": "The member action stays inside its row and can receive pointer events."
+      }
+    },
+    "input": {
+      "containerWidth": 360,
+      "members": [
+        {
+          "id": "member-primary",
+          "name": "Alexandria Konstantinopoulou-Wiśniewska",
+          "email": "a@b.co",
+          "role": null,
+          "status": "invited",
+          "avatar": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "member-fixed",
+    "name": "Member reference · fixed same input",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 1000,
+      "height": 900
+    },
+    "rule": {
+      "id": "action-reachable",
+      "target": "[data-member-id=\"member-primary\"] [data-action]",
+      "boundary": "[data-member-id=\"member-primary\"]",
+      "description": "The member action stays inside its row and can receive pointer events."
+    },
+    "recipe": {
+      "path": "/fixture?layout=fixed",
+      "query": {
+        "width": "/containerWidth"
+      },
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "fixtures": [
+        {
+          "url": "**/api/members?*"
+        }
+      ],
+      "ready": "[data-fixture-stage][data-ready=\"true\"]",
+      "proofs": [
+        {
+          "selector": "[data-fixture-stage][data-ready=\"true\"]",
+          "kind": "jsonAttribute",
+          "attribute": "data-input"
+        }
+      ],
+      "screenshot": "[data-fixture-stage]",
+      "rule": {
+        "id": "action-reachable",
+        "target": "[data-member-id=\"member-primary\"] [data-action]",
+        "boundary": "[data-member-id=\"member-primary\"]",
+        "description": "The member action stays inside its row and can receive pointer events."
+      }
+    },
+    "input": {
+      "containerWidth": 360,
+      "members": [
+        {
+          "id": "member-primary",
+          "name": "Alexandria Konstantinopoulou-Wiśniewska",
+          "email": "a@b.co",
+          "role": null,
+          "status": "invited",
+          "avatar": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "cart-normal",
+    "name": "Pinned cart · normal control",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 1000,
+      "height": 900
+    },
+    "rule": {
+      "id": "cart-checkout-reachable",
+      "target": ".cart-preview.active .action-block button",
+      "boundary": ".cart-preview.active",
+      "requireViewportCenter": true
+    },
+    "recipe": {
+      "path": "/fixtures/compat-app/cart.html",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "viewportFromInput": {
+        "width": "/viewportWidth",
+        "height": "/viewportHeight"
+      },
+      "fixtures": [
+        {
+          "url": "**/api/cart-fixture"
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1493547373/dummy-logo/Veggy.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAAMwAAAA8CAYAAAAqsFXrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUzMzFBNjUzMkQ4RDExRTdCODlBQzI0QjEyMTk1NDFFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUzMzFBNjU0MkQ4RDExRTdCODlBQzI0QjEyMTk1NDFFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTMzMUE2NTEyRDhEMTFFN0I4OUFDMjRCMTIxOTU0MUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTMzMUE2NTIyRDhEMTFFN0I4OUFDMjRCMTIxOTU0MUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7zcl2dAAAJ1UlEQVR42uxd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"
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1493548928/icons/bag.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAjCAYAAAD17ghaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxY2FhN2ExNC04NThhLTJiNGYtYTg5Yi05NDRhYTM4MGFhYjkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0QxNDlBMDEyRDkxMTFFN0I2QzhERjgwQ0RCREMyNjIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0QxNDlBMDAyRDkxMTFFN0I2QzhERjgwQ0RCREMyNjIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDA5NjBlOWQtNjliMS0xNzQzLTg5MzItYzM0Yzg3ZWQzOGM3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFjYWE3YTE0LTg1OGEtMmI0Zi1hODliLTk0NGFhMzgwYWFiOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmMCRBkAAAFoSURBVHjaYvz//z8DNsBRJcaAA1gCcToQuwCxNBA/BeK9QDwDiI+jK/7R9ooBH2BiIB6wAvFkID4KxPFQyxmgdBxUfDJUHdGAWAcwAvFiIM4B4u9A3ADEqkDMDKUboOI5UHVUd0AKEIcD8UcgtgfiRiC+A8T/oHQjVPwjVF0qNR3ACcRtUHYSEJ/Boe4MVJ4Bqp6TWg6IAmIRID4IxOsIqAXJH4Oqj6SWA/ygNLFxOw9K+xOVuNgrRQmpeQzEMkCsDsS3iDATpO4GVJ8cNUJAHMkhxIBHUFqCGMUsSGw+aCrGBb4xkAZA5cF/HHICMLuQQ0COgX5AFlsUyNLRAXID7QCsITAaBSM7BBjp7AAZqJ1wB4BKOzY6OoANVlIyDUDwo0Q50wAkQKwOGIgQkBtUISA30CEgOxIdAI8CNmJbL1QG4LKHCblUojMAl75MAxT88GhgGqAcMGgcIDfQUSA3mgYGPAoAAgwAQGc0M5aL1IgAAAAASUVORK5CYII="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494756966/icons/search-green.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2NEJBQTJFMzg4RTExRTc4RjNEREIyNjQxNkZBMjdEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ2NEJBQTJGMzg4RTExRTc4RjNEREIyNjQxNkZBMjdEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDY0QkFBMkMzODhFMTFFNzhGM0REQjI2NDE2RkEyN0QiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDY0QkFBMkQzODhFMTFFNzhGM0REQjI2NDE2RkEyN0QiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6zplVHAAABwUlEQVR42uyYO3LCMBBAcSZFOqjS4hvYR+AG8Q0wN6BOBU1q3yDiBuIG5gbxDZI2VdKlc3ZnNjM7OxKSLJmQiTWzAwh59bTaH2R938+uadzMrmxMQH8O6NZ34d3jfQkvNcgKpGBfdSAtiPp6en+JBcpcUQYgC9wM5MFD3wmhAex1FCCyCp5+HqDzE6041FpWIAsMbqZpHq2Q0xVWhnWDoM75kBKbHOk6PuQ6utYGZE1zc3q+TGIh2ACd95lNHQCk9nB8xaBwbOA5lSLst+z9m/hsHQTdsalddB6CU+YirHeGazo3OMSS9EVZSCrQIQoBXjv0xWXqQOvwZPlPalmoD1AKKFICyWRWB+qsHPrCgMhnjjwF0Kl9rcOj7BTqg7Yra9h7zLqtJxQmwaVFT3Qt06LCY+Rs4cStpe4p4TtonVVKoAUV0cIQ0lr4jMmJD+g/ANUkAXJAuXJQzgqzVx30Cnt0SBC8jj21FK4+aE/reWStqeim6RiFxSrqf0oR1ij6J6IM3YK3pbKxfigOhRqtdFAftBHTzusbtZYNgRq9uIZCXaTaW6DKX20/BFRH0Xq5KHOkjtZWdLPp/6EJKHJ8CzAATKXM6Tc2Oc4AAAAASUVORK5CYII="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ5RjUxMjkyMzg4QjExRTdBNEY1Qjk3QzRBMDdBMzNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ5RjUxMjkzMzg4QjExRTdBNEY1Qjk3QzRBMDdBMzNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDlGNTEyOTAzODhCMTFFN0E0RjVCOTdDNEEwN0EzM0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDlGNTEyOTEzODhCMTFFN0E0RjVCOTdDNEEwN0EzM0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6C/+j4AAAA2UlEQVR42mL8//8/w2ACTAyDDIw6aNRBow4adRCpgKNKbAEIDwoHQR0SD8JAdsKAOgjJMSCw8EfbqwUD5iAsjkkYsCijpWNIdhCaYy4CccGA5TIsjnEAhs4HajuIkZj2EJpjyAGOQMcfoGYIGdCrYGQhUp0DEIN8qA9LzEBMSja/QNUog0abAJqjEqlV9pCVqKEJ2AGaoEFgPrVKZ7KzPT0cRXLBSGtHMZLbDcKSpgKBjt0wYJUrWkhdhDpu4EIILaQYqFVqM472XEcdNOqgUQeNOmiQOwggwAA84V4TSWGD1AAAAABJRU5ErkJggg=="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494692031/icons/search.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEyOUI1NEZCMzdGNzExRTc5QTI3RENGNjZDOTk2MjIzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEyOUI1NEZDMzdGNzExRTc5QTI3RENGNjZDOTk2MjIzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTI5QjU0RjkzN0Y3MTFFNzlBMjdEQ0Y2NkM5OTYyMjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTI5QjU0RkEzN0Y3MTFFNzlBMjdEQ0Y2NkM5OTYyMjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz74Tq3oAAABDklEQVR42uyX4Q2DIBCF1XQARnCDOoIjMAIjdISO4Ah2g67QDRiBEdiAQnIkF6pFUKhN7iXvjxzhA71naI0xzZnUNScTAREQAZXWJXNeD3ZS4GPkgjHB3FqZTykYa/Y6pXg2cc21gG5oURmcBodnXvfSQMxaIxi2UveEGv2l5hAggXbfR8C9RC5Qt7GjnF6RbtJQg+f8PIdkzWBkG2rGGkB+19fIggPU7DupjR+bQh00LIz3qPVVjRwaUAc5qMl6BE8oFnwOsRpJzYOFQ2l0SjIXKnUCgxOQQXJP8NrCRGelgVL/eclQJYB2QZUCWoI67NeRK2H9SM2ltsLN1YHNZwKiWwcBERAB/RXQW4ABAK0mbQbQddx6AAAAAElFTkSuQmCC"
+        }
+      ],
+      "setup": [
+        {
+          "action": "wait",
+          "selector": "[data-ready=\"true\"]"
+        },
+        {
+          "action": "click",
+          "selector": ".cart-icon"
+        },
+        {
+          "action": "wait",
+          "selector": ".cart-preview.active"
+        },
+        {
+          "action": "scroll",
+          "selector": ".cart-preview.active .action-block button"
+        }
+      ],
+      "ready": "[data-ready=\"true\"]",
+      "proofs": [
+        {
+          "selector": "[data-ready=\"true\"]",
+          "kind": "jsonAttribute",
+          "attribute": "data-input"
+        },
+        {
+          "selector": ".cart-item:first-child .product-name",
+          "kind": "text",
+          "inputPath": "/products/0/name"
+        }
+      ],
+      "screenshot": "viewport",
+      "rule": {
+        "id": "cart-checkout-reachable",
+        "target": ".cart-preview.active .action-block button",
+        "boundary": ".cart-preview.active",
+        "requireViewportCenter": true
+      }
+    },
+    "input": {
+      "products": [
+        {
+          "id": "cart-primary",
+          "name": "Broccoli — family pack",
+          "price": 120,
+          "quantity": 2,
+          "image": "/fixtures/compat-app/product.svg"
+        },
+        {
+          "id": "cart-secondary",
+          "name": "Fresh carrots",
+          "price": 80,
+          "quantity": 1,
+          "image": "/fixtures/compat-app/product.svg"
+        },
+        {
+          "id": "cart-third",
+          "name": "Green beans",
+          "price": 90,
+          "quantity": 1,
+          "image": "/fixtures/compat-app/product.svg"
+        }
+      ],
+      "viewportWidth": 1000,
+      "viewportHeight": 900
+    }
+  },
+  {
+    "id": "cart-original",
+    "name": "Pinned cart · original landscape case",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 640,
+      "height": 320
+    },
+    "rule": {
+      "id": "cart-checkout-reachable",
+      "target": ".cart-preview.active .action-block button",
+      "boundary": ".cart-preview.active",
+      "requireViewportCenter": true
+    },
+    "recipe": {
+      "path": "/fixtures/compat-app/cart.html",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "viewportFromInput": {
+        "width": "/viewportWidth",
+        "height": "/viewportHeight"
+      },
+      "fixtures": [
+        {
+          "url": "**/api/cart-fixture"
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1493547373/dummy-logo/Veggy.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAAMwAAAA8CAYAAAAqsFXrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUzMzFBNjUzMkQ4RDExRTdCODlBQzI0QjEyMTk1NDFFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUzMzFBNjU0MkQ4RDExRTdCODlBQzI0QjEyMTk1NDFFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTMzMUE2NTEyRDhEMTFFN0I4OUFDMjRCMTIxOTU0MUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTMzMUE2NTIyRDhEMTFFN0I4OUFDMjRCMTIxOTU0MUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7zcl2dAAAJ1UlEQVR42uxd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"
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1493548928/icons/bag.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAjCAYAAAD17ghaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxY2FhN2ExNC04NThhLTJiNGYtYTg5Yi05NDRhYTM4MGFhYjkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0QxNDlBMDEyRDkxMTFFN0I2QzhERjgwQ0RCREMyNjIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0QxNDlBMDAyRDkxMTFFN0I2QzhERjgwQ0RCREMyNjIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDA5NjBlOWQtNjliMS0xNzQzLTg5MzItYzM0Yzg3ZWQzOGM3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFjYWE3YTE0LTg1OGEtMmI0Zi1hODliLTk0NGFhMzgwYWFiOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmMCRBkAAAFoSURBVHjaYvz//z8DNsBRJcaAA1gCcToQuwCxNBA/BeK9QDwDiI+jK/7R9ooBH2BiIB6wAvFkID4KxPFQyxmgdBxUfDJUHdGAWAcwAvFiIM4B4u9A3ADEqkDMDKUboOI5UHVUd0AKEIcD8UcgtgfiRiC+A8T/oHQjVPwjVF0qNR3ACcRtUHYSEJ/Boe4MVJ4Bqp6TWg6IAmIRID4IxOsIqAXJH4Oqj6SWA/ygNLFxOw9K+xOVuNgrRQmpeQzEMkCsDsS3iDATpO4GVJ8cNUJAHMkhxIBHUFqCGMUsSGw+aCrGBb4xkAZA5cF/HHICMLuQQ0COgX5AFlsUyNLRAXID7QCsITAaBSM7BBjp7AAZqJ1wB4BKOzY6OoANVlIyDUDwo0Q50wAkQKwOGIgQkBtUISA30CEgOxIdAI8CNmJbL1QG4LKHCblUojMAl75MAxT88GhgGqAcMGgcIDfQUSA3mgYGPAoAAgwAQGc0M5aL1IgAAAAASUVORK5CYII="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494756966/icons/search-green.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2NEJBQTJFMzg4RTExRTc4RjNEREIyNjQxNkZBMjdEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ2NEJBQTJGMzg4RTExRTc4RjNEREIyNjQxNkZBMjdEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDY0QkFBMkMzODhFMTFFNzhGM0REQjI2NDE2RkEyN0QiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDY0QkFBMkQzODhFMTFFNzhGM0REQjI2NDE2RkEyN0QiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6zplVHAAABwUlEQVR42uyYO3LCMBBAcSZFOqjS4hvYR+AG8Q0wN6BOBU1q3yDiBuIG5gbxDZI2VdKlc3ZnNjM7OxKSLJmQiTWzAwh59bTaH2R938+uadzMrmxMQH8O6NZ34d3jfQkvNcgKpGBfdSAtiPp6en+JBcpcUQYgC9wM5MFD3wmhAex1FCCyCp5+HqDzE6041FpWIAsMbqZpHq2Q0xVWhnWDoM75kBKbHOk6PuQ6utYGZE1zc3q+TGIh2ACd95lNHQCk9nB8xaBwbOA5lSLst+z9m/hsHQTdsalddB6CU+YirHeGazo3OMSS9EVZSCrQIQoBXjv0xWXqQOvwZPlPalmoD1AKKFICyWRWB+qsHPrCgMhnjjwF0Kl9rcOj7BTqg7Yra9h7zLqtJxQmwaVFT3Qt06LCY+Rs4cStpe4p4TtonVVKoAUV0cIQ0lr4jMmJD+g/ANUkAXJAuXJQzgqzVx30Cnt0SBC8jj21FK4+aE/reWStqeim6RiFxSrqf0oR1ij6J6IM3YK3pbKxfigOhRqtdFAftBHTzusbtZYNgRq9uIZCXaTaW6DKX20/BFRH0Xq5KHOkjtZWdLPp/6EJKHJ8CzAATKXM6Tc2Oc4AAAAASUVORK5CYII="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ5RjUxMjkyMzg4QjExRTdBNEY1Qjk3QzRBMDdBMzNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ5RjUxMjkzMzg4QjExRTdBNEY1Qjk3QzRBMDdBMzNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDlGNTEyOTAzODhCMTFFN0E0RjVCOTdDNEEwN0EzM0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDlGNTEyOTEzODhCMTFFN0E0RjVCOTdDNEEwN0EzM0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6C/+j4AAAA2UlEQVR42mL8//8/w2ACTAyDDIw6aNRBow4adRCpgKNKbAEIDwoHQR0SD8JAdsKAOgjJMSCw8EfbqwUD5iAsjkkYsCijpWNIdhCaYy4CccGA5TIsjnEAhs4HajuIkZj2EJpjyAGOQMcfoGYIGdCrYGQhUp0DEIN8qA9LzEBMSja/QNUog0abAJqjEqlV9pCVqKEJ2AGaoEFgPrVKZ7KzPT0cRXLBSGtHMZLbDcKSpgKBjt0wYJUrWkhdhDpu4EIILaQYqFVqM472XEcdNOqgUQeNOmiQOwggwAA84V4TSWGD1AAAAABJRU5ErkJggg=="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494692031/icons/search.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEyOUI1NEZCMzdGNzExRTc5QTI3RENGNjZDOTk2MjIzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEyOUI1NEZDMzdGNzExRTc5QTI3RENGNjZDOTk2MjIzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTI5QjU0RjkzN0Y3MTFFNzlBMjdEQ0Y2NkM5OTYyMjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTI5QjU0RkEzN0Y3MTFFNzlBMjdEQ0Y2NkM5OTYyMjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz74Tq3oAAABDklEQVR42uyX4Q2DIBCF1XQARnCDOoIjMAIjdISO4Ah2g67QDRiBEdiAQnIkF6pFUKhN7iXvjxzhA71naI0xzZnUNScTAREQAZXWJXNeD3ZS4GPkgjHB3FqZTykYa/Y6pXg2cc21gG5oURmcBodnXvfSQMxaIxi2UveEGv2l5hAggXbfR8C9RC5Qt7GjnF6RbtJQg+f8PIdkzWBkG2rGGkB+19fIggPU7DupjR+bQh00LIz3qPVVjRwaUAc5qMl6BE8oFnwOsRpJzYOFQ2l0SjIXKnUCgxOQQXJP8NrCRGelgVL/eclQJYB2QZUCWoI67NeRK2H9SM2ltsLN1YHNZwKiWwcBERAB/RXQW4ABAK0mbQbQddx6AAAAAElFTkSuQmCC"
+        }
+      ],
+      "setup": [
+        {
+          "action": "wait",
+          "selector": "[data-ready=\"true\"]"
+        },
+        {
+          "action": "click",
+          "selector": ".cart-icon"
+        },
+        {
+          "action": "wait",
+          "selector": ".cart-preview.active"
+        },
+        {
+          "action": "scroll",
+          "selector": ".cart-preview.active .action-block button"
+        }
+      ],
+      "ready": "[data-ready=\"true\"]",
+      "proofs": [
+        {
+          "selector": "[data-ready=\"true\"]",
+          "kind": "jsonAttribute",
+          "attribute": "data-input"
+        },
+        {
+          "selector": ".cart-item:first-child .product-name",
+          "kind": "text",
+          "inputPath": "/products/0/name"
+        }
+      ],
+      "screenshot": "viewport",
+      "rule": {
+        "id": "cart-checkout-reachable",
+        "target": ".cart-preview.active .action-block button",
+        "boundary": ".cart-preview.active",
+        "requireViewportCenter": true
+      }
+    },
+    "input": {
+      "products": [
+        {
+          "id": "cart-primary",
+          "name": "Broccoli — family pack",
+          "price": 120,
+          "quantity": 2,
+          "image": "/fixtures/compat-app/product.svg"
+        },
+        {
+          "id": "cart-secondary",
+          "name": "Fresh carrots",
+          "price": 80,
+          "quantity": 1,
+          "image": "/fixtures/compat-app/product.svg"
+        },
+        {
+          "id": "cart-third",
+          "name": "Green beans",
+          "price": 90,
+          "quantity": 1,
+          "image": "/fixtures/compat-app/product.svg"
+        }
+      ],
+      "viewportWidth": 640,
+      "viewportHeight": 320
+    }
+  },
+  {
+    "id": "cart-reduced",
+    "name": "Pinned cart · reduced same failure",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 640,
+      "height": 320
+    },
+    "rule": {
+      "id": "cart-checkout-reachable",
+      "target": ".cart-preview.active .action-block button",
+      "boundary": ".cart-preview.active",
+      "requireViewportCenter": true
+    },
+    "recipe": {
+      "path": "/fixtures/compat-app/cart.html",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "viewportFromInput": {
+        "width": "/viewportWidth",
+        "height": "/viewportHeight"
+      },
+      "fixtures": [
+        {
+          "url": "**/api/cart-fixture"
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1493547373/dummy-logo/Veggy.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAAMwAAAA8CAYAAAAqsFXrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUzMzFBNjUzMkQ4RDExRTdCODlBQzI0QjEyMTk1NDFFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUzMzFBNjU0MkQ4RDExRTdCODlBQzI0QjEyMTk1NDFFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTMzMUE2NTEyRDhEMTFFN0I4OUFDMjRCMTIxOTU0MUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTMzMUE2NTIyRDhEMTFFN0I4OUFDMjRCMTIxOTU0MUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7zcl2dAAAJ1UlEQVR42uxd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"
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1493548928/icons/bag.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAjCAYAAAD17ghaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxY2FhN2ExNC04NThhLTJiNGYtYTg5Yi05NDRhYTM4MGFhYjkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0QxNDlBMDEyRDkxMTFFN0I2QzhERjgwQ0RCREMyNjIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0QxNDlBMDAyRDkxMTFFN0I2QzhERjgwQ0RCREMyNjIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDA5NjBlOWQtNjliMS0xNzQzLTg5MzItYzM0Yzg3ZWQzOGM3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFjYWE3YTE0LTg1OGEtMmI0Zi1hODliLTk0NGFhMzgwYWFiOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmMCRBkAAAFoSURBVHjaYvz//z8DNsBRJcaAA1gCcToQuwCxNBA/BeK9QDwDiI+jK/7R9ooBH2BiIB6wAvFkID4KxPFQyxmgdBxUfDJUHdGAWAcwAvFiIM4B4u9A3ADEqkDMDKUboOI5UHVUd0AKEIcD8UcgtgfiRiC+A8T/oHQjVPwjVF0qNR3ACcRtUHYSEJ/Boe4MVJ4Bqp6TWg6IAmIRID4IxOsIqAXJH4Oqj6SWA/ygNLFxOw9K+xOVuNgrRQmpeQzEMkCsDsS3iDATpO4GVJ8cNUJAHMkhxIBHUFqCGMUsSGw+aCrGBb4xkAZA5cF/HHICMLuQQ0COgX5AFlsUyNLRAXID7QCsITAaBSM7BBjp7AAZqJ1wB4BKOzY6OoANVlIyDUDwo0Q50wAkQKwOGIgQkBtUISA30CEgOxIdAI8CNmJbL1QG4LKHCblUojMAl75MAxT88GhgGqAcMGgcIDfQUSA3mgYGPAoAAgwAQGc0M5aL1IgAAAAASUVORK5CYII="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494756966/icons/search-green.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2NEJBQTJFMzg4RTExRTc4RjNEREIyNjQxNkZBMjdEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ2NEJBQTJGMzg4RTExRTc4RjNEREIyNjQxNkZBMjdEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDY0QkFBMkMzODhFMTFFNzhGM0REQjI2NDE2RkEyN0QiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDY0QkFBMkQzODhFMTFFNzhGM0REQjI2NDE2RkEyN0QiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6zplVHAAABwUlEQVR42uyYO3LCMBBAcSZFOqjS4hvYR+AG8Q0wN6BOBU1q3yDiBuIG5gbxDZI2VdKlc3ZnNjM7OxKSLJmQiTWzAwh59bTaH2R938+uadzMrmxMQH8O6NZ34d3jfQkvNcgKpGBfdSAtiPp6en+JBcpcUQYgC9wM5MFD3wmhAex1FCCyCp5+HqDzE6041FpWIAsMbqZpHq2Q0xVWhnWDoM75kBKbHOk6PuQ6utYGZE1zc3q+TGIh2ACd95lNHQCk9nB8xaBwbOA5lSLst+z9m/hsHQTdsalddB6CU+YirHeGazo3OMSS9EVZSCrQIQoBXjv0xWXqQOvwZPlPalmoD1AKKFICyWRWB+qsHPrCgMhnjjwF0Kl9rcOj7BTqg7Yra9h7zLqtJxQmwaVFT3Qt06LCY+Rs4cStpe4p4TtonVVKoAUV0cIQ0lr4jMmJD+g/ANUkAXJAuXJQzgqzVx30Cnt0SBC8jj21FK4+aE/reWStqeim6RiFxSrqf0oR1ij6J6IM3YK3pbKxfigOhRqtdFAftBHTzusbtZYNgRq9uIZCXaTaW6DKX20/BFRH0Xq5KHOkjtZWdLPp/6EJKHJ8CzAATKXM6Tc2Oc4AAAAASUVORK5CYII="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ5RjUxMjkyMzg4QjExRTdBNEY1Qjk3QzRBMDdBMzNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ5RjUxMjkzMzg4QjExRTdBNEY1Qjk3QzRBMDdBMzNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDlGNTEyOTAzODhCMTFFN0E0RjVCOTdDNEEwN0EzM0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDlGNTEyOTEzODhCMTFFN0E0RjVCOTdDNEEwN0EzM0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6C/+j4AAAA2UlEQVR42mL8//8/w2ACTAyDDIw6aNRBow4adRCpgKNKbAEIDwoHQR0SD8JAdsKAOgjJMSCw8EfbqwUD5iAsjkkYsCijpWNIdhCaYy4CccGA5TIsjnEAhs4HajuIkZj2EJpjyAGOQMcfoGYIGdCrYGQhUp0DEIN8qA9LzEBMSja/QNUog0abAJqjEqlV9pCVqKEJ2AGaoEFgPrVKZ7KzPT0cRXLBSGtHMZLbDcKSpgKBjt0wYJUrWkhdhDpu4EIILaQYqFVqM472XEcdNOqgUQeNOmiQOwggwAA84V4TSWGD1AAAAABJRU5ErkJggg=="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494692031/icons/search.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEyOUI1NEZCMzdGNzExRTc5QTI3RENGNjZDOTk2MjIzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEyOUI1NEZDMzdGNzExRTc5QTI3RENGNjZDOTk2MjIzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTI5QjU0RjkzN0Y3MTFFNzlBMjdEQ0Y2NkM5OTYyMjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTI5QjU0RkEzN0Y3MTFFNzlBMjdEQ0Y2NkM5OTYyMjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz74Tq3oAAABDklEQVR42uyX4Q2DIBCF1XQARnCDOoIjMAIjdISO4Ah2g67QDRiBEdiAQnIkF6pFUKhN7iXvjxzhA71naI0xzZnUNScTAREQAZXWJXNeD3ZS4GPkgjHB3FqZTykYa/Y6pXg2cc21gG5oURmcBodnXvfSQMxaIxi2UveEGv2l5hAggXbfR8C9RC5Qt7GjnF6RbtJQg+f8PIdkzWBkG2rGGkB+19fIggPU7DupjR+bQh00LIz3qPVVjRwaUAc5qMl6BE8oFnwOsRpJzYOFQ2l0SjIXKnUCgxOQQXJP8NrCRGelgVL/eclQJYB2QZUCWoI67NeRK2H9SM2ltsLN1YHNZwKiWwcBERAB/RXQW4ABAK0mbQbQddx6AAAAAElFTkSuQmCC"
+        }
+      ],
+      "setup": [
+        {
+          "action": "wait",
+          "selector": "[data-ready=\"true\"]"
+        },
+        {
+          "action": "click",
+          "selector": ".cart-icon"
+        },
+        {
+          "action": "wait",
+          "selector": ".cart-preview.active"
+        },
+        {
+          "action": "scroll",
+          "selector": ".cart-preview.active .action-block button"
+        }
+      ],
+      "ready": "[data-ready=\"true\"]",
+      "proofs": [
+        {
+          "selector": "[data-ready=\"true\"]",
+          "kind": "jsonAttribute",
+          "attribute": "data-input"
+        },
+        {
+          "selector": ".cart-item:first-child .product-name",
+          "kind": "text",
+          "inputPath": "/products/0/name"
+        }
+      ],
+      "screenshot": "viewport",
+      "rule": {
+        "id": "cart-checkout-reachable",
+        "target": ".cart-preview.active .action-block button",
+        "boundary": ".cart-preview.active",
+        "requireViewportCenter": true
+      }
+    },
+    "input": {
+      "products": [
+        {
+          "id": "cart-primary",
+          "name": "Tea",
+          "price": 1,
+          "quantity": 2,
+          "image": "/fixtures/compat-app/product.svg"
+        }
+      ],
+      "viewportWidth": 640,
+      "viewportHeight": 320
+    }
+  },
+  {
+    "id": "cart-candidate",
+    "name": "Pinned cart · investigation-only CSS candidate",
+    "group": "application",
+    "category": "candidate-css",
+    "viewport": {
+      "width": 640,
+      "height": 320
+    },
+    "rule": {
+      "id": "cart-checkout-reachable",
+      "target": ".cart-preview.active .action-block button",
+      "boundary": ".cart-preview.active",
+      "requireViewportCenter": true
+    },
+    "recipe": {
+      "path": "/fixtures/compat-app/cart.html",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "viewportFromInput": {
+        "width": "/viewportWidth",
+        "height": "/viewportHeight"
+      },
+      "fixtures": [
+        {
+          "url": "**/api/cart-fixture"
+        }
+      ],
+      "resources": [
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1493547373/dummy-logo/Veggy.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAAMwAAAA8CAYAAAAqsFXrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUzMzFBNjUzMkQ4RDExRTdCODlBQzI0QjEyMTk1NDFFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUzMzFBNjU0MkQ4RDExRTdCODlBQzI0QjEyMTk1NDFFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTMzMUE2NTEyRDhEMTFFN0I4OUFDMjRCMTIxOTU0MUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTMzMUE2NTIyRDhEMTFFN0I4OUFDMjRCMTIxOTU0MUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7zcl2dAAAJ1UlEQVR42uxd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"
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1493548928/icons/bag.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAjCAYAAAD17ghaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxY2FhN2ExNC04NThhLTJiNGYtYTg5Yi05NDRhYTM4MGFhYjkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0QxNDlBMDEyRDkxMTFFN0I2QzhERjgwQ0RCREMyNjIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0QxNDlBMDAyRDkxMTFFN0I2QzhERjgwQ0RCREMyNjIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDA5NjBlOWQtNjliMS0xNzQzLTg5MzItYzM0Yzg3ZWQzOGM3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFjYWE3YTE0LTg1OGEtMmI0Zi1hODliLTk0NGFhMzgwYWFiOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmMCRBkAAAFoSURBVHjaYvz//z8DNsBRJcaAA1gCcToQuwCxNBA/BeK9QDwDiI+jK/7R9ooBH2BiIB6wAvFkID4KxPFQyxmgdBxUfDJUHdGAWAcwAvFiIM4B4u9A3ADEqkDMDKUboOI5UHVUd0AKEIcD8UcgtgfiRiC+A8T/oHQjVPwjVF0qNR3ACcRtUHYSEJ/Boe4MVJ4Bqp6TWg6IAmIRID4IxOsIqAXJH4Oqj6SWA/ygNLFxOw9K+xOVuNgrRQmpeQzEMkCsDsS3iDATpO4GVJ8cNUJAHMkhxIBHUFqCGMUsSGw+aCrGBb4xkAZA5cF/HHICMLuQQ0COgX5AFlsUyNLRAXID7QCsITAaBSM7BBjp7AAZqJ1wB4BKOzY6OoANVlIyDUDwo0Q50wAkQKwOGIgQkBtUISA30CEgOxIdAI8CNmJbL1QG4LKHCblUojMAl75MAxT88GhgGqAcMGgcIDfQUSA3mgYGPAoAAgwAQGc0M5aL1IgAAAAASUVORK5CYII="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494756966/icons/search-green.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2NEJBQTJFMzg4RTExRTc4RjNEREIyNjQxNkZBMjdEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQ2NEJBQTJGMzg4RTExRTc4RjNEREIyNjQxNkZBMjdEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDY0QkFBMkMzODhFMTFFNzhGM0REQjI2NDE2RkEyN0QiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDY0QkFBMkQzODhFMTFFNzhGM0REQjI2NDE2RkEyN0QiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6zplVHAAABwUlEQVR42uyYO3LCMBBAcSZFOqjS4hvYR+AG8Q0wN6BOBU1q3yDiBuIG5gbxDZI2VdKlc3ZnNjM7OxKSLJmQiTWzAwh59bTaH2R938+uadzMrmxMQH8O6NZ34d3jfQkvNcgKpGBfdSAtiPp6en+JBcpcUQYgC9wM5MFD3wmhAex1FCCyCp5+HqDzE6041FpWIAsMbqZpHq2Q0xVWhnWDoM75kBKbHOk6PuQ6utYGZE1zc3q+TGIh2ACd95lNHQCk9nB8xaBwbOA5lSLst+z9m/hsHQTdsalddB6CU+YirHeGazo3OMSS9EVZSCrQIQoBXjv0xWXqQOvwZPlPalmoD1AKKFICyWRWB+qsHPrCgMhnjjwF0Kl9rcOj7BTqg7Yra9h7zLqtJxQmwaVFT3Qt06LCY+Rs4cStpe4p4TtonVVKoAUV0cIQ0lr4jMmJD+g/ANUkAXJAuXJQzgqzVx30Cnt0SBC8jj21FK4+aE/reWStqeim6RiFxSrqf0oR1ij6J6IM3YK3pbKxfigOhRqtdFAftBHTzusbtZYNgRq9uIZCXaTaW6DKX20/BFRH0Xq5KHOkjtZWdLPp/6EJKHJ8CzAATKXM6Tc2Oc4AAAAASUVORK5CYII="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ5RjUxMjkyMzg4QjExRTdBNEY1Qjk3QzRBMDdBMzNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ5RjUxMjkzMzg4QjExRTdBNEY1Qjk3QzRBMDdBMzNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDlGNTEyOTAzODhCMTFFN0E0RjVCOTdDNEEwN0EzM0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDlGNTEyOTEzODhCMTFFN0E0RjVCOTdDNEEwN0EzM0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6C/+j4AAAA2UlEQVR42mL8//8/w2ACTAyDDIw6aNRBow4adRCpgKNKbAEIDwoHQR0SD8JAdsKAOgjJMSCw8EfbqwUD5iAsjkkYsCijpWNIdhCaYy4CccGA5TIsjnEAhs4HajuIkZj2EJpjyAGOQMcfoGYIGdCrYGQhUp0DEIN8qA9LzEBMSja/QNUog0abAJqjEqlV9pCVqKEJ2AGaoEFgPrVKZ7KzPT0cRXLBSGtHMZLbDcKSpgKBjt0wYJUrWkhdhDpu4EIILaQYqFVqM472XEcdNOqgUQeNOmiQOwggwAA84V4TSWGD1AAAAABJRU5ErkJggg=="
+        },
+        {
+          "url": "https://res.cloudinary.com/sivadass/image/upload/v1494692031/icons/search.png",
+          "contentType": "image/png",
+          "base64": "iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEyOUI1NEZCMzdGNzExRTc5QTI3RENGNjZDOTk2MjIzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEyOUI1NEZDMzdGNzExRTc5QTI3RENGNjZDOTk2MjIzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTI5QjU0RjkzN0Y3MTFFNzlBMjdEQ0Y2NkM5OTYyMjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTI5QjU0RkEzN0Y3MTFFNzlBMjdEQ0Y2NkM5OTYyMjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz74Tq3oAAABDklEQVR42uyX4Q2DIBCF1XQARnCDOoIjMAIjdISO4Ah2g67QDRiBEdiAQnIkF6pFUKhN7iXvjxzhA71naI0xzZnUNScTAREQAZXWJXNeD3ZS4GPkgjHB3FqZTykYa/Y6pXg2cc21gG5oURmcBodnXvfSQMxaIxi2UveEGv2l5hAggXbfR8C9RC5Qt7GjnF6RbtJQg+f8PIdkzWBkG2rGGkB+19fIggPU7DupjR+bQh00LIz3qPVVjRwaUAc5qMl6BE8oFnwOsRpJzYOFQ2l0SjIXKnUCgxOQQXJP8NrCRGelgVL/eclQJYB2QZUCWoI67NeRK2H9SM2ltsLN1YHNZwKiWwcBERAB/RXQW4ABAK0mbQbQddx6AAAAAElFTkSuQmCC"
+        }
+      ],
+      "setup": [
+        {
+          "action": "wait",
+          "selector": "[data-ready=\"true\"]"
+        },
+        {
+          "action": "click",
+          "selector": ".cart-icon"
+        },
+        {
+          "action": "wait",
+          "selector": ".cart-preview.active"
+        },
+        {
+          "action": "scroll",
+          "selector": ".cart-preview.active .action-block button"
+        }
+      ],
+      "ready": "[data-ready=\"true\"]",
+      "proofs": [
+        {
+          "selector": "[data-ready=\"true\"]",
+          "kind": "jsonAttribute",
+          "attribute": "data-input"
+        },
+        {
+          "selector": ".cart-item:first-child .product-name",
+          "kind": "text",
+          "inputPath": "/products/0/name"
+        }
+      ],
+      "screenshot": "viewport",
+      "rule": {
+        "id": "cart-checkout-reachable",
+        "target": ".cart-preview.active .action-block button",
+        "boundary": ".cart-preview.active",
+        "requireViewportCenter": true
+      }
+    },
+    "input": {
+      "products": [
+        {
+          "id": "cart-primary",
+          "name": "Tea",
+          "price": 1,
+          "quantity": 2,
+          "image": "/fixtures/compat-app/product.svg"
+        }
+      ],
+      "viewportWidth": 640,
+      "viewportHeight": 320
+    },
+    "patch": "/* Investigation-only candidate. This does not modify the vendored upstream SCSS. */\n.cart-preview.active {\n  height: min(388px, calc(100dvh - 96px));\n  display: flex;\n  flex-direction: column;\n}\n.cart-preview.active .cart-items {\n  flex: 1 1 auto;\n  min-height: 0;\n  height: auto;\n}\n.cart-preview.active .action-block {\n  position: static;\n  flex: 0 0 auto;\n}\n"
+  },
+  {
+    "id": "vue-normal",
+    "name": "Unchanged complete Vue app · normal tasks",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 1000,
+      "height": 900
+    },
+    "rule": {
+      "id": "todo-delete-reachable",
+      "target": ".todo-list > li:first-child .destroy",
+      "boundary": ".todo-list > li:first-child"
+    },
+    "recipe": {
+      "path": "/subjects/todomvc/examples/vue/dist/index.html#/",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "viewportFromInput": {
+        "width": "/viewportWidth",
+        "height": "/viewportHeight"
+      },
+      "form": {
+        "input": ".new-todo",
+        "itemsPath": "/titles",
+        "submitKey": "Enter"
+      },
+      "setup": [
+        {
+          "action": "scroll",
+          "selector": ".todo-list > li:first-child"
+        },
+        {
+          "action": "hover",
+          "selector": ".todo-list > li:first-child"
+        }
+      ],
+      "ready": ".todo-list > li:first-child",
+      "proofs": [
+        {
+          "selector": ".todo-list > li .view > label",
+          "kind": "texts",
+          "inputPath": "/titles"
+        }
+      ],
+      "screenshot": "viewport",
+      "rule": {
+        "id": "todo-delete-reachable",
+        "target": ".todo-list > li:first-child .destroy",
+        "boundary": ".todo-list > li:first-child"
+      }
+    },
+    "input": {
+      "titles": [
+        "Review the pull request",
+        "Write release notes",
+        "Update the documentation"
+      ],
+      "viewportWidth": 1000,
+      "viewportHeight": 900
+    }
+  },
+  {
+    "id": "vue-long-narrow",
+    "name": "Unchanged Vue app · long task at 320px",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 320,
+      "height": 900
+    },
+    "rule": {
+      "id": "todo-delete-reachable",
+      "target": ".todo-list > li:first-child .destroy",
+      "boundary": ".todo-list > li:first-child"
+    },
+    "recipe": {
+      "path": "/subjects/todomvc/examples/vue/dist/index.html#/",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "viewportFromInput": {
+        "width": "/viewportWidth",
+        "height": "/viewportHeight"
+      },
+      "form": {
+        "input": ".new-todo",
+        "itemsPath": "/titles",
+        "submitKey": "Enter"
+      },
+      "setup": [
+        {
+          "action": "scroll",
+          "selector": ".todo-list > li:first-child"
+        },
+        {
+          "action": "hover",
+          "selector": ".todo-list > li:first-child"
+        }
+      ],
+      "ready": ".todo-list > li:first-child",
+      "proofs": [
+        {
+          "selector": ".todo-list > li .view > label",
+          "kind": "texts",
+          "inputPath": "/titles"
+        }
+      ],
+      "screenshot": "viewport",
+      "rule": {
+        "id": "todo-delete-reachable",
+        "target": ".todo-list > li:first-child .destroy",
+        "boundary": ".todo-list > li:first-child"
+      }
+    },
+    "input": {
+      "titles": [
+        "Investigate the international customer onboarding experience and prepare the accessibility review before the next release",
+        "Write release notes"
+      ],
+      "viewportWidth": 320,
+      "viewportHeight": 900
+    }
+  },
+  {
+    "id": "dialog-constrained",
+    "name": "Radix dialog · long content at constrained height",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 390,
+      "height": 320
+    },
+    "rule": {
+      "id": "dialog-close-reachable",
+      "target": "[data-dialog-close]",
+      "boundary": "[role=\"dialog\"]"
+    },
+    "recipe": {
+      "path": "/fixtures/compat-app/index.html?component=dialog",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "viewportFromInput": {
+        "width": "/viewportWidth",
+        "height": "/viewportHeight"
+      },
+      "fixtures": [
+        {
+          "url": "**/api/compat-fixture?*"
+        }
+      ],
+      "ready": "[data-ready=\"true\"]",
+      "screenshot": "page",
+      "rule": {
+        "id": "dialog-close-reachable",
+        "target": "[data-dialog-close]",
+        "boundary": "[role=\"dialog\"]"
+      },
+      "proofs": [
+        {
+          "selector": "[data-ready=\"true\"]",
+          "kind": "jsonAttribute",
+          "attribute": "data-input"
+        },
+        {
+          "selector": "[data-dialog-title]",
+          "kind": "text",
+          "inputPath": "/title"
+        }
+      ],
+      "setup": [
+        {
+          "action": "click",
+          "selector": "[data-open-dialog]"
+        },
+        {
+          "action": "scroll",
+          "selector": "[data-dialog-close]"
+        }
+      ]
+    },
+    "input": {
+      "title": "Fresh broccoli",
+      "description": "Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. ",
+      "price": 120,
+      "rows": [
+        {
+          "id": "record-primary",
+          "name": "Maya Chen",
+          "email": "maya@example.com"
+        },
+        {
+          "id": "record-secondary",
+          "name": "Sam Miller",
+          "email": "sam@example.com"
+        }
+      ],
+      "viewportWidth": 390,
+      "viewportHeight": 320
+    }
+  },
+  {
+    "id": "table-long",
+    "name": "Radix table · long valid email with scrolling",
+    "group": "application",
+    "category": "declared-application-state",
+    "viewport": {
+      "width": 360,
+      "height": 900
+    },
+    "rule": {
+      "id": "table-review-reachable",
+      "target": "[data-record=\"record-primary\"] [data-row-action]",
+      "boundary": "[data-record=\"record-primary\"]"
+    },
+    "recipe": {
+      "path": "/fixtures/compat-app/index.html?component=table",
+      "viewport": {
+        "width": 1000,
+        "height": 900
+      },
+      "viewportFromInput": {
+        "width": "/viewportWidth",
+        "height": "/viewportHeight"
+      },
+      "fixtures": [
+        {
+          "url": "**/api/compat-fixture?*"
+        }
+      ],
+      "ready": "[data-ready=\"true\"]",
+      "screenshot": "page",
+      "rule": {
+        "id": "table-review-reachable",
+        "target": "[data-record=\"record-primary\"] [data-row-action]",
+        "boundary": "[data-record=\"record-primary\"]"
+      },
+      "proofs": [
+        {
+          "selector": "[data-ready=\"true\"]",
+          "kind": "jsonAttribute",
+          "attribute": "data-input"
+        },
+        {
+          "selector": "[data-record=\"record-primary\"] [data-record-name]",
+          "kind": "text",
+          "inputPath": "/rows/0/name"
+        }
+      ],
+      "setup": [
+        {
+          "action": "scroll",
+          "selector": "[data-record=\"record-primary\"] [data-row-action]"
+        }
+      ]
+    },
+    "input": {
+      "title": "InternationalProductCollectionWithExtendedAvailabilityAndShippingOptions",
+      "description": "Review the product details before continuing.",
+      "price": 120,
+      "rows": [
+        {
+          "id": "record-primary",
+          "name": "InternationalCustomerAccountWithoutSpaces",
+          "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com"
+        }
+      ],
+      "viewportWidth": 360,
+      "viewportHeight": 900
+    }
+  }
+]

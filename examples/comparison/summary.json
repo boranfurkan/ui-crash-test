@@ -1,0 +1,39 @@
+{
+  "cases": 44,
+  "observations": 132,
+  "applicationStates": 12,
+  "comparableApplications": 12,
+  "applicationAgreement": 12,
+  "appRuleFailures": 4,
+  "ownControlMatches": 32,
+  "controls": 32,
+  "controlDisagreements": [
+    {
+      "id": "control-clip-center",
+      "name": "Ancestor clips the action center",
+      "ours": "failed",
+      "native": "passed"
+    },
+    {
+      "id": "control-inert",
+      "name": "Inert application region",
+      "ours": "inconclusive",
+      "native": "failed"
+    },
+    {
+      "id": "control-transparent-parent",
+      "name": "Fully transparent ancestor",
+      "ours": "inconclusive",
+      "native": "passed"
+    },
+    {
+      "id": "control-offscreen",
+      "name": "Unscrolled off-screen action",
+      "ours": "inconclusive",
+      "native": "passed"
+    }
+  ],
+  "renderlintStatesWithFindings": 8,
+  "renderlintInconclusive": 0,
+  "pageErrors": 0
+}

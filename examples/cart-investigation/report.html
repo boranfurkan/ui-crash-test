@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkout below the viewport · UI Crash Test</title><style>body{font:15px/1.65 system-ui;margin:0;background:#f5f4ed;color:#203e2d}main{max-width:1100px;padding:36px 20px;margin:auto}h1{font-size:36px;line-height:1.2}a{color:#285e43}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:20px}figure{margin:0;padding:12px;border:1px solid #d7ded1;border-radius:8px;background:white}img{width:100%;height:auto}figcaption{margin-bottom:10px}small{color:#69786b}pre{overflow:auto;padding:16px;background:#e7ece2;border-radius:8px;font-size:13px}table{border-collapse:collapse;width:100%;font-size:13px}td,th{padding:10px;text-align:left;border-bottom:1px solid #d7ded1}.scroll{overflow:auto}code{overflow-wrap:anywhere}</style></head><body><main><a href="/">← UI Crash Test</a><p>EXTERNAL-SOURCE INVESTIGATION · 2026-11-03T01:16:15.752Z</p><h1>Checkout below the viewport.</h1><p>In the pinned shopping-app header, a 388px cart popup stays anchored to a fixed header. At 640×320, the checkout button’s center remains at y=417 after scrolling attempts, below the viewport’s 320px edge.</p><p><strong>Scope:</strong> unchanged source from <a href="https://github.com/sivadass/react-shopping-cart/tree/0e867f1caf6abd7114aab6ae704a2824064e84e0">sivadass/react-shopping-cart, revision 0e867f1 (2021)</a>, mounted in a local API fixture harness. This is not a finding against the current deployed site. Local fallback fonts and a modern compatibility runtime are used.</p><div class="grid"><figure><figcaption><strong>Original · cannot reach checkout with a pointer</strong><br><small>Playwright trial click also fails after trying to scroll.</small></figcaption><img src="original.png" alt="Original cart popup cut off below a 320px-high viewport"></figure><figure><figcaption><strong>Candidate CSS · same saved cart and viewport</strong><br><small>Both the rule and Playwright trial click pass.</small></figcaption><img src="candidate-fix.png" alt="The candidate height and flex fix keeps checkout inside the same viewport"></figure></div><h2>Independent check</h2><p>The generic campaign confirmed the same failure in three fresh contexts, reduced the fixture and executed its exported test. Separately, Playwright’s trial click fails on the original and passes after the candidate CSS is injected. The candidate also passes the normal control, all 14 supplied cases and the reduced saved input: 16/16 checks. These results do not establish superiority over an ordinary Playwright assertion.</p><p><a href="replay-bundle.zip" download>Download the failing regression</a> · <a href="case.json">Saved input and recipe</a> · <a href="investigation.json">Independent verification details</a></p><h2>Reduced input</h2><pre>{
+  &quot;products&quot;: [
+    {
+      &quot;id&quot;: &quot;cart-primary&quot;,
+      &quot;name&quot;: &quot;Tea&quot;,
+      &quot;price&quot;: 1,
+      &quot;quantity&quot;: 2,
+      &quot;image&quot;: &quot;/fixtures/compat-app/product.svg&quot;
+    }
+  ],
+  &quot;viewportWidth&quot;: 640,
+  &quot;viewportHeight&quot;: 320
+}</pre><h2>Candidate CSS, for review</h2><p>The proposed change caps popup height to the available viewport and lets the item list scroll while the footer remains visible. It was injected only in verification pages; no vendored upstream file was changed.</p><pre>/* Investigation-only candidate. This does not modify the vendored upstream SCSS. */
+.cart-preview.active {
+  height: min(388px, calc(100dvh - 96px));
+  display: flex;
+  flex-direction: column;
+}
+.cart-preview.active .cart-items {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+}
+.cart-preview.active .action-block {
+  position: static;
+  flex: 0 0 auto;
+}
+</pre><p><a href="proposed-fix.css">Download candidate CSS</a></p><h2>Candidate verification</h2><div class="scroll"><table><thead><tr><th>Case</th><th>Viewport</th><th>Rule</th><th>Trial click</th></tr></thead><tbody><tr><td>Baseline</td><td>1000×900</td><td>passed</td><td>passed</td></tr><tr><td>Landscape phone viewport</td><td>640×320</td><td>passed</td><td>passed</td></tr><tr><td>Tall mobile viewport</td><td>390×844</td><td>passed</td><td>passed</td></tr><tr><td>Narrow phone viewport</td><td>320×600</td><td>passed</td><td>passed</td></tr><tr><td>Short desktop window</td><td>1000×280</td><td>passed</td><td>passed</td></tr><tr><td>Long valid product name</td><td>1000×900</td><td>passed</td><td>passed</td></tr><tr><td>Five cart products</td><td>1000×900</td><td>passed</td><td>passed</td></tr><tr><td>Seeded viewport 1</td><td>640×280</td><td>passed</td><td>passed</td></tr><tr><td>Seeded viewport 2</td><td>1000×900</td><td>passed</td><td>passed</td></tr><tr><td>Seeded viewport 3</td><td>390×390</td><td>passed</td><td>passed</td></tr><tr><td>Seeded viewport 4</td><td>640×600</td><td>passed</td><td>passed</td></tr><tr><td>Seeded viewport 5</td><td>320×390</td><td>passed</td><td>passed</td></tr><tr><td>Seeded viewport 6</td><td>390×390</td><td>passed</td><td>passed</td></tr><tr><td>Seeded viewport 7</td><td>1000×900</td><td>passed</td><td>passed</td></tr><tr><td>Seeded viewport 8</td><td>320×280</td><td>passed</td><td>passed</td></tr><tr><td>Reduced saved case</td><td>640×320</td><td>passed</td><td>passed</td></tr></tbody></table></div><p>Chromium 156.0.8078.4. Original source fingerprint: <code>872c2a6e131c303c54c55bb611616a1c2fbfa0073f54f3e70d5d0c137d7c8957</code>. Candidate CSS SHA256: <code>774c20e28b16599554f255a8766c16afa5509a40b89bd491e4fffd851f9b7aba</code>.</p></main></body></html>

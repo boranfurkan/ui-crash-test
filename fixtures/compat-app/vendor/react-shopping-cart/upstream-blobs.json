@@ -1,0 +1,13 @@
+{
+  "src/components/Product.jsx": "85288fd2ae353f2799475ca3546dcc831c50a3c7",
+  "src/contexts/cart.jsx": "eb58aa69e3cb404fde4f2bc95fff561c90116041",
+  "src/hooks/useLocalStorage.js": "1d6ed3cae109aaaa7fc2f09a5ca7c120ddb4e902",
+  "src/assets/scss/base/_variables.scss": "0b91c3776dfeeef70dff99265d3bcc6d8ca71d44",
+  "src/assets/scss/base/_reset.scss": "5b86c219f7fd6b679336062fe111f17411b5c0f4",
+  "src/assets/scss/components/_product.scss": "1628219f46cb0f7b152a044089c99abebdfbb3a9",
+  "LICENSE": "dfdb07476bfffac68805f50949ee8fb63a8c5c70",
+  "src/assets/scss/components/_header.scss": "ab356d1dfcb00972240a88d158ffe6ec9bf44aac",
+  "src/components/CartPreview.jsx": "88720e8f7c38232528e6198f81a224305e12472c",
+  "src/components/Header.jsx": "f4097eea94b53fdaf0f4278ceaadb478a8601536",
+  "src/contexts/common.jsx": "5628eb174dbae077a79abab48cf6606af98b7f40"
+}

@@ -1,0 +1,13 @@
+node_modules/
+lib/
+dist/
+!fixtures/todomvc/examples/vue/dist/
+!fixtures/todomvc/examples/vue/dist/**
+artifacts/
+test-results/
+.DS_Store
+.env
+.env.*
+!.env.example
+.npmrc
+AUTONOMOUS-WORK.md

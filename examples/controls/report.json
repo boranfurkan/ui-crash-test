@@ -1,0 +1,928 @@
+{
+  "schemaVersion": 1,
+  "id": "run-controls-1793668287145-c26e04",
+  "createdAt": "2026-11-03T01:11:30.159Z",
+  "browser": "156.0.8078.4",
+  "viewport": {
+    "width": 600,
+    "height": 400
+  },
+  "sourceHash": "cbf00daa9f928ed7d17398215ca4fcdc8945a81823932e1e66de0a8dba81b4cd",
+  "sources": [
+    {
+      "path": "src/core/action-rule.ts",
+      "sha256": "07c96e4b082bc83c14258e88d8dd06c101c95631ca5a3b634f1aad9cbf7caeaf"
+    },
+    {
+      "path": "src/controls/cases.ts",
+      "sha256": "7c88693ce19d75bc53b5ebd4a9a11306bc7e0ecdfad03fa4959a2f652ace7c02"
+    }
+  ],
+  "summary": {
+    "checked": 32,
+    "matched": 32,
+    "mismatched": 0,
+    "healthy": 10,
+    "defects": 6,
+    "uncertain": 14,
+    "limitations": 2
+  },
+  "results": [
+    {
+      "id": "normal",
+      "name": "Ordinary contained action",
+      "category": "healthy",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "A visible, enabled button is contained and unobstructed.",
+      "trialClick": true,
+      "screenshot": true,
+      "scroll": false
+    },
+    {
+      "id": "ellipsis",
+      "name": "Intentional text ellipsis",
+      "category": "healthy",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "Truncating unrelated content does not obstruct the action.",
+      "trialClick": true,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "decoration",
+      "name": "Intentional decoration over button",
+      "category": "healthy",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "A pointer-events:none decoration does not intercept the center hit.",
+      "trialClick": true,
+      "screenshot": true,
+      "scroll": false
+    },
+    {
+      "id": "child-hit",
+      "name": "Icon child receives the hit",
+      "category": "healthy",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "A hit on a descendant belongs to the button.",
+      "trialClick": true,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "transformed",
+      "name": "Translated containing component",
+      "category": "healthy",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 213,
+          "y": 128,
+          "width": 100,
+          "height": 36,
+          "right": 313,
+          "bottom": 164
+        },
+        "boundaryRect": {
+          "x": 72,
+          "y": 97,
+          "width": 260,
+          "height": 100,
+          "right": 332,
+          "bottom": 197
+        }
+      },
+      "matched": true,
+      "explanation": "Moving both region and target keeps containment.",
+      "trialClick": true,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "tolerance",
+      "name": "Subpixel edge tolerance",
+      "category": "healthy",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0.5,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 192.5,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 292.5,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "A 0.5px protrusion is within the declared 1px tolerance.",
+      "trialClick": true,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "horizontal-scroll",
+      "name": "Allowed horizontal scrolling",
+      "category": "healthy",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 183,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 283,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": -388,
+          "y": 77,
+          "width": 700,
+          "height": 100,
+          "right": 312,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "A wide row can be scrolled; the action is inside that declared wide row.",
+      "trialClick": true,
+      "screenshot": true,
+      "scroll": true
+    },
+    {
+      "id": "vertical-scroll",
+      "name": "Allowed nested vertical scrolling",
+      "category": "healthy",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 119,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 155
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": -452,
+          "width": 260,
+          "height": 700,
+          "right": 292,
+          "bottom": 248
+        }
+      },
+      "matched": true,
+      "explanation": "A tall declared region scrolls within its container before measurement.",
+      "trialClick": true,
+      "screenshot": false,
+      "scroll": true
+    },
+    {
+      "id": "portal",
+      "name": "Portal with the correct boundary",
+      "category": "healthy",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 125,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 161
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 94,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 194
+        }
+      },
+      "matched": true,
+      "explanation": "The target is measured within its actual portal region, outside the app shell.",
+      "trialClick": true,
+      "screenshot": true,
+      "scroll": false
+    },
+    {
+      "id": "aria-opt-in",
+      "name": "Descendant opts out of inherited ARIA disabled state",
+      "category": "healthy",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "The nearest explicit aria-disabled=false state is honored.",
+      "trialClick": true,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "outside",
+      "name": "Action outside its declared region",
+      "category": "defect",
+      "expected": "failed",
+      "finding": {
+        "status": "failed",
+        "signature": "control-action|[data-action]|[data-boundary]|outside-boundary",
+        "overflowPx": 61,
+        "contained": false,
+        "receivesEvents": true,
+        "reason": "The action extends 61px outside its declared region.",
+        "targetRect": {
+          "x": 253,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 353,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "The action extends 61px beyond the component edge.",
+      "trialClick": null,
+      "screenshot": true,
+      "scroll": false
+    },
+    {
+      "id": "overlay",
+      "name": "Pointer-blocking overlay",
+      "category": "defect",
+      "expected": "failed",
+      "finding": {
+        "status": "failed",
+        "signature": "control-action|[data-action]|[data-boundary]|pointer-blocked",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": false,
+        "reason": "Another element or a clipping region blocks the action at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "An opaque sibling covers the center of the button.",
+      "trialClick": null,
+      "screenshot": true,
+      "scroll": false
+    },
+    {
+      "id": "transparent-overlay",
+      "name": "Transparent intercepting overlay",
+      "category": "defect",
+      "expected": "failed",
+      "finding": {
+        "status": "failed",
+        "signature": "control-action|[data-action]|[data-boundary]|pointer-blocked",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": false,
+        "reason": "Another element or a clipping region blocks the action at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "Opacity does not determine whether an overlay captures pointer events.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "clip-center",
+      "name": "Ancestor clips the action center",
+      "category": "defect",
+      "expected": "failed",
+      "finding": {
+        "status": "failed",
+        "signature": "control-action|[data-action]|[data-boundary]|pointer-blocked",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": false,
+        "reason": "Another element or a clipping region blocks the action at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "The region contains the button, but an ancestor clips its center.",
+      "trialClick": null,
+      "screenshot": true,
+      "scroll": false
+    },
+    {
+      "id": "pointer-events",
+      "name": "Pointer events disabled on the action",
+      "category": "defect",
+      "expected": "failed",
+      "finding": {
+        "status": "failed",
+        "signature": "control-action|[data-action]|[data-boundary]|pointer-blocked",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": false,
+        "reason": "Another element or a clipping region blocks the action at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "An otherwise enabled visible action rejects pointer input.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "disabled",
+      "name": "Native disabled action",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "The declared action is disabled in this state."
+      },
+      "matched": true,
+      "explanation": "A disabled action is outside the enabled-action experiment.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "disabled-fieldset",
+      "name": "Disabled through a fieldset",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "The declared action is disabled in this state."
+      },
+      "matched": true,
+      "explanation": "Native disabled inheritance is honored.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "aria-disabled",
+      "name": "ARIA-disabled action",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "The declared action is disabled in this state."
+      },
+      "matched": true,
+      "explanation": "Explicit ARIA disabled state is not a geometry failure.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "aria-disabled-ancestor",
+      "name": "ARIA-disabled ancestor",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "The declared action is inside an inert or aria-disabled region."
+      },
+      "matched": true,
+      "explanation": "Inherited disabled state does not masquerade as an enabled-action defect.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "inert",
+      "name": "Inert application region",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "The declared action is inside an inert or aria-disabled region."
+      },
+      "matched": true,
+      "explanation": "A target in an inert region is not interactive in this state.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "hidden",
+      "name": "Hidden action",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "The declared action is not rendered visibly."
+      },
+      "matched": true,
+      "explanation": "A hidden action does not establish a layout defect.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "transparent-parent",
+      "name": "Fully transparent ancestor",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "An ancestor makes the declared action fully transparent."
+      },
+      "matched": true,
+      "explanation": "The action has a box and hit target but is not visibly rendered.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "collapsed",
+      "name": "Collapsed action",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "The declared action is not rendered visibly."
+      },
+      "matched": true,
+      "explanation": "A zero-size target cannot be meaningfully evaluated.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "missing",
+      "name": "Missing target",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "Expected one target and one boundary; found 0 and 1."
+      },
+      "matched": true,
+      "explanation": "A missing locator is adapter uncertainty.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "duplicate",
+      "name": "Ambiguous target",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "Expected one target and one boundary; found 2 and 1."
+      },
+      "matched": true,
+      "explanation": "Two matching targets cannot identify one action.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "duplicate-boundary",
+      "name": "Ambiguous boundary",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "Expected one target and one boundary; found 1 and 2."
+      },
+      "matched": true,
+      "explanation": "Two matching regions do not establish one component boundary.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "portal-wrong-boundary",
+      "name": "Portal with an app-shell boundary",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "The declared boundary does not contain the target."
+      },
+      "matched": true,
+      "explanation": "The locator points at a shell that does not contain the portalled action.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "offscreen",
+      "name": "Unscrolled off-screen action",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[data-action]|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": false,
+        "reason": "The action center is outside the viewport. Declare permitted scrolling before measuring."
+      },
+      "matched": true,
+      "explanation": "A contained off-screen center requires an explicit scrolling policy.",
+      "trialClick": null,
+      "screenshot": true,
+      "scroll": false
+    },
+    {
+      "id": "required-viewport",
+      "name": "Explicit viewport requirement violated",
+      "category": "defect",
+      "expected": "failed",
+      "finding": {
+        "status": "failed",
+        "signature": "control-action|[data-action]|[data-boundary]|outside-viewport",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": false,
+        "reason": "The action center is outside the viewport despite the declared viewport requirement.",
+        "targetRect": {
+          "x": 173,
+          "y": 731,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 767
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 700,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 800
+        }
+      },
+      "matched": true,
+      "explanation": "A fixed action must have its center in the viewport when that is an explicit component requirement.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "invalid-selector",
+      "name": "Invalid CSS selector",
+      "category": "uncertain",
+      "expected": "inconclusive",
+      "finding": {
+        "status": "inconclusive",
+        "signature": "control-action|[|[data-boundary]|inconclusive",
+        "overflowPx": 0,
+        "contained": false,
+        "receivesEvents": false,
+        "reason": "A declared target or boundary selector is invalid."
+      },
+      "matched": true,
+      "explanation": "A selector syntax error is adapter uncertainty.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    },
+    {
+      "id": "partial-clip",
+      "name": "Partial clipping away from center",
+      "category": "limitation",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "Known scope limit: the center remains available although the right edge is clipped. This rule does not establish full hitbox visibility.",
+      "trialClick": null,
+      "screenshot": true,
+      "scroll": false
+    },
+    {
+      "id": "corner-overlay",
+      "name": "Overlay covers only a corner",
+      "category": "limitation",
+      "expected": "passed",
+      "finding": {
+        "status": "passed",
+        "signature": "control-action|[data-action]|[data-boundary]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 173,
+          "y": 108,
+          "width": 100,
+          "height": 36,
+          "right": 273,
+          "bottom": 144
+        },
+        "boundaryRect": {
+          "x": 32,
+          "y": 77,
+          "width": 260,
+          "height": 100,
+          "right": 292,
+          "bottom": 177
+        }
+      },
+      "matched": true,
+      "explanation": "Known scope limit: an obstruction away from the center is not detected.",
+      "trialClick": null,
+      "screenshot": false,
+      "scroll": false
+    }
+  ]
+}

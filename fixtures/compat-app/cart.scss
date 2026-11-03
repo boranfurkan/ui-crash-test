@@ -1,0 +1,7 @@
+@import './vendor/react-shopping-cart/src/assets/scss/base/variables';
+@import './vendor/react-shopping-cart/src/assets/scss/base/reset';
+@import './vendor/react-shopping-cart/src/assets/scss/components/header';
+
+// Context below the unchanged fixed upstream header.
+.cart-fixture-note { margin: 140px auto 40px; max-width: 760px; padding: 24px; font: 14px/1.6 system-ui, sans-serif; }
+.cart-fixture-note h1 { font-size: 22px; margin-bottom: 12px; }

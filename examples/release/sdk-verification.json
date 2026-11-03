@@ -1,0 +1,44 @@
+{
+  "createdAt": "2026-11-03T04:56:56.229Z",
+  "version": "0.2.0-rc.1",
+  "isolatedInstall": true,
+  "consumerPackageType": "No type field; TypeScript config loading verified.",
+  "cli": {
+    "binInstalled": true,
+    "help": true,
+    "version": true,
+    "init": true,
+    "preservesExistingConfig": true,
+    "passingExit": 0,
+    "failureExit": 1,
+    "setupErrorExit": 2
+  },
+  "libraryImport": true,
+  "explicitApplicationRoot": true,
+  "externalOutputDirectory": true,
+  "verificationLinkRemoved": true,
+  "compiledReplayVerified": true,
+  "compiledRuleMatchesRuntime": true,
+  "normal": {
+    "checked": 1,
+    "failed": 0,
+    "passed": 1,
+    "inconclusive": 0,
+    "valid": 1
+  },
+  "confirmed": {
+    "checked": 1,
+    "failed": 1,
+    "passed": 0,
+    "inconclusive": 0,
+    "valid": 1
+  },
+  "packageDependencies": {
+    "fflate": "0.8.3",
+    "tsx": "4.23.15"
+  },
+  "peerDependencies": {
+    "@playwright/test": "1.64.1"
+  },
+  "private": true
+}

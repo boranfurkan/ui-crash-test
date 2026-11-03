@@ -1,0 +1,703 @@
+{
+  "schemaVersion": 2,
+  "id": "run-todomvc-vue-1793688438173-261477",
+  "createdAt": "2026-11-03T06:47:18.539Z",
+  "seed": 42,
+  "durationMs": 3644,
+  "appURL": "http://127.0.0.1:4173",
+  "scenario": {
+    "id": "todomvc-vue",
+    "name": "TodoMVC · complete Vue app",
+    "description": "Enter tasks through the unchanged app’s real form, then hover the first row. Its delete action must remain inside the row and receive a pointer hit. This is the maintained upstream framework example, not a production application.",
+    "provenance": {
+      "kind": "complete-upstream-application",
+      "repository": "https://github.com/tastejs/todomvc",
+      "commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+      "revisionDate": "2026-05-03",
+      "license": "MIT",
+      "maintenanceEvidence": {
+        "readme": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/readme.md",
+        "lastRelevantRefresh": "2026-05-03",
+        "repositoryArchived": false
+      },
+      "adaptation": "Complete upstream prebuilt Vue example served byte-for-byte, including its original HTML, CSS, Vue runtime and auxiliary metadata. No application source, wrappers or styles are changed. Synthetic tasks enter via the native form. Hover is a declared desktop interaction. This is an official maintained example, not a production product or independent developer study."
+    }
+  },
+  "environment": {
+    "browser": "156.0.8078.4",
+    "node": "v24.21.0",
+    "sourceHash": "6386e6fafcaf8dd6cef21c82bc23319036afe9e9e86af365ec80865abce00614",
+    "sources": [
+      {
+        "path": "fixtures/todomvc/examples/vue/dist/assets/index-CO9Gq1IP.js",
+        "sha256": "a3369f75571a321455ce646feb7c242e559b57df21fe1a6d60a32a0064ae6d64"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/dist/assets/index-bgjkvPzV.css",
+        "sha256": "0b471946c750dd088f0f535ac38548d353065992e8f7f88e993ccab97f7da556"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/dist/base.js",
+        "sha256": "84090789021f5f8206800503e18adbc38b5fddbfb0a84bfe36e86e683da60c20"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/dist/favicon.ico",
+        "sha256": "db74ab0b78338c1f778f8398c45f4103c99aea0e845a3118a7750b4eeafd3445"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/dist/index.html",
+        "sha256": "8d2fb97cb255c5bd26f19214a4c8992ed87c60592a19645a3dcdbba2790da697"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/package.json",
+        "sha256": "698c54f9663447efbdd30249dd2d3406fc63c3e2955b8ffd707355ae889ae24c"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/src/components/TodoFooter.vue",
+        "sha256": "b31a46ea4a096bf61cf9463f30f3550bcd23a870f61f8f3b91f27b1318d493ae"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/src/components/TodoHeader.vue",
+        "sha256": "fb7e520ca7afcbfad015c8bf60d3a0bc7f12494dd754299b02e19ff3e59c0482"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/src/components/TodoItem.vue",
+        "sha256": "fc80ba57eaa344b7e0300dc1154b1ccfa14568f794560e6e3fcd04c9f606e866"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/src/components/TodosComponent.vue",
+        "sha256": "d793971fe34269c89988ec0e9f73248c924ed85ebd3518ba03cb9bb6644992cd"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/src/main.js",
+        "sha256": "9070b5dc191079fe7d5a177131cc8d21999d45243c470d04be84db01cee3c7f5"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/src/router/index.js",
+        "sha256": "c55da627be34e66aea79ce554b5a256a699d432c7cb893e17b182a6c304d7498"
+      },
+      {
+        "path": "fixtures/todomvc/examples/vue/vite.config.js",
+        "sha256": "f005dfc7919b52154f357be781fc1fb1ae028f9ace52143f35f83478aff800d1"
+      },
+      {
+        "path": "fixtures/todomvc/learn.json",
+        "sha256": "47192f5d6f87d5a2025ff26ea00ac9040e1092144e0431185e92c417a3e4f439"
+      },
+      {
+        "path": "fixtures/todomvc/license.md",
+        "sha256": "32238c5c6759b589ea768661b6eb0fcb42449b74d57cdf09928743f2e1eb748d"
+      },
+      {
+        "path": "fixtures/todomvc/provenance.json",
+        "sha256": "5ddcb76a81428f7886f8da88a771d8ffbab21924d4a38d306a3945e173c68c35"
+      },
+      {
+        "path": "fixtures/todomvc/readme.md",
+        "sha256": "c9db37c6a64766fe253b7a62160b92a8a96bc7cf975af6538f6d605f36ce100e"
+      },
+      {
+        "path": "scenarios/todomvc-vue.ts",
+        "sha256": "71f3bf6dc17a2e5f073c3976989f8bca535ef893a82e6c84d9ec13b0d0a78219"
+      },
+      {
+        "path": "src/server/subjects.ts",
+        "sha256": "9446908c87b32eb96763a7ceb36267d01175650ffeefc76df3297dc6427f8c62"
+      },
+      {
+        "path": "engine/scenario/config.ts",
+        "sha256": "a084ea0349a6a334d4e4c933ac88f6b2e76e147d9ffa3544ab1607a46dd604c4"
+      },
+      {
+        "path": "engine/scenario/renderer.ts",
+        "sha256": "5c3e0e836762a5b8dce85ac827b4a5a77811c721bb368361600684a1d43f9a99"
+      },
+      {
+        "path": "engine/scenario/replay.ts",
+        "sha256": "3d4ec70f9d57fca4c1c5b7dbab98e83a06111c3a07370c4830295391db3a74c2"
+      },
+      {
+        "path": "engine/scenario/reduce.ts",
+        "sha256": "a1d04ba3bd1792718565a1bd45c5b9c76a0e348e64e20c2e2daf3b8e801a7475"
+      },
+      {
+        "path": "engine/scenario/run.ts",
+        "sha256": "f876736887775fd55a7a67972c75ae78df3fdc7bef4ebdb157d89ad411609615"
+      },
+      {
+        "path": "engine/scenario/export.ts",
+        "sha256": "1695e343c62b024b0c92b54c8894eca34fd537941bad3a6483be6b08f6c0eaa7"
+      },
+      {
+        "path": "engine/scenario/runtime.ts",
+        "sha256": "d458e7e3ee0c7385021c24fa56afc4054a2ba473c286f083768df7666cdfadf1"
+      },
+      {
+        "path": "engine/core/regression.ts",
+        "sha256": "7a12c9551e41dbb63bebb505e54cea9b0e9d1a7db6c420bf929f23737324cc67"
+      },
+      {
+        "path": "engine/core/action-rule.ts",
+        "sha256": "07c96e4b082bc83c14258e88d8dd06c101c95631ca5a3b634f1aad9cbf7caeaf"
+      }
+    ]
+  },
+  "outcome": "no-failure",
+  "baseline": {
+    "input": {
+      "titles": [
+        "Review the pull request",
+        "Write release notes",
+        "Update the documentation"
+      ],
+      "viewportWidth": 1000,
+      "viewportHeight": 900
+    },
+    "finding": {
+      "status": "passed",
+      "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+      "overflowPx": 0,
+      "contained": true,
+      "receivesEvents": true,
+      "reason": "The action is inside its declared region and receives pointer events at its center.",
+      "targetRect": {
+        "x": 875,
+        "y": 205.390625,
+        "width": 40,
+        "height": 40,
+        "right": 915,
+        "bottom": 245.390625
+      },
+      "boundaryRect": {
+        "x": 375,
+        "y": 196,
+        "width": 550,
+        "height": 59.796875,
+        "right": 925,
+        "bottom": 255.796875
+      }
+    }
+  },
+  "discovery": [
+    {
+      "name": "Long realistic task",
+      "origin": "curated",
+      "input": {
+        "titles": [
+          "Investigate the international customer onboarding experience and prepare the accessibility review before the next release",
+          "Write release notes"
+        ],
+        "viewportWidth": 1000,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 875,
+          "y": 234.1875,
+          "width": 40,
+          "height": 40,
+          "right": 915,
+          "bottom": 274.1875
+        },
+        "boundaryRect": {
+          "x": 375,
+          "y": 196,
+          "width": 550,
+          "height": 117.390625,
+          "right": 925,
+          "bottom": 313.390625
+        }
+      }
+    },
+    {
+      "name": "Narrow mobile viewport",
+      "origin": "curated",
+      "input": {
+        "titles": [
+          "Review the pull request",
+          "Write release notes",
+          "Update the documentation"
+        ],
+        "viewportWidth": 320,
+        "viewportHeight": 600
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 270,
+          "y": 219.796875,
+          "width": 40,
+          "height": 40,
+          "right": 310,
+          "bottom": 259.796875
+        },
+        "boundaryRect": {
+          "x": 0,
+          "y": 196,
+          "width": 320,
+          "height": 88.59375,
+          "right": 320,
+          "bottom": 284.59375
+        }
+      }
+    },
+    {
+      "name": "Landscape phone viewport",
+      "origin": "curated",
+      "input": {
+        "titles": [
+          "Review the pull request",
+          "Write release notes",
+          "Update the documentation"
+        ],
+        "viewportWidth": 640,
+        "viewportHeight": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 545,
+          "y": 205.390625,
+          "width": 40,
+          "height": 40,
+          "right": 585,
+          "bottom": 245.390625
+        },
+        "boundaryRect": {
+          "x": 45,
+          "y": 196,
+          "width": 550,
+          "height": 59.796875,
+          "right": 595,
+          "bottom": 255.796875
+        }
+      }
+    },
+    {
+      "name": "Unbroken task title",
+      "origin": "curated",
+      "input": {
+        "titles": [
+          "InternationalCustomerOnboardingAccessibilityAndRegionalShippingConfigurationInternationalCustomerOnboardingAccessibilityAndRegionalShippingConfiguration"
+        ],
+        "viewportWidth": 360,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 310,
+          "y": 291.78125,
+          "width": 40,
+          "height": 40,
+          "right": 350,
+          "bottom": 331.78125
+        },
+        "boundaryRect": {
+          "x": 0,
+          "y": 196,
+          "width": 360,
+          "height": 231.578125,
+          "right": 360,
+          "bottom": 427.578125
+        }
+      }
+    },
+    {
+      "name": "Unicode and right-to-left content",
+      "origin": "curated",
+      "input": {
+        "titles": [
+          "国際配送の確認 — مراجعة الطلب — Україна"
+        ],
+        "viewportWidth": 390,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 340,
+          "y": 219.796875,
+          "width": 40,
+          "height": 40,
+          "right": 380,
+          "bottom": 259.796875
+        },
+        "boundaryRect": {
+          "x": 0,
+          "y": 196,
+          "width": 390,
+          "height": 87.59375,
+          "right": 390,
+          "bottom": 283.59375
+        }
+      }
+    },
+    {
+      "name": "Five tasks and a tall first row",
+      "origin": "curated",
+      "input": {
+        "titles": [
+          "Investigate the international customer onboarding experience and prepare the accessibility review before the next release",
+          "Review pull request",
+          "Update documentation",
+          "Run regression checks",
+          "Publish release notes"
+        ],
+        "viewportWidth": 320,
+        "viewportHeight": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 270,
+          "y": 182.78125,
+          "width": 40,
+          "height": 40,
+          "right": 310,
+          "bottom": 222.78125
+        },
+        "boundaryRect": {
+          "x": 0,
+          "y": 87,
+          "width": 320,
+          "height": 232.578125,
+          "right": 320,
+          "bottom": 319.578125
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 1",
+      "origin": "generated",
+      "input": {
+        "titles": [
+          "Investigate the international customer onboarding experience and prepare the accessibility review before the next release",
+          "Write release notes"
+        ],
+        "viewportWidth": 640,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 545,
+          "y": 234.1875,
+          "width": 40,
+          "height": 40,
+          "right": 585,
+          "bottom": 274.1875
+        },
+        "boundaryRect": {
+          "x": 45,
+          "y": 196,
+          "width": 550,
+          "height": 117.390625,
+          "right": 595,
+          "bottom": 313.390625
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 2",
+      "origin": "generated",
+      "input": {
+        "titles": [
+          "国際配送の確認 — مراجعة الطلب"
+        ],
+        "viewportWidth": 640,
+        "viewportHeight": 600
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 545,
+          "y": 205.390625,
+          "width": 40,
+          "height": 40,
+          "right": 585,
+          "bottom": 245.390625
+        },
+        "boundaryRect": {
+          "x": 45,
+          "y": 196,
+          "width": 550,
+          "height": 58.796875,
+          "right": 595,
+          "bottom": 254.796875
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 3",
+      "origin": "generated",
+      "input": {
+        "titles": [
+          "Investigate the international customer onboarding experience and prepare the accessibility review before the next release",
+          "Write release notes"
+        ],
+        "viewportWidth": 320,
+        "viewportHeight": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 270,
+          "y": 182.78125,
+          "width": 40,
+          "height": 40,
+          "right": 310,
+          "bottom": 222.78125
+        },
+        "boundaryRect": {
+          "x": 0,
+          "y": 87,
+          "width": 320,
+          "height": 232.578125,
+          "right": 320,
+          "bottom": 319.578125
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 4",
+      "origin": "generated",
+      "input": {
+        "titles": [
+          "Review the pull request"
+        ],
+        "viewportWidth": 640,
+        "viewportHeight": 600
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 545,
+          "y": 205.390625,
+          "width": 40,
+          "height": 40,
+          "right": 585,
+          "bottom": 245.390625
+        },
+        "boundaryRect": {
+          "x": 45,
+          "y": 196,
+          "width": 550,
+          "height": 58.796875,
+          "right": 595,
+          "bottom": 254.796875
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 5",
+      "origin": "generated",
+      "input": {
+        "titles": [
+          "Investigate the international customer onboarding experience and prepare the accessibility review before the next release",
+          "Write release notes"
+        ],
+        "viewportWidth": 390,
+        "viewportHeight": 600
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 340,
+          "y": 262.984375,
+          "width": 40,
+          "height": 40,
+          "right": 380,
+          "bottom": 302.984375
+        },
+        "boundaryRect": {
+          "x": 0,
+          "y": 196,
+          "width": 390,
+          "height": 174.984375,
+          "right": 390,
+          "bottom": 370.984375
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 6",
+      "origin": "generated",
+      "input": {
+        "titles": [
+          "Investigate the international customer onboarding experience and prepare the accessibility review before the next release",
+          "Write release notes"
+        ],
+        "viewportWidth": 320,
+        "viewportHeight": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 270,
+          "y": 182.78125,
+          "width": 40,
+          "height": 40,
+          "right": 310,
+          "bottom": 222.78125
+        },
+        "boundaryRect": {
+          "x": 0,
+          "y": 87,
+          "width": 320,
+          "height": 232.578125,
+          "right": 320,
+          "bottom": 319.578125
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 7",
+      "origin": "generated",
+      "input": {
+        "titles": [
+          "Review the pull request"
+        ],
+        "viewportWidth": 640,
+        "viewportHeight": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 545,
+          "y": 205.390625,
+          "width": 40,
+          "height": 40,
+          "right": 585,
+          "bottom": 245.390625
+        },
+        "boundaryRect": {
+          "x": 45,
+          "y": 196,
+          "width": 550,
+          "height": 58.796875,
+          "right": 595,
+          "bottom": 254.796875
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 8",
+      "origin": "generated",
+      "input": {
+        "titles": [
+          "Investigate the international customer onboarding experience and prepare the accessibility review before the next release",
+          "Write release notes"
+        ],
+        "viewportWidth": 320,
+        "viewportHeight": 600
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "todo-delete-reachable|.todo-list > li:first-child .destroy|.todo-list > li:first-child|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 270,
+          "y": 291.78125,
+          "width": 40,
+          "height": 40,
+          "right": 310,
+          "bottom": 331.78125
+        },
+        "boundaryRect": {
+          "x": 0,
+          "y": 196,
+          "width": 320,
+          "height": 232.578125,
+          "right": 320,
+          "bottom": 428.578125
+        }
+      }
+    }
+  ],
+  "summary": {
+    "checked": 14,
+    "failed": 0,
+    "passed": 14,
+    "inconclusive": 0,
+    "valid": 14
+  },
+  "original": null,
+  "reduced": null,
+  "reduction": null,
+  "confirmation": null,
+  "regression": null,
+  "screenshots": [
+    "baseline.png",
+    "sample.png"
+  ]
+}

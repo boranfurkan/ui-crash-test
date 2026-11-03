@@ -1,0 +1,789 @@
+{
+  "schemaVersion": 2,
+  "id": "run-dialog-1793670226200-8c4499",
+  "createdAt": "2026-11-03T01:43:46.638Z",
+  "seed": 42,
+  "durationMs": 4383,
+  "appURL": "http://127.0.0.1:4173",
+  "scenario": {
+    "id": "dialog",
+    "name": "Radix · dialog",
+    "description": "After opening and explicitly scrolling, the close action must be contained and receive pointer events. Tests an actual portal with constrained height.",
+    "provenance": {
+      "kind": "library-component-harness",
+      "package": "@radix-ui/themes",
+      "version": "3.3.0",
+      "repository": "https://github.com/radix-ui/themes",
+      "adaptation": "Local title, description and close-button composition using the unmodified library and its stylesheet."
+    }
+  },
+  "environment": {
+    "browser": "156.0.8078.4",
+    "node": "v24.21.0",
+    "sourceHash": "4fc04ca82d01d6b589c983786bf127d32615cd386a1d0e1459b7b624eb066aa0",
+    "sources": [
+      {
+        "path": "fixtures/compat-app/main.tsx",
+        "sha256": "d168ef59b9377ce4effd38075661adeda895351a622becbd6127671da227771c"
+      },
+      {
+        "path": "package-lock.json",
+        "sha256": "5181122fb5394025d8a605270c388fc636a33db9afa5ee81ad1cd260639925a2"
+      },
+      {
+        "path": "scenarios/compat.ts",
+        "sha256": "1f0947843f8bd40a4f10737a681dde4f7eb38d0b11dde46c6e37d02ff9eb2bed"
+      },
+      {
+        "path": "src/core/action-rule.ts",
+        "sha256": "07c96e4b082bc83c14258e88d8dd06c101c95631ca5a3b634f1aad9cbf7caeaf"
+      },
+      {
+        "path": "src/core/regression.ts",
+        "sha256": "da91bb5b91ffac56cfe987f9ff3bfba1eba489141a91c596e48d1b8adf00d6c6"
+      },
+      {
+        "path": "src/scenario/config.ts",
+        "sha256": "425478e0249b3cba8d48462e651605eccd0206514cc9a2111ca2c2fb3e494c70"
+      },
+      {
+        "path": "src/scenario/export.ts",
+        "sha256": "ac25e72a925f28737b7c3182a38205c78918f1f46971d36c9ccdcf71f25ec6df"
+      },
+      {
+        "path": "src/scenario/reduce.ts",
+        "sha256": "a1d04ba3bd1792718565a1bd45c5b9c76a0e348e64e20c2e2daf3b8e801a7475"
+      },
+      {
+        "path": "src/scenario/renderer.ts",
+        "sha256": "5c3e0e836762a5b8dce85ac827b4a5a77811c721bb368361600684a1d43f9a99"
+      },
+      {
+        "path": "src/scenario/replay.ts",
+        "sha256": "3d4ec70f9d57fca4c1c5b7dbab98e83a06111c3a07370c4830295391db3a74c2"
+      },
+      {
+        "path": "src/scenario/run.ts",
+        "sha256": "e7e1b2aa9b39341c4aaecc8da0b8a2bc079934077be999bdb821d537537d7af3"
+      }
+    ]
+  },
+  "outcome": "no-failure",
+  "baseline": {
+    "input": {
+      "title": "Fresh broccoli",
+      "description": "Review the product details before continuing.",
+      "price": 120,
+      "rows": [
+        {
+          "id": "record-primary",
+          "name": "Maya Chen",
+          "email": "maya@example.com"
+        },
+        {
+          "id": "record-secondary",
+          "name": "Sam Miller",
+          "email": "sam@example.com"
+        }
+      ],
+      "viewportWidth": 1000,
+      "viewportHeight": 900
+    },
+    "finding": {
+      "status": "passed",
+      "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+      "overflowPx": 0,
+      "contained": true,
+      "receivesEvents": true,
+      "reason": "The action is inside its declared region and receives pointer events at its center.",
+      "targetRect": {
+        "x": 592.140625,
+        "y": 457.703125,
+        "width": 108.859375,
+        "height": 32,
+        "right": 701,
+        "bottom": 489.703125
+      },
+      "boundaryRect": {
+        "x": 275,
+        "y": 364.296875,
+        "width": 450,
+        "height": 149.40625,
+        "right": 725,
+        "bottom": 513.703125
+      }
+    }
+  },
+  "discovery": [
+    {
+      "name": "Long product and record names",
+      "origin": "curated",
+      "input": {
+        "title": "Alexandria Konstantinopoulou-Wiśniewska",
+        "description": "Review the product details before continuing.",
+        "price": 120,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Alexandria Konstantinopoulou-Wiśniewska",
+            "email": "alexandria.konstantinopoulou@design.example.com"
+          }
+        ],
+        "viewportWidth": 1000,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 592.140625,
+          "y": 457.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 701,
+          "bottom": 489.703125
+        },
+        "boundaryRect": {
+          "x": 275,
+          "y": 364.296875,
+          "width": 450,
+          "height": 149.40625,
+          "right": 725,
+          "bottom": 513.703125
+        }
+      }
+    },
+    {
+      "name": "Narrow mobile viewport",
+      "origin": "curated",
+      "input": {
+        "title": "Fresh broccoli",
+        "description": "Review the product details before continuing.",
+        "price": 120,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Maya Chen",
+            "email": "maya@example.com"
+          },
+          {
+            "id": "record-secondary",
+            "name": "Sam Miller",
+            "email": "sam@example.com"
+          }
+        ],
+        "viewportWidth": 320,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 171.140625,
+          "y": 467.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 280,
+          "bottom": 499.703125
+        },
+        "boundaryRect": {
+          "x": 16,
+          "y": 354.296875,
+          "width": 288,
+          "height": 169.40625,
+          "right": 304,
+          "bottom": 523.703125
+        }
+      }
+    },
+    {
+      "name": "Constrained height with long description",
+      "origin": "curated",
+      "input": {
+        "title": "Fresh broccoli",
+        "description": "Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. ",
+        "price": 120,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Maya Chen",
+            "email": "maya@example.com"
+          },
+          {
+            "id": "record-secondary",
+            "name": "Sam Miller",
+            "email": "sam@example.com"
+          }
+        ],
+        "viewportWidth": 390,
+        "viewportHeight": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 241.140625,
+          "y": 232.40625,
+          "width": 108.859375,
+          "height": 32,
+          "right": 350,
+          "bottom": 264.40625
+        },
+        "boundaryRect": {
+          "x": 16,
+          "y": -3441,
+          "width": 358,
+          "height": 3729.40625,
+          "right": 374,
+          "bottom": 288.40625
+        }
+      }
+    },
+    {
+      "name": "Unbroken valid content",
+      "origin": "curated",
+      "input": {
+        "title": "InternationalProductCollectionWithExtendedAvailabilityAndShippingOptions",
+        "description": "Review the product details before continuing.",
+        "price": 120,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "InternationalCustomerAccountWithoutSpaces",
+            "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com"
+          }
+        ],
+        "viewportWidth": 360,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 251.140625,
+          "y": 470.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 360,
+          "bottom": 502.703125
+        },
+        "boundaryRect": {
+          "x": -66,
+          "y": 351.296875,
+          "width": 450,
+          "height": 175.40625,
+          "right": 384,
+          "bottom": 526.703125
+        }
+      }
+    },
+    {
+      "name": "Unicode content",
+      "origin": "curated",
+      "input": {
+        "title": "国際配送と製品情報 — العربية — Україна",
+        "description": "Review the product details before continuing.",
+        "price": 120,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "王小明 — Александра",
+            "email": "international@example.com"
+          }
+        ],
+        "viewportWidth": 390,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 241.140625,
+          "y": 470.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 350,
+          "bottom": 502.703125
+        },
+        "boundaryRect": {
+          "x": 16,
+          "y": 351.296875,
+          "width": 358,
+          "height": 175.40625,
+          "right": 374,
+          "bottom": 526.703125
+        }
+      }
+    },
+    {
+      "name": "Five table records",
+      "origin": "curated",
+      "input": {
+        "title": "Fresh broccoli",
+        "description": "Review the product details before continuing.",
+        "price": 120,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Alexandria Konstantinopoulou-Wiśniewska",
+            "email": "customer-0@example.com"
+          },
+          {
+            "id": "record-1",
+            "name": "Sam Miller",
+            "email": "customer-1@example.com"
+          },
+          {
+            "id": "record-2",
+            "name": "Sam Miller",
+            "email": "customer-2@example.com"
+          },
+          {
+            "id": "record-3",
+            "name": "Sam Miller",
+            "email": "customer-3@example.com"
+          },
+          {
+            "id": "record-4",
+            "name": "Sam Miller",
+            "email": "customer-4@example.com"
+          }
+        ],
+        "viewportWidth": 1000,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 592.140625,
+          "y": 457.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 701,
+          "bottom": 489.703125
+        },
+        "boundaryRect": {
+          "x": 275,
+          "y": 364.296875,
+          "width": 450,
+          "height": 149.40625,
+          "right": 725,
+          "bottom": 513.703125
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 1",
+      "origin": "generated",
+      "input": {
+        "title": "Alexandria Konstantinopoulou-Wiśniewska",
+        "description": "Review the details.",
+        "price": 12,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Maya Chen",
+            "email": "maya@example.com"
+          },
+          {
+            "id": "record-secondary",
+            "name": "Sam Miller",
+            "email": "sam@example.com"
+          }
+        ],
+        "viewportWidth": 320,
+        "viewportHeight": 600
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 171.140625,
+          "y": 342.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 280,
+          "bottom": 374.703125
+        },
+        "boundaryRect": {
+          "x": 16,
+          "y": 197.296875,
+          "width": 288,
+          "height": 201.40625,
+          "right": 304,
+          "bottom": 398.703125
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 2",
+      "origin": "generated",
+      "input": {
+        "title": "国際配送の製品情報",
+        "description": "Review the details.",
+        "price": 71969,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Maya Chen",
+            "email": "maya@example.com"
+          },
+          {
+            "id": "record-secondary",
+            "name": "Sam Miller",
+            "email": "sam@example.com"
+          }
+        ],
+        "viewportWidth": 768,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 476.140625,
+          "y": 457.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 585,
+          "bottom": 489.703125
+        },
+        "boundaryRect": {
+          "x": 159,
+          "y": 364.296875,
+          "width": 450,
+          "height": 149.40625,
+          "right": 609,
+          "bottom": 513.703125
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 3",
+      "origin": "generated",
+      "input": {
+        "title": "Alexandria Konstantinopoulou-Wiśniewska",
+        "description": "Review the details.",
+        "price": 68765,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Maya Chen",
+            "email": "maya@example.com"
+          },
+          {
+            "id": "record-secondary",
+            "name": "Sam Miller",
+            "email": "sam@example.com"
+          }
+        ],
+        "viewportWidth": 768,
+        "viewportHeight": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 476.140625,
+          "y": 178.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 585,
+          "bottom": 210.703125
+        },
+        "boundaryRect": {
+          "x": 159,
+          "y": 85.296875,
+          "width": 450,
+          "height": 149.40625,
+          "right": 609,
+          "bottom": 234.703125
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 4",
+      "origin": "generated",
+      "input": {
+        "title": "Fresh broccoli",
+        "description": "Review the details.",
+        "price": 4123,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Maya Chen",
+            "email": "maya@example.com"
+          },
+          {
+            "id": "record-secondary",
+            "name": "Sam Miller",
+            "email": "sam@example.com"
+          }
+        ],
+        "viewportWidth": 768,
+        "viewportHeight": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 476.140625,
+          "y": 178.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 585,
+          "bottom": 210.703125
+        },
+        "boundaryRect": {
+          "x": 159,
+          "y": 85.296875,
+          "width": 450,
+          "height": 149.40625,
+          "right": 609,
+          "bottom": 234.703125
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 5",
+      "origin": "generated",
+      "input": {
+        "title": "Alexandria Konstantinopoulou-Wiśniewska",
+        "description": "Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. Shipping details and product information. ",
+        "price": 42466,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Maya Chen",
+            "email": "maya@example.com"
+          },
+          {
+            "id": "record-secondary",
+            "name": "Sam Miller",
+            "email": "sam@example.com"
+          }
+        ],
+        "viewportWidth": 768,
+        "viewportHeight": 600
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 476.140625,
+          "y": 508.40625,
+          "width": 108.859375,
+          "height": 32,
+          "right": 585,
+          "bottom": 540.40625
+        },
+        "boundaryRect": {
+          "x": 159,
+          "y": -2265,
+          "width": 450,
+          "height": 2829.40625,
+          "right": 609,
+          "bottom": 564.40625
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 6",
+      "origin": "generated",
+      "input": {
+        "title": "Alexandria Konstantinopoulou-Wiśniewska",
+        "description": "Review the details.",
+        "price": 71605,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Maya Chen",
+            "email": "maya@example.com"
+          },
+          {
+            "id": "record-secondary",
+            "name": "Sam Miller",
+            "email": "sam@example.com"
+          }
+        ],
+        "viewportWidth": 768,
+        "viewportHeight": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 476.140625,
+          "y": 178.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 585,
+          "bottom": 210.703125
+        },
+        "boundaryRect": {
+          "x": 159,
+          "y": 85.296875,
+          "width": 450,
+          "height": 149.40625,
+          "right": 609,
+          "bottom": 234.703125
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 7",
+      "origin": "generated",
+      "input": {
+        "title": "Fresh broccoli",
+        "description": "Review the details.",
+        "price": 83327,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Maya Chen",
+            "email": "maya@example.com"
+          },
+          {
+            "id": "record-secondary",
+            "name": "Sam Miller",
+            "email": "sam@example.com"
+          }
+        ],
+        "viewportWidth": 768,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 476.140625,
+          "y": 457.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 585,
+          "bottom": 489.703125
+        },
+        "boundaryRect": {
+          "x": 159,
+          "y": 364.296875,
+          "width": 450,
+          "height": 149.40625,
+          "right": 609,
+          "bottom": 513.703125
+        }
+      }
+    },
+    {
+      "name": "Seeded combination 8",
+      "origin": "generated",
+      "input": {
+        "title": "Alexandria Konstantinopoulou-Wiśniewska",
+        "description": "Review the details.",
+        "price": 50611,
+        "rows": [
+          {
+            "id": "record-primary",
+            "name": "Maya Chen",
+            "email": "maya@example.com"
+          },
+          {
+            "id": "record-secondary",
+            "name": "Sam Miller",
+            "email": "sam@example.com"
+          }
+        ],
+        "viewportWidth": 1000,
+        "viewportHeight": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "dialog-close-reachable|[data-dialog-close]|[role=\"dialog\"]|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 592.140625,
+          "y": 457.703125,
+          "width": 108.859375,
+          "height": 32,
+          "right": 701,
+          "bottom": 489.703125
+        },
+        "boundaryRect": {
+          "x": 275,
+          "y": 364.296875,
+          "width": 450,
+          "height": 149.40625,
+          "right": 725,
+          "bottom": 513.703125
+        }
+      }
+    }
+  ],
+  "summary": {
+    "checked": 14,
+    "failed": 0,
+    "passed": 14,
+    "inconclusive": 0,
+    "valid": 14
+  },
+  "original": null,
+  "reduced": null,
+  "reduction": null,
+  "confirmation": null,
+  "regression": null
+}

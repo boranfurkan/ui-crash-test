@@ -1,0 +1,36 @@
+{
+  "createdAt": "2026-11-03T01:17:52.186Z",
+  "installedInExtractedBundle": true,
+  "playwrightVersion": "1.64.1",
+  "passed": 0,
+  "failed": 1,
+  "retries": 0,
+  "sameSavedFailure": true,
+  "finding": {
+    "status": "failed",
+    "signature": "cart-checkout-reachable|.cart-preview.active .action-block button|.cart-preview.active|outside-viewport",
+    "overflowPx": 0,
+    "contained": true,
+    "receivesEvents": false,
+    "reason": "The action center is outside the viewport despite the declared viewport requirement.",
+    "targetRect": {
+      "x": 281,
+      "y": 399,
+      "width": 326,
+      "height": 36,
+      "right": 607,
+      "bottom": 435
+    },
+    "boundaryRect": {
+      "x": 264,
+      "y": 64,
+      "width": 360,
+      "height": 388,
+      "right": 624,
+      "bottom": 452
+    }
+  },
+  "measurementSHA256": "07c96e4b082bc83c14258e88d8dd06c101c95631ca5a3b634f1aad9cbf7caeaf",
+  "runId": "run-cart-preview-1793668389600-8c0051",
+  "sourceHash": "872c2a6e131c303c54c55bb611616a1c2fbfa0073f54f3e70d5d0c137d7c8957"
+}

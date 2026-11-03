@@ -1,0 +1,50 @@
+{
+  "name": "ui-crash-test",
+  "version": "0.2.0-rc.2",
+  "private": true,
+  "type": "module",
+  "exports": { ".": { "types": "./lib/index.d.ts", "import": "./lib/index.js", "default": "./lib/index.js" } },
+  "bin": { "ui-crash-test": "./lib/cli.js" },
+  "description": "Find a small valid input that breaks a UI rule. Keep it as a regression test.",
+  "scripts": {
+    "compare": "node --import tsx scripts/compare.ts",
+    "controls": "node --import tsx scripts/controls.ts",
+    "investigate:cart": "node --import tsx scripts/investigate-cart.ts",
+    "scenarios": "node --import tsx scripts/scenarios.ts",
+    "dev": "vite --host 127.0.0.1 --port 4173",
+    "build": "npm run build:sdk && tsc --noEmit && vite build",
+    "build:sdk": "tsc -p tsconfig.lib.json && node --input-type=module -e \"import {chmodSync} from 'node:fs'; chmodSync('lib/cli.js', 0o755);\"",
+    "pack:sdk": "npm run build:sdk && node --import tsx scripts/pack-sdk.ts",
+    "verify:sdk": "node --import tsx scripts/verify-sdk.ts",
+    "crash": "node --import tsx scripts/crash.ts",
+    "test": "node --import tsx --test tests/core.test.ts tests/scenario.test.ts tests/comparison.test.ts tests/doctor.test.ts",
+    "test:browser": "playwright test --config playwright.config.ts",
+    "verify:ui": "node --import tsx scripts/verify-ui.ts",
+    "verify:scenarios-ui": "node --import tsx scripts/verify-scenarios-ui.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@playwright/test": "1.64.1",
+    "@radix-ui/themes": "3.3.0",
+    "classnames": "2.5.1",
+    "fast-check": "4.3.0",
+    "fflate": "0.8.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-router-dom": "5.3.4",
+    "sass": "1.93.2"
+  },
+  "devDependencies": {
+    "@ngocanhnckh/renderlint": "https://codeload.github.com/ngocanhnckh/renderlint/tar.gz/d54018ce58a2b2faeb42e98a092bca9ec577eae3",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "vite": "8.3.5"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "license": "MIT"
+}

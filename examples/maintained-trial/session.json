@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "studyKind": "assisted-integration",
+  "independentParticipantCount": 0,
+  "actor": "Codex, already familiar with and editing the tool",
+  "application": {
+    "name": "TodoMVC Vue",
+    "repository": "https://github.com/tastejs/todomvc",
+    "commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+    "revisionDate": "2026-05-03",
+    "scope": "Complete unchanged upstream prebuilt application; official maintained framework showcase, not a production product."
+  },
+  "milestones": {
+    "taskStartedAt": "2026-11-03T01:26:09Z",
+    "targetConfirmedAt": "2026-11-03T01:28:53Z",
+    "upstreamFilesAcquiredAt": "2026-11-03T01:32:05Z",
+    "firstRunnerSupportImplementedAt": "2026-11-03T01:33:09Z",
+    "firstRuntimeControlPassedAt": "2026-11-03T01:34:48.756Z",
+    "firstRuntimeCampaignCompletedAt": "2026-11-03T01:34:52.344364+00:00",
+    "typecheckAndBrowserChecksObservedCompleteAt": "2026-11-03T01:38:48.031029+00:00"
+  },
+  "elapsed": {
+    "targetToFirstRuntimeControlSeconds": 355.756,
+    "targetToVerifiedChecksSeconds": 595.031
+  },
+  "timingLimitations": [
+    "Wall-clock milestones include source research, tool feature implementation and assistant work. They are not independent first-use measurements.",
+    "The first runtime result preceded correction of a TypeScript readonly-array error in the generator.",
+    "Tool dependencies and Chromium were already installed; the upstream prebuilt app required no dependency installation or rebuild.",
+    "Filesystem log/report modification times provide completion timestamps; they do not measure active coding time."
+  ],
+  "friction": [
+    {
+      "kind": "tool-gap",
+      "detail": "The runner required an HTTP fixture even though this app receives data through a native form.",
+      "resolution": "Added a declarative form input boundary."
+    },
+    {
+      "kind": "tool-gap",
+      "detail": "The app deliberately reveals delete on hover, but hover was not a supported setup action.",
+      "resolution": "Added an explicit hover setup action."
+    },
+    {
+      "kind": "tool-gap",
+      "detail": "Rendered proofs required a single scalar or JSON attribute; the native app exposes a list of labels.",
+      "resolution": "Added exact ordered texts proofs."
+    },
+    {
+      "kind": "integration-requirement",
+      "detail": "The checked-in upstream HTML, JavaScript, CSS and metadata needed to be served without Vite rewriting.",
+      "resolution": "Added a restricted raw subject server and raw build asset copies."
+    },
+    {
+      "kind": "adapter-error",
+      "detail": "The first TypeScript check rejected readonly tuples from the seeded title generator.",
+      "resolution": "Copied generated titles into mutable arrays and reran type checking and tests."
+    }
+  ],
+  "changes": {
+    "applicationSourceEdits": 0,
+    "applicationStyleEdits": 0,
+    "applicationWrappersAdded": 0,
+    "applicationDependenciesInstalled": 0,
+    "upstreamFilesVerified": 16,
+    "runnerChangesRequired": true
+  },
+  "validation": {
+    "initialRuntimeReportId": "run-todomvc-vue-1793669688315-cc7a9f",
+    "verifiedReportId": "run-todomvc-vue-1793670249247-ef5880",
+    "sourceHash": "341dd78afa247b142f9d38024ba95caf80f1aa97d20a304d626d345a46bbd6c0",
+    "summary": {
+      "checked": 14,
+      "failed": 0,
+      "passed": 14,
+      "inconclusive": 0,
+      "valid": 14
+    },
+    "baseline": "passed",
+    "unitTestsPassed": 15,
+    "browserTestsPassed": 49,
+    "nativeDeleteVerified": true,
+    "httpBytesMatchUpstream": true,
+    "independentHumanTrialCompleted": false
+  },
+  "nextTrial": {
+    "status": "prepared_for_later",
+    "userPreference": "Prepare a self-guided trial for later",
+    "instructions": "../../TRIAL.md",
+    "worksheet": "worksheet.json"
+  }
+}

@@ -1,0 +1,265 @@
+[WebServer] (node:85321) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 52 tests using 1 worker
+
+[1/52] tests/browser.spec.ts:7:1 › normal input passes; the same realistic stress input fails before and passes after the flex fix
+[2/52] tests/browser.spec.ts:25:1 › intentional text truncation passes while an actual pointer-blocking overlay fails the declared action rule
+[3/52] tests/browser.spec.ts:44:1 › a missing target is inconclusive and never masquerades as a passing layout
+[4/52] tests/browser.spec.ts:51:1 › the responsive dashboard and live fixture controls work without horizontal page overflow
+[5/52] tests/browser.spec.ts:64:1 › the campaign endpoint rejects invalid options without launching a run
+[6/52] tests/browser.spec.ts:69:1 › a real portal dialog remains usable with long content at constrained height after allowed scrolling
+[7/52] tests/browser.spec.ts:82:1 › a table with a long valid email allows horizontal scrolling without being called broken
+[8/52] tests/browser.spec.ts:91:1 › an input proof mismatch prevents measurement even when the fixture endpoint is consumed
+[WebServer] DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]   ╷
+[WebServer] 1 │ @import './vendor/react-shopping-cart/src/assets/scss/base/variables';
+[WebServer]   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]   ╵
+[WebServer]     fixtures/compat-app/product.scss 1:9  root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]   ╷
+[WebServer] 2 │ @import './vendor/react-shopping-cart/src/assets/scss/base/reset';
+[WebServer]   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]   ╵
+[WebServer]     fixtures/compat-app/product.scss 2:9  root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]   ╷
+[WebServer] 3 │ @import './vendor/react-shopping-cart/src/assets/scss/components/product';
+[WebServer]   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]   ╵
+[WebServer]     fixtures/compat-app/product.scss 3:9  root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] Use color.adjust instead.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]    ╷
+[WebServer] 75 │     background: lighten($primary-green, 10%);
+[WebServer]    │                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]    ╵
+[WebServer]     fixtures/compat-app/vendor/react-shopping-cart/src/assets/scss/base/_reset.scss 75:17  @import
+[WebServer]     fixtures/compat-app/product.scss 2:9                                                   root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+[WebServer] 
+[WebServer] color.scale($color, $lightness: 13.3507853403%)
+[WebServer] color.adjust($color, $lightness: 10%)
+[WebServer] 
+[WebServer] More info: https://sass-lang.com/d/color-functions
+[WebServer] 
+[WebServer]    ╷
+[WebServer] 75 │     background: lighten($primary-green, 10%);
+[WebServer]    │                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]    ╵
+[WebServer]     fixtures/compat-app/vendor/react-shopping-cart/src/assets/scss/base/_reset.scss 75:17  @import
+[WebServer]     fixtures/compat-app/product.scss 2:9                                                   root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] Use color.adjust instead.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]    ╷
+[WebServer] 81 │     background: lighten($primary-green, 15%);
+[WebServer]    │                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]    ╵
+[WebServer]     fixtures/compat-app/vendor/react-shopping-cart/src/assets/scss/base/_reset.scss 81:17  @import
+[WebServer]     fixtures/compat-app/product.scss 2:9                                                   root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+[WebServer] 
+[WebServer] color.scale($color, $lightness: 20.0261780105%)
+[WebServer] color.adjust($color, $lightness: 15%)
+[WebServer] 
+[WebServer] More info: https://sass-lang.com/d/color-functions
+[WebServer] 
+[WebServer]    ╷
+[WebServer] 81 │     background: lighten($primary-green, 15%);
+[WebServer]    │                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]    ╵
+[WebServer]     fixtures/compat-app/vendor/react-shopping-cart/src/assets/scss/base/_reset.scss 81:17  @import
+[WebServer]     fixtures/compat-app/product.scss 2:9                                                   root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] Use color.adjust instead.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]    ╷
+[WebServer] 87 │       background: lighten($primary-green, 15%);
+[WebServer]    │                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]    ╵
+[WebServer]     fixtures/compat-app/vendor/react-shopping-cart/src/assets/scss/components/_product.scss 87:19  @import
+[WebServer]     fixtures/compat-app/product.scss 3:9                                                           root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+[WebServer] 
+[WebServer] color.scale($color, $lightness: 20.0261780105%)
+[WebServer] color.adjust($color, $lightness: 15%)
+[WebServer] 
+[WebServer] More info: https://sass-lang.com/d/color-functions
+[WebServer] 
+[WebServer]    ╷
+[WebServer] 87 │       background: lighten($primary-green, 15%);
+[WebServer]    │                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]    ╵
+[WebServer]     fixtures/compat-app/vendor/react-shopping-cart/src/assets/scss/components/_product.scss 87:19  @import
+[WebServer]     fixtures/compat-app/product.scss 3:9                                                           root stylesheet
+[WebServer] 
+
+[9/52] tests/browser.spec.ts:97:1 › an unused fixture route prevents default application data from producing a false pass
+[10/52] tests/browser.spec.ts:103:1 › external scenario API rejects unknown configs and invalid seeds
+[11/52] tests/cart.spec.ts:13:1 › pinned cart checkout is below a landscape viewport; independent actionability and a candidate CSS fix confirm it
+[WebServer] DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]   ╷
+[WebServer] 1 │ @import './vendor/react-shopping-cart/src/assets/scss/base/variables';
+[WebServer]   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]   ╵
+[WebServer]     fixtures/compat-app/cart.scss 1:9  root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]   ╷
+[WebServer] 2 │ @import './vendor/react-shopping-cart/src/assets/scss/base/reset';
+[WebServer]   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]   ╵
+[WebServer]     fixtures/compat-app/cart.scss 2:9  root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]   ╷
+[WebServer] 3 │ @import './vendor/react-shopping-cart/src/assets/scss/components/header';
+[WebServer]   │         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]   ╵
+[WebServer]     fixtures/compat-app/cart.scss 3:9  root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] Use color.adjust instead.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]    ╷
+[WebServer] 75 │     background: lighten($primary-green, 10%);
+[WebServer]    │                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]    ╵
+[WebServer]     fixtures/compat-app/vendor/react-shopping-cart/src/assets/scss/base/_reset.scss 75:17  @import
+[WebServer]     fixtures/compat-app/cart.scss 2:9                                                      root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+[WebServer] 
+[WebServer] color.scale($color, $lightness: 13.3507853403%)
+[WebServer] color.adjust($color, $lightness: 10%)
+[WebServer] 
+[WebServer] More info: https://sass-lang.com/d/color-functions
+[WebServer] 
+[WebServer]    ╷
+[WebServer] 75 │     background: lighten($primary-green, 10%);
+[WebServer]    │                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]    ╵
+[WebServer]     fixtures/compat-app/vendor/react-shopping-cart/src/assets/scss/base/_reset.scss 75:17  @import
+[WebServer]     fixtures/compat-app/cart.scss 2:9                                                      root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [global-builtin]: Global built-in functions are deprecated and will be removed in Dart Sass 3.0.0.
+[WebServer] Use color.adjust instead.
+[WebServer] 
+[WebServer] More info and automated migrator: https://sass-lang.com/d/import
+[WebServer] 
+[WebServer]    ╷
+[WebServer] 81 │     background: lighten($primary-green, 15%);
+[WebServer]    │                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]    ╵
+[WebServer]     fixtures/compat-app/vendor/react-shopping-cart/src/assets/scss/base/_reset.scss 81:17  @import
+[WebServer]     fixtures/compat-app/cart.scss 2:9                                                      root stylesheet
+[WebServer] 
+
+[WebServer] DEPRECATION WARNING [color-functions]: lighten() is deprecated. Suggestions:
+[WebServer] 
+[WebServer] color.scale($color, $lightness: 20.0261780105%)
+[WebServer] color.adjust($color, $lightness: 15%)
+[WebServer] 
+[WebServer] More info: https://sass-lang.com/d/color-functions
+[WebServer] 
+[WebServer]    ╷
+[WebServer] 81 │     background: lighten($primary-green, 15%);
+[WebServer]    │                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[WebServer]    ╵
+[WebServer]     fixtures/compat-app/vendor/react-shopping-cart/src/assets/scss/base/_reset.scss 81:17  @import
+[WebServer]     fixtures/compat-app/cart.scss 2:9                                                      root stylesheet
+[WebServer] 
+
+[12/52] tests/cart.spec.ts:30:1 › cart header assets and real provider state reproduce without external image requests
+[13/52] tests/cart.spec.ts:38:1 › source drift invalidates a scenario instead of saving a completed result
+[14/52] tests/controls.spec.ts:7:3 › rule control · normal · passed
+[15/52] tests/controls.spec.ts:7:3 › rule control · ellipsis · passed
+[16/52] tests/controls.spec.ts:7:3 › rule control · decoration · passed
+[17/52] tests/controls.spec.ts:7:3 › rule control · child-hit · passed
+[18/52] tests/controls.spec.ts:7:3 › rule control · transformed · passed
+[19/52] tests/controls.spec.ts:7:3 › rule control · tolerance · passed
+[20/52] tests/controls.spec.ts:7:3 › rule control · horizontal-scroll · passed
+[21/52] tests/controls.spec.ts:7:3 › rule control · vertical-scroll · passed
+[22/52] tests/controls.spec.ts:7:3 › rule control · portal · passed
+[23/52] tests/controls.spec.ts:7:3 › rule control · aria-opt-in · passed
+[24/52] tests/controls.spec.ts:7:3 › rule control · outside · failed
+[25/52] tests/controls.spec.ts:7:3 › rule control · overlay · failed
+[26/52] tests/controls.spec.ts:7:3 › rule control · transparent-overlay · failed
+[27/52] tests/controls.spec.ts:7:3 › rule control · clip-center · failed
+[28/52] tests/controls.spec.ts:7:3 › rule control · pointer-events · failed
+[29/52] tests/controls.spec.ts:7:3 › rule control · disabled · inconclusive
+[30/52] tests/controls.spec.ts:7:3 › rule control · disabled-fieldset · inconclusive
+[31/52] tests/controls.spec.ts:7:3 › rule control · aria-disabled · inconclusive
+[32/52] tests/controls.spec.ts:7:3 › rule control · aria-disabled-ancestor · inconclusive
+[33/52] tests/controls.spec.ts:7:3 › rule control · inert · inconclusive
+[34/52] tests/controls.spec.ts:7:3 › rule control · hidden · inconclusive
+[35/52] tests/controls.spec.ts:7:3 › rule control · transparent-parent · inconclusive
+[36/52] tests/controls.spec.ts:7:3 › rule control · collapsed · inconclusive
+[37/52] tests/controls.spec.ts:7:3 › rule control · missing · inconclusive
+[38/52] tests/controls.spec.ts:7:3 › rule control · duplicate · inconclusive
+[39/52] tests/controls.spec.ts:7:3 › rule control · duplicate-boundary · inconclusive
+[40/52] tests/controls.spec.ts:7:3 › rule control · portal-wrong-boundary · inconclusive
+[41/52] tests/controls.spec.ts:7:3 › rule control · offscreen · inconclusive
+[42/52] tests/controls.spec.ts:7:3 › rule control · required-viewport · failed
+[43/52] tests/controls.spec.ts:7:3 › rule control · invalid-selector · inconclusive
+[44/52] tests/controls.spec.ts:7:3 › rule control · partial-clip · passed
+[45/52] tests/controls.spec.ts:7:3 › rule control · corner-overlay · passed
+[46/52] tests/doctor.spec.ts:9:1 › doctor proves the normal-data control without measuring discovery or reducing
+[47/52] tests/doctor.spec.ts:19:1 › doctor blocks ignored input instead of accepting default app data
+[48/52] tests/doctor.spec.ts:26:1 › a missing normal-data target blocks diagnosis and produces no pretend stress evidence
+[49/52] tests/todomvc.spec.ts:8:1 › the unchanged Vue app consumes form input, reveals delete on hover and deletes the actual first task
+[50/52] tests/todomvc.spec.ts:24:1 › a form submission that does not create the supplied tasks fails the rendered-list proof
+[51/52] tests/todomvc.spec.ts:32:1 › form fixtures reject non-string lists rather than silently coercing input
+[52/52] tests/todomvc.spec.ts:36:1 › the served TodoMVC distribution and metadata match pinned upstream bytes without Vite rewriting
+  52 passed (12.2s)

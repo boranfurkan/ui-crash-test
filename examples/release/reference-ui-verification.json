@@ -1,0 +1,30 @@
+{
+  "runId": "run-20261103t045359782z-1c1de6",
+  "summary": {
+    "checked": 14,
+    "failed": 5,
+    "passed": 9,
+    "inconclusive": 0,
+    "valid": 14
+  },
+  "regression": {
+    "broken": {
+      "passed": 0,
+      "failed": 1
+    },
+    "fixed": {
+      "passed": 1,
+      "failed": 0
+    },
+    "verified": true
+  },
+  "sourceHash": "fd2eddd6065670fc",
+  "browserErrors": [],
+  "testedWidths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "duplicateRunStatus": 409
+}

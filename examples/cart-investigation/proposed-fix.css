@@ -1,0 +1,15 @@
+/* Investigation-only candidate. This does not modify the vendored upstream SCSS. */
+.cart-preview.active {
+  height: min(388px, calc(100dvh - 96px));
+  display: flex;
+  flex-direction: column;
+}
+.cart-preview.active .cart-items {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+}
+.cart-preview.active .action-block {
+  position: static;
+  flex: 0 0 auto;
+}

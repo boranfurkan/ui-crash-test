@@ -1,0 +1,95 @@
+{
+  "repository": "https://github.com/tastejs/todomvc",
+  "commit": "ff43b02e59dfa604386bb382034b2cd07c2bcd8a",
+  "commitDate": "2026-05-03",
+  "checkedAt": "2026-11-03T01:32:05Z",
+  "license": "MIT",
+  "scope": "Unmodified complete Vue example distribution, plus original source retained for inspection. This is an upstream maintained framework showcase, not a production product or an independent developer trial.",
+  "maintenanceEvidence": {
+    "readme": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/readme.md",
+    "lastRelevantRefresh": "2026-05-03",
+    "repositoryArchived": false
+  },
+  "files": [
+    {
+      "path": "examples/vue/dist/index.html",
+      "gitBlob": "51e986b3757b69f1a48a05e1761e5a9b1e8ff5ea",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/dist/index.html"
+    },
+    {
+      "path": "examples/vue/dist/assets/index-CO9Gq1IP.js",
+      "gitBlob": "fafb4fc8d34befa99fac43c5ea82e280b95bcff0",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/dist/assets/index-CO9Gq1IP.js"
+    },
+    {
+      "path": "examples/vue/dist/assets/index-bgjkvPzV.css",
+      "gitBlob": "59c89c15fbd58f5aadd1bd2a658e8ebaf30ff88a",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/dist/assets/index-bgjkvPzV.css"
+    },
+    {
+      "path": "examples/vue/dist/base.js",
+      "gitBlob": "a56b5aaca980fb608faf3eb9624750c8740b0025",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/dist/base.js"
+    },
+    {
+      "path": "examples/vue/src/main.js",
+      "gitBlob": "501b068f426e0a6acbe126a5f5d08e3076ca062d",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/src/main.js"
+    },
+    {
+      "path": "examples/vue/src/components/TodosComponent.vue",
+      "gitBlob": "044e57d0bb77ba0cd19b288c95f0aa36b0f11601",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/src/components/TodosComponent.vue"
+    },
+    {
+      "path": "examples/vue/src/components/TodoItem.vue",
+      "gitBlob": "3ca0eb4233e2fee3fddea3d198c58617844eb045",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/src/components/TodoItem.vue"
+    },
+    {
+      "path": "examples/vue/src/components/TodoHeader.vue",
+      "gitBlob": "70c7d3cac6556337058971b1f2d06ecf7b6cfbfd",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/src/components/TodoHeader.vue"
+    },
+    {
+      "path": "examples/vue/src/components/TodoFooter.vue",
+      "gitBlob": "af596daf00aa72a1e5aec8e1dbdb5cba6bc9a2d7",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/src/components/TodoFooter.vue"
+    },
+    {
+      "path": "examples/vue/src/router/index.js",
+      "gitBlob": "b370daabc83c1b561ba2d120c988cab3ac5c0836",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/src/router/index.js"
+    },
+    {
+      "path": "examples/vue/vite.config.js",
+      "gitBlob": "5fcae088b5f44ad507dd23cdf6083ff4116ece1c",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/vite.config.js"
+    },
+    {
+      "path": "license.md",
+      "gitBlob": "9275d4371020294b6a107e454a0d1819f8b71c31",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/license.md"
+    },
+    {
+      "path": "readme.md",
+      "gitBlob": "eb18d0090b6855b32f5c004018c7f1ff7bdb3432",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/readme.md"
+    },
+    {
+      "path": "examples/vue/package.json",
+      "gitBlob": "ac2f8aead7d1eb113297375a03015f8af6ad277b",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/package.json"
+    },
+    {
+      "path": "learn.json",
+      "gitBlob": "ec7c5152c6b95e98ef23de92bca6b1f2fbed63c8",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/learn.json"
+    },
+    {
+      "path": "examples/vue/dist/favicon.ico",
+      "gitBlob": "df36fcfb72584e00488330b560ebcf34a41c64c2",
+      "sourceURL": "https://github.com/tastejs/todomvc/blob/ff43b02e59dfa604386bb382034b2cd07c2bcd8a/examples/vue/dist/favicon.ico"
+    }
+  ]
+}

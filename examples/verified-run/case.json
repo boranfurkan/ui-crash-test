@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "input": {
+    "containerWidth": 360,
+    "members": [
+      {
+        "id": "member-primary",
+        "name": "Alexandria Konstantinopoulou-Wiśniewska",
+        "email": "a@b.co",
+        "role": null,
+        "status": "invited",
+        "avatar": null
+      }
+    ]
+  },
+  "rule": {
+    "id": "action-reachable",
+    "target": "[data-member-id=\"member-primary\"] [data-action]",
+    "boundary": "[data-member-id=\"member-primary\"]",
+    "description": "The member action stays inside its row and can receive pointer events."
+  },
+  "failureSignature": "action-reachable|[data-member-id=\"member-primary\"] [data-action]|[data-member-id=\"member-primary\"]|outside-boundary",
+  "sourceHash": "b6b7be092de51456",
+  "environment": {
+    "browser": "156.0.8078.4",
+    "node": "v24.21.0",
+    "sourceHash": "b6b7be092de51456",
+    "viewport": {
+      "width": 1000,
+      "height": 900
+    }
+  },
+  "seed": 42,
+  "createdAt": "2026-11-03T00:11:22.570Z"
+}

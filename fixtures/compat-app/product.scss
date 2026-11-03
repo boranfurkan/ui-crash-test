@@ -1,0 +1,8 @@
+@import './vendor/react-shopping-cart/src/assets/scss/base/variables';
+@import './vendor/react-shopping-cart/src/assets/scss/base/reset';
+@import './vendor/react-shopping-cart/src/assets/scss/components/product';
+
+// Harness geometry only. The product component and its SCSS above are unchanged.
+.fixture-shell { margin: 32px auto; padding: 16px; max-width: 720px; }
+.fixture-shell > header { font-family: system-ui, sans-serif; margin: 0 0 24px; }
+.fixture-shell > header p { font-size: 13px; margin-top: 8px; }

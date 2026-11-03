@@ -1,4 +1,4 @@
-# UI Crash Test — local release candidate
+# CLI and SDK guide
 
 **Find a smaller valid input that breaks a declared UI action rule, and keep it as a Playwright regression.**
 
@@ -16,7 +16,7 @@ npx playwright install chromium
 npx ui-crash-test init
 ```
 
-For an unpublished candidate, replace `ui-crash-test@next` with the supplied local `ui-crash-test-0.3.0-rc.1.tgz` path. Adapt the generated `ui-crash.config.ts` to the real input contract, selectors and source paths, and keep the target app running separately.
+For an unpublished candidate, replace `ui-crash-test@next` with the supplied local `ui-crash-test-0.3.0-rc.2.tgz` path. Adapt the generated `ui-crash.config.ts` to the real input contract, selectors and source paths, and keep the target app running separately.
 
 ```sh
 npx ui-crash-test doctor --url http://localhost:3000

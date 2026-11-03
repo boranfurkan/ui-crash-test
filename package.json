@@ -1,6 +1,6 @@
 {
   "name": "ui-crash-test",
-  "version": "0.3.0-rc.1",
+  "version": "0.3.0-rc.2",
   "private": true,
   "type": "module",
   "exports": {
@@ -13,7 +13,7 @@
   "bin": {
     "ui-crash-test": "./lib/cli.js"
   },
-  "description": "Find a small valid input that breaks a UI rule. Keep it as a regression test.",
+  "description": "Stress-test UI layouts with valid data. Shrink failures into verified Playwright regressions.",
   "scripts": {
     "compare": "node --import tsx scripts/compare.ts",
     "verify:holo": "node --import tsx scripts/verify-holo.ts",
@@ -66,5 +66,23 @@
   "homepage": "https://github.com/boranfurkan/ui-crash-test#readme",
   "bugs": {
     "url": "https://github.com/boranfurkan/ui-crash-test/issues"
+  },
+  "keywords": [
+    "playwright",
+    "ui-testing",
+    "layout-testing",
+    "regression-testing",
+    "browser-testing",
+    "test-case-reduction",
+    "text-overflow",
+    "typescript",
+    "javascript",
+    "testing",
+    "cli",
+    "developer-tools"
+  ],
+  "author": {
+    "name": "Furkan Boran",
+    "url": "https://github.com/boranfurkan"
   }
 }

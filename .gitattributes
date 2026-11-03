@@ -1,0 +1,5 @@
+# Keep the language breakdown focused on maintained project source.
+docs/evidence/** linguist-generated=true
+docs/assets/** linguist-documentation=true
+fixtures/compat-app/vendor/** linguist-vendored=true
+fixtures/todomvc/** linguist-vendored=true

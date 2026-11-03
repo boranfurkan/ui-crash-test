@@ -1,6 +1,10 @@
 # Verification
 
-## Current local candidate: 0.3.0-rc.1
+## 0.3.0-rc.2: package presentation
+
+The GitHub and npm introductions are shorter, with shared branding, clearer installation, documentation navigation and discovery metadata. The npm package ships `docs/npm.md` as its README; the detailed CLI/SDK guide remains in `docs/sdk.md`. All 30 compiled runtime and declaration files match the published RC1 package byte for byte. The final RC2 tarball passes isolated installation, diagnostics, CLI/library and exported action/text replay verification. This release changes documentation and package metadata, not engine behavior.
+
+## 0.3.0-rc.1: engine verification
 
 After reorganizing the repository, the SDK/frontend build, typechecking, all **26 unit tests** and **74 Chromium tests** pass on local Node 24.21.0. The 32 authored action controls also match their expected outcomes, including the documented limits. The freshly packed 33-file SDK passes isolated installation, CLI/library diagnostics, action/text replay execution and copied-rule checks. The dashboard campaign confirms and reduces a failure, executes its exported original-failing/fixed-passing test and has no page errors or overflow at 320/390/768/1440px. Guides and curated HTML report links resolve after relocation. The same engine and layout passed Linux Node 22.12.0 and Node 24 jobs in [PR #2 CI](https://github.com/boranfurkan/ui-crash-test/actions/runs/41654166244) and again on [merged main](https://github.com/boranfurkan/ui-crash-test/actions/runs/41655806571), commit `eb4683919a783c02c0f4b54f942bdd60bc396935`. The required organization security checks passed before transfer. The repository is now owned by `boranfurkan`; the organization-only private workflow caller was removed for public publication. Earlier checkpoints below retain their original counts and ownership context.
 

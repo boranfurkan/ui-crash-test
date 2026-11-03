@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">UI Crash Test — break the layout, keep the test</title>
+<desc id="desc">A valid input is reduced to a smaller case and saved as a Playwright regression. Cream, forest green and lime visual identity.</desc>
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dbe2d5" stroke-width=".6"/></pattern></defs>
+<rect width="1200" height="360" rx="18" fill="#f4f5ed"/>
+<path d="M684 0H1182Q1200 0 1200 18V342Q1200 360 1182 360H684Z" fill="#e9eee1"/>
+<path d="M684 0H1182Q1200 0 1200 18V342Q1200 360 1182 360H684Z" fill="url(#grid)"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif">
+<rect x="40" y="32" width="36" height="36" rx="9" fill="#25382b"/>
+<path d="M49 46v-5h5m8 0h5v5m0 8v5h-5m-8 0h-5v-5m7-8 5 5-5 5" fill="none" stroke="#c7f58a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="88" y="56" font-size="19" font-weight="650" letter-spacing="-.4" fill="#27382c">UI CRASH TEST</text>
+<text x="40" y="143" font-size="56" font-weight="720" letter-spacing="-2.6" fill="#203127">Break the layout.</text>
+<text x="40" y="204" font-size="56" font-weight="720" letter-spacing="-2.6" fill="#53713f">Keep the test.</text>
+<text x="42" y="255" font-size="20" fill="#53614e">Stress valid inputs. Reduce failures.</text>
+<text x="42" y="284" font-size="20" fill="#53614e">Save a Playwright regression.</text>
+<rect x="730" y="38" width="426" height="121" rx="12" fill="#fffef9" stroke="#cbd6c0"/>
+<circle cx="752" cy="62" r="3" fill="#c4774a"/>
+<text x="765" y="66" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" letter-spacing="1.4" fill="#566650">SMALLER VALID CASE</text>
+<text x="750" y="103" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="18" fill="#2e4433">input + viewport</text>
+<text x="750" y="135" font-size="14" fill="#6a7662">The same failure. Less data to inspect.</text>
+<path d="M942 166v22m-6-6 6 6 6-6" fill="none" stroke="#83976e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="730" y="196" width="426" height="125" rx="12" fill="#25382b"/>
+<rect x="750" y="215" width="24" height="24" rx="5" fill="#3d5435"/>
+<path d="m757 227 4 4 7-8" fill="none" stroke="#c7f58a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="784" y="232" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="14" fill="#e5efda">regression.spec.ts</text>
+<text x="750" y="270" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="14" fill="#c7f58a">saved input + rule + replay</text>
+<text x="750" y="299" font-size="14" fill="#b5c4a9">Ready to run against your app.</text>
+</g></svg>

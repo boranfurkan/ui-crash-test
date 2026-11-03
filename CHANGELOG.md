@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0-rc.2 — 3 November 2026
+
+- Simplified GitHub and npm introductions, quickstart, rule examples and documentation navigation.
+- Added a shared banner, package badges, npm keywords, author metadata and GitHub topics.
+- The npm package now ships a concise README; the complete SDK reference remains in the repository.
+- Measurement, campaign, reduction and replay behavior are unchanged.
+
 ## 0.3.0-rc.1 — 3 November 2026
 
 - Add opt-in horizontal `text-fit`, plus `measureText` and the generic `measureRule` API. Keep the existing action rule as the default.

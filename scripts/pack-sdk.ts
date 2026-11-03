@@ -9,10 +9,10 @@ const staging = resolve(root, 'artifacts', 'sdk-package');
 await rm(staging, { recursive: true, force: true });
 await mkdir(staging, { recursive: true });
 await cp(resolve(root, 'lib'), resolve(staging, 'lib'), { recursive: true });
-await writeFile(resolve(staging, 'README.md'), await readFile(resolve(root, 'docs/sdk.md')));
+await writeFile(resolve(staging, 'README.md'), await readFile(resolve(root, 'docs/npm.md')));
 await writeFile(resolve(staging, 'LICENSE'), await readFile(resolve(root, 'LICENSE')));
 const manifest = {
-  name: pkg.name, version: pkg.version, private: false, type: 'module', description: pkg.description,
+  name: pkg.name, version: pkg.version, private: false, type: 'module', description: pkg.description, keywords: pkg.keywords, author: pkg.author,
   exports: pkg.exports, bin: pkg.bin, engines: pkg.engines, license: 'MIT', files: ['lib', 'README.md', 'LICENSE'],
   dependencies: { fflate: pkg.dependencies.fflate, tsx: pkg.devDependencies.tsx },
   peerDependencies: { '@playwright/test': pkg.dependencies['@playwright/test'] },

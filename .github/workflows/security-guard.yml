@@ -1,0 +1,14 @@
+name: Security Guard
+
+"on":
+  pull_request: {}
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    uses: QuechyDev/.github/.github/workflows/security-guard-reusable.yml@main

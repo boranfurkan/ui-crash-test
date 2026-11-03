@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 2,
+  "input": {
+    "displayNames": [
+      "Konstantinou"
+    ],
+    "handle": "alex",
+    "bio": "",
+    "width": 320,
+    "height": 568
+  },
+  "recipe": {
+    "path": "/profile/edit",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "viewportFromInput": {
+      "width": "/width",
+      "height": "/height"
+    },
+    "form": {
+      "input": "main form input[id$=\"-name\"]",
+      "itemsPath": "/displayNames",
+      "submitKey": "Tab"
+    },
+    "setup": [
+      {
+        "action": "fill",
+        "selector": "main form input[id$=\"-handle\"]",
+        "inputPath": "/handle"
+      },
+      {
+        "action": "fill",
+        "selector": "main form textarea[id$=\"-bio\"]",
+        "inputPath": "/bio"
+      },
+      {
+        "action": "scroll",
+        "selector": "main form button[type=\"submit\"]"
+      },
+      {
+        "action": "click",
+        "selector": "main form button[type=\"submit\"]"
+      },
+      {
+        "action": "wait",
+        "selector": "main header h1"
+      },
+      {
+        "action": "scroll",
+        "selector": "main header h1"
+      }
+    ],
+    "ready": "main header h1",
+    "proofs": [
+      {
+        "selector": "main header h1",
+        "kind": "text",
+        "inputPath": "/displayNames/0"
+      }
+    ],
+    "screenshot": "page",
+    "rule": {
+      "kind": "text-fit",
+      "id": "required-profile-name-fits",
+      "target": "main header h1",
+      "boundary": "main header:has(h1)"
+    }
+  },
+  "failureSignature": "required-profile-name-fits|main header h1|main header:has(h1)|horizontal-text-overflow",
+  "scenario": {
+    "id": "holo-grails-name",
+    "name": "Holo Grails · required profile name",
+    "description": "After a real demo profile save, the required name must fit horizontally inside its profile header and overflow clips.",
+    "provenance": {
+      "kind": "user-owned-application",
+      "repository": "THE-SEVEN-SE4S/tradingcards-frontend",
+      "appRevision": "5e9ce9630960fccd94153402f1d2d011fcfdfd4a",
+      "mode": "Built-in browser mock API and demo session; no real backend or wallet.",
+      "policy": "Explicit horizontal fit for the full displayed name. Vertical clipping and occlusion are outside this rule."
+    }
+  },
+  "environment": {
+    "browser": "156.0.8078.4",
+    "node": "v24.21.0",
+    "sourceHash": "4610c5eebd960cbd8c0fc9f9552fae14b4e68df49377ef0a61b972e877857f84",
+    "sources": [
+      {
+        "path": "/Users/boran/Documents/Codex/2026-11-02/x20-i-wanna-create-something-else/work/holo-text-final-consumer/ui-crash.config.ts",
+        "sha256": "f76aa0317c8b8c5d338c591af8f0474ab00df2ada1ff005361c034781665f2e2"
+      },
+      {
+        "path": "src/components/ui/button.tsx",
+        "sha256": "ead4ee4eadf06bc21cebf3f4e3e108de6d31bdcbc9767f81b5964df640b77131"
+      },
+      {
+        "path": "src/features/profile/profile-editor.tsx",
+        "sha256": "b0cb402f770f6fe4003538edc5c5cbc0b5e1f8ba7977c694aa949ca502ceeff6"
+      },
+      {
+        "path": "src/features/profile/profile-header.tsx",
+        "sha256": "b0cf7a6a2e2322ef70861522c644895321808f77c04c99d578d743f11471a6a5"
+      },
+      {
+        "path": "src/features/profile/profile-setup-view.tsx",
+        "sha256": "45d530985c1764688a880827df71d7421761f6cb0fa2d6a34af7eade25a5962b"
+      },
+      {
+        "path": "src/lib/api/mock/account.ts",
+        "sha256": "3d25bfae1d1e604de19ce5265d56149c2c1437a41dda3d1e1e69237bd76b9556"
+      },
+      {
+        "path": "src/lib/domain/profile.ts",
+        "sha256": "e1ee7e231a0a00042fe593613ccd76e713fe107d8d19fb53a384db1330805a0f"
+      },
+      {
+        "path": "src/lib/queries/account.ts",
+        "sha256": "0dac80bf3b2c71e3b4e26fbda5d489b9ffa24fd73ca84b2012f82165f51c1bb4"
+      },
+      {
+        "path": "src/styles/globals.css",
+        "sha256": "07889b16ebc00361a4a263ded51ca2f1a7b0385f82e478e1b3c6285535471f82"
+      },
+      {
+        "path": "engine/scenario/config.js",
+        "sha256": "1b4c735ad21dd6a88441757444d5366b7431b6df30c64841725270a83fffa15b"
+      },
+      {
+        "path": "engine/scenario/renderer.js",
+        "sha256": "c9797b4d45071dda47de9b57823fdf83834d22e704354643828f9513d8f4717b"
+      },
+      {
+        "path": "engine/scenario/replay.js",
+        "sha256": "0a85578546a146bf9769edc2bdc273c73beb1e88df74a8e9a149e5f6332ee748"
+      },
+      {
+        "path": "engine/scenario/reduce.js",
+        "sha256": "d7b01a5214d31d0174c92177a7ab1f8141d2e1302ce824a9ed9d3a99444069d4"
+      },
+      {
+        "path": "engine/scenario/run.js",
+        "sha256": "526e8d241f4c21c836c66810a4916fce1be4625b8794d72bfb4057abd4055c49"
+      },
+      {
+        "path": "engine/scenario/export.js",
+        "sha256": "3105ae96ebd7382f53675440a6f16ea8dd3845933a1a35c41b315a7ec34dcf76"
+      },
+      {
+        "path": "engine/scenario/runtime.js",
+        "sha256": "a26db122b28f2fc1ee6d3e5d8c2201d40d7c5e8f4f787e94b0e47253d0394187"
+      },
+      {
+        "path": "engine/core/regression.js",
+        "sha256": "59961871e9607985709359a3c664cb0b1acb623bb5168b1ad8dcf2595cc103f5"
+      },
+      {
+        "path": "engine/core/action-rule.js",
+        "sha256": "fe9b2f3a1490903335fda196422349ffa8d2e20b819f22eccb820ff39fbb1e7c"
+      },
+      {
+        "path": "engine/core/text-rule.js",
+        "sha256": "b3d42f6d46ffcf89f68775a3cdc71edba533765d5c3dbaee59596d56bde0dd9e"
+      },
+      {
+        "path": "engine/core/rules.js",
+        "sha256": "479acf7fe138bc80f58d0352a6949adc899c1b7f232677ac453499dd0a4f933c"
+      }
+    ]
+  },
+  "seed": 42,
+  "appURL": "http://127.0.0.1:4180"
+}

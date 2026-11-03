@@ -1,0 +1,37 @@
+{
+  "executedTests": 1,
+  "expectedRegressionFailures": 1,
+  "retries": 0,
+  "infrastructureErrors": 0,
+  "attachmentName": "rule-finding",
+  "finding": {
+    "status": "failed",
+    "signature": "required-profile-name-fits|main header h1|main header:has(h1)|horizontal-text-overflow",
+    "reason": "Required text extends 6.95px beyond its horizontal region or overflow clip.",
+    "overflowPx": 6.953125,
+    "contained": false,
+    "text": "Konstantinou",
+    "fragments": [
+      {
+        "left": 35,
+        "right": 313.953125,
+        "top": 222,
+        "bottom": 300
+      }
+    ],
+    "effectiveRegion": {
+      "left": 13,
+      "right": 307
+    },
+    "clippingRegions": [
+      {
+        "tag": "header",
+        "left": 13,
+        "right": 307
+      }
+    ]
+  },
+  "independentlyInstalled": true,
+  "requiresToolPackage": false,
+  "requiresRunningApp": true
+}

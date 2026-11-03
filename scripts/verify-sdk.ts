@@ -4,7 +4,7 @@ import { resolve, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
-import { BASELINE, WORST_CASE } from '../src/shared/model.ts';
+import { BASELINE, WORST_CASE } from "../src/demo/model.ts";
 import { memberRecipe } from '../scenarios/member-list.ts';
 import vue from '../scenarios/todomvc-vue.ts';
 
@@ -34,6 +34,8 @@ export default defineScenario({ id:'sdk-member',name:'Installed member adapter',
 validate: value => value && value.containerWidth===360 && Array.isArray(value.members) && value.members.length>0 && value.members.length<=5 && new Set(value.members.map(m=>m.id)).size===value.members.length && value.members.some(m=>m.id==='member-primary') && value.members.every(m=>typeof m.name==='string'&&m.name.length>0&&m.name.length<=80&&typeof m.email==='string'&&/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(m.email)&&['active','invited'].includes(m.status)&&[null,'Owner','Member','Viewer'].includes(m.role)&&[null,'sage','sand','lilac'].includes(m.avatar)) ? [] : ['invalid'],
 cases:()=>[{name:'Long name',origin:'curated',input:${JSON.stringify(WORST_CASE)}}],candidates:input=>[{label:'Keep primary',input:{...input,members:input.members.filter(m=>m.id==='member-primary')}}] });\n`;
 await writeFile(resolve(consumer, 'member.config.ts'), memberConfig);
+const textRecipe = { ...memberRecipe('fixed'), rule: { kind: 'text-fit', id: 'required-name-fits', target: '[data-member-id="member-primary"] .member-name', boundary: '[data-member-id="member-primary"]' } };
+await writeFile(resolve(consumer, 'text.config.ts'), memberConfig.replace(JSON.stringify(memberRecipe()), JSON.stringify(textRecipe)).replace("id:'sdk-member'", "id:'sdk-text'"));
 const server = await createServer({ configFile: resolve(root, 'vite.config.ts'), server: { port: 0, host: '127.0.0.1', open: false } });
 try {
   await server.listen(); const address = server.httpServer!.address();
@@ -74,6 +76,14 @@ try {
   if (failed.code !== 1) throw new Error(`Installed failing run had unexpected result: ${failed.code} ${failed.stderr} ${failed.stdout}`);
   const bad = JSON.parse(failed.stdout);
   if (!bad.regression?.reproduced || bad.confirmation?.failures !== 3) throw new Error('Installed package did not verify its exported failure.');
+  // This authored reference intentionally ellipsizes; the opt-in full-text policy must fail.
+  const textRun = await runAsync(['run', '--config', 'text.config.ts', '--url', url, '--out-dir', externalOutput, '--json']);
+  if (textRun.code !== 1) throw new Error(`Expected the explicit full-text contract to fail: ${textRun.stderr} ${textRun.stdout}`);
+  const textReport = JSON.parse(textRun.stdout);
+  if (!textReport.regression?.reproduced || textReport.confirmation?.failures !== 3 || !textReport.reduced.finding.signature.endsWith('|horizontal-text-overflow')) throw new Error('Installed text-fit export did not reproduce the same confirmed rule failure.');
+  for (const name of ['text-rule', 'rules', 'action-rule']) {
+    if (!(await readFile(resolve(externalOutput, textReport.id, `core/${name}.js`))).equals(await readFile(resolve(consumer, `node_modules/ui-crash-test/lib/core/${name}.js`)))) throw new Error(`Exported ${name} differs from the installed measurement implementation.`);
+  }
   const copiedRule = await readFile(resolve(externalOutput, bad.id, 'core/action-rule.js'));
   if (!copiedRule.equals(await readFile(resolve(consumer, 'node_modules/ui-crash-test/lib/core/action-rule.js')))) throw new Error('Exported compiled rule differs from installed runtime.');
   let linkRetained = false;
@@ -90,7 +100,7 @@ try {
   });
   if (library.code !== 0 || JSON.parse(library.stdout).outcome !== 'no-failure') throw new Error(`Library import failed: ${library.stderr}`);
   const manifest = JSON.parse(await readFile(resolve(consumer, 'node_modules/ui-crash-test/package.json'), 'utf8'));
-  const result = { createdAt: new Date().toISOString(), node: process.version, platform: process.platform, version: packageInfo.version, isolatedInstall: true, tarballIntegrity: packageInfo.integrity, doctor: { readyExit: diagnosed.code, missingSourceExit: missingSource.code, missingTargetExit: missingTarget.code, failingBaselineExit: brokenBaseline.code, sourceWarning: true, noArtifactsWritten: true, humanOutput: true }, consumerPackageType: 'No type field; TypeScript config loading verified.', cli: { binInstalled: true, help: true, version: true, init: true, preservesExistingConfig: true, passingExit: passed.code, failureExit: failed.code, setupErrorExit: invalid.code }, libraryImport: true, libraryDoctor: true, explicitApplicationRoot: true, externalOutputDirectory: true, verificationLinkRemoved: true, compiledReplayVerified: true, compiledRuleMatchesRuntime: true, normal: good.summary, confirmed: bad.summary, packageDependencies: manifest.dependencies, peerDependencies: manifest.peerDependencies, private: manifest.private };
+  const result = { createdAt: new Date().toISOString(), node: process.version, platform: process.platform, version: packageInfo.version, isolatedInstall: true, tarballIntegrity: packageInfo.integrity, doctor: { readyExit: diagnosed.code, missingSourceExit: missingSource.code, missingTargetExit: missingTarget.code, failingBaselineExit: brokenBaseline.code, sourceWarning: true, noArtifactsWritten: true, humanOutput: true }, consumerPackageType: 'No type field; TypeScript config loading verified.', cli: { binInstalled: true, help: true, version: true, init: true, preservesExistingConfig: true, passingExit: passed.code, failureExit: failed.code, setupErrorExit: invalid.code }, libraryImport: true, libraryDoctor: true, explicitApplicationRoot: true, externalOutputDirectory: true, verificationLinkRemoved: true, compiledReplayVerified: true, compiledRuleMatchesRuntime: true, textFitReplayVerified: true, textFitConfirmation: textReport.confirmation, textFitSignature: textReport.reduced.finding.signature, normal: good.summary, confirmed: bad.summary, packageDependencies: manifest.dependencies, peerDependencies: manifest.peerDependencies, private: manifest.private };
   await mkdir(resolve(root, 'artifacts/qa'), { recursive: true });
   await writeFile(resolve(root, 'artifacts/qa/sdk-verification.json'), JSON.stringify(result, null, 2) + '\n');
   await writeFile(resolve(root, `artifacts/qa/sdk-verification-node-${process.versions.node}.json`), JSON.stringify(result, null, 2) + '\n');

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { comparisonSummary, comparisonHTML, type ComparisonReport, type Observation } from '../src/comparison/report.ts';
+import { comparisonSummary, comparisonHTML, type ComparisonReport, type Observation } from "../scripts/comparison/report.ts";
 
 const catalog = [{ id: 'app', name: '<img src=x onerror=alert(1)>', group: 'application', category: 'fixture' }, { id: 'control', name: 'Uncertain state', group: 'control', category: 'uncertain', expectedForOurRule: 'inconclusive' }];
 const observations: Observation[] = catalog.flatMap(item => ['ui-crash-test', 'playwright-native', 'renderlint-layout'].map(method => ({ caseId: item.id, group: item.group, method, preparationMs: 1, measurementMs: 1, pageErrors: [], result: method === 'renderlint-layout' ? { status: 'findings', findings: [{ rule: 'example', message: '<script>bad()</script>' }] } : { status: item.group === 'application' ? 'failed' : method === 'ui-crash-test' ? 'inconclusive' : 'passed' } })));

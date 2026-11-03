@@ -1,4 +1,4 @@
-import type { ActionRule } from '../core/action-rule.ts';
+import type { Rule } from '../core/rules.ts';
 
 export type Json = null | boolean | number | string | Json[] | { [key: string]: Json };
 export type SetupStep = { action: 'click' | 'fill' | 'wait' | 'scroll' | 'hover'; selector: string; value?: string; inputPath?: string };
@@ -16,7 +16,7 @@ export type BrowserRecipe = {
   ready: string;
   proofs: RenderProof[];
   screenshot: string;
-  rule: ActionRule;
+  rule: Rule;
 };
 export type ScenarioCase<T extends Json> = { name: string; input: T; origin: 'curated' | 'generated' };
 export type ScenarioConfig<T extends Json = Json> = {
@@ -63,7 +63,9 @@ export function validateRecipe(recipe: BrowserRecipe) {
   if (!(recipe.fixtures?.length || recipe.form) || !Array.isArray(recipe.proofs) || !recipe.proofs.length || !text(recipe.ready) || !text(recipe.screenshot)) throw new Error('Declare an API or form input boundary, rendered-input proofs, readiness and screenshot selectors.');
   if (recipe.form && (!text(recipe.form.input) || !pointer(recipe.form.itemsPath) || !text(recipe.form.submitKey))) throw new Error('A form boundary needs input, itemsPath (a JSON pointer) and submitKey.');
   if (!recipe.rule || !text(recipe.rule.id) || !text(recipe.rule.target) || !text(recipe.rule.boundary)) throw new Error('Declare a rule target and boundary.');
-  if (recipe.rule.requireViewportCenter !== undefined && typeof recipe.rule.requireViewportCenter !== 'boolean') throw new Error('requireViewportCenter must be a boolean.');
+  if (recipe.rule.kind !== undefined && !['action', 'text-fit'].includes(recipe.rule.kind)) throw new Error('Supported rule kinds are action and text-fit.');
+  const viewportOption = (recipe.rule as { requireViewportCenter?: unknown }).requireViewportCenter;
+  if (viewportOption !== undefined && (recipe.rule.kind === 'text-fit' || typeof viewportOption !== 'boolean')) throw new Error('requireViewportCenter is a boolean option for action rules only.');
   for (const value of [...Object.values(recipe.query ?? {}), ...Object.values(recipe.viewportFromInput ?? {})]) if (!pointer(value)) throw new Error('Query and viewport input paths must be JSON pointers.');
   for (const proof of recipe.proofs) {
     if (!proof || !text(proof.selector) || !['text', 'texts', 'attribute', 'jsonAttribute'].includes(proof.kind)) throw new Error('Every rendered-input proof needs a selector and a supported kind.');

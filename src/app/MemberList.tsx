@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { CaseInput, Layout, Member } from '../shared/model.ts';
+import type { CaseInput, Layout, Member } from "../demo/model.ts";
 
 function initials(name: string): string {
   const words = name.trim().split(/\s+/);

@@ -39,7 +39,7 @@ export async function runExportedTest(root: string, directory: string, baseURL: 
     if (specs.length !== 1 || result.stats.expected + result.stats.unexpected !== 1) throw new Error('Expected exactly one exported test to run.');
     const executed = (specs[0] as { tests: { results: { attachments: { name: string; path?: string; body?: string }[] }[] }[] }).tests[0].results;
     if (executed.length !== 1) throw new Error('Expected one attempt with no retries.');
-    const attachment = executed[0].attachments.find(item => item.name === 'action-finding');
+    const attachment = executed[0].attachments.find(item => item.name === 'rule-finding' || item.name === 'action-finding');
     if (!attachment || (!attachment.path && !attachment.body)) throw new Error('The exported test did not attach a measured rule result.');
     const measured = JSON.parse(attachment.path ? await readFile(attachment.path, 'utf8') : Buffer.from(attachment.body!, 'base64').toString('utf8'));
     const saved = JSON.parse(await readFile(resolve(directory, 'case.json'), 'utf8'));

@@ -11,7 +11,7 @@ export type ActionFinding = {
   targetRect?: Rect;
   boundaryRect?: Rect;
 };
-export type ActionRule = { id: string; target: string; boundary: string; requireViewportCenter?: boolean };
+export type ActionRule = { kind?: 'action'; id: string; target: string; boundary: string; requireViewportCenter?: boolean };
 
 /** Shared verbatim with the exported test. A measurement never clicks the action. */
 export async function measureAction(page: Page, rule: ActionRule): Promise<ActionFinding> {

@@ -1,6 +1,6 @@
 import { createServer } from 'vite';
 import { fileURLToPath } from 'node:url';
-import { runCampaign } from '../src/core/campaign.ts';
+import { runCampaign } from "../src/demo/campaign.ts";
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const args = process.argv.slice(2);

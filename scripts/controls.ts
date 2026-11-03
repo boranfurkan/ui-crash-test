@@ -3,14 +3,14 @@ import { createHash, randomUUID } from 'node:crypto';
 import { mkdir, writeFile, readFile, rename } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { CONTROL_RULE, RULE_CONTROLS, mountControl } from '../src/controls/cases.ts';
+import { CONTROL_RULE, RULE_CONTROLS, mountControl } from "../fixtures/controls/cases.ts";
 import { measureAction, type ActionFinding } from '../src/core/action-rule.ts';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const id = `run-controls-${Date.now()}-${randomUUID().slice(0, 6)}`;
 const directory = resolve(root, 'artifacts', id);
 await mkdir(directory, { recursive: true });
-const sourceFiles = ['src/core/action-rule.ts', 'src/controls/cases.ts'];
+const sourceFiles = ['src/core/action-rule.ts', 'fixtures/controls/cases.ts'];
 const sources = await Promise.all(sourceFiles.map(async path => ({ path, sha256: createHash('sha256').update(await readFile(resolve(root, path))).digest('hex') })));
 const sourceHash = createHash('sha256').update(JSON.stringify(sources)).digest('hex');
 type Result = { id: string; name: string; category: string; expected: string; finding: ActionFinding; matched: boolean; explanation: string; trialClick: boolean | null; screenshot: boolean; scroll: boolean };

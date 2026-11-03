@@ -7,3 +7,8 @@ export type { ActionRule, ActionFinding, Rect } from './core/action-rule.ts';
 export type { ScenarioReport } from './scenario/report.ts';
 export { checkScenario } from './scenario/doctor.ts';
 export type { DoctorReport, DoctorCheck, DoctorOptions } from './scenario/doctor.ts';
+
+export { measureText } from './core/text-rule.ts';
+export type { TextRule, TextFinding } from './core/text-rule.ts';
+export { measureRule } from './core/rules.ts';
+export type { Rule, RuleFinding } from './core/rules.ts';

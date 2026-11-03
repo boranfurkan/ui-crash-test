@@ -1,0 +1,13 @@
+{
+  "products": [
+    {
+      "id": "cart-primary",
+      "name": "Tea",
+      "price": 1,
+      "quantity": 2,
+      "image": "/fixtures/compat-app/product.svg"
+    }
+  ],
+  "viewportWidth": 640,
+  "viewportHeight": 320
+}

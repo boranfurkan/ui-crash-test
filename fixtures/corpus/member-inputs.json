@@ -1,0 +1,44 @@
+{
+  "original": {
+    "containerWidth": 360,
+    "members": [
+      {
+        "id": "member-primary",
+        "name": "Alexandria Konstantinopoulou-Wi\u015bniewska",
+        "email": "alexandria.konstantinopoulou@northwind.example.test",
+        "role": "Owner",
+        "status": "invited",
+        "avatar": "sage"
+      },
+      {
+        "id": "member-second",
+        "name": "Alex Morgan",
+        "email": "alex@orbit.test",
+        "role": "Member",
+        "status": "active",
+        "avatar": "sand"
+      },
+      {
+        "id": "member-third",
+        "name": "Noor Ali",
+        "email": "noor@orbit.test",
+        "role": "Viewer",
+        "status": "active",
+        "avatar": "lilac"
+      }
+    ]
+  },
+  "reduced": {
+    "containerWidth": 360,
+    "members": [
+      {
+        "id": "member-primary",
+        "name": "Alexandria Konstantinopoulou-Wi\u015bniewska",
+        "email": "a@b.co",
+        "role": null,
+        "status": "invited",
+        "avatar": null
+      }
+    ]
+  }
+}

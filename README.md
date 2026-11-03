@@ -10,10 +10,10 @@ Supply data through an application's real API response or native form, prove it 
 
 ## Install
 
-Node 22.12+ and Chromium are required. npm publication is pending account verification. Install the verified release tarball directly for now:
+Node 22.12+ and Chromium are required. This early release uses npm's **next** tag:
 
 ```sh
-npm install --save-dev https://github.com/boranfurkan/ui-crash-test/releases/download/v0.3.0-rc.1/ui-crash-test-0.3.0-rc.1.tgz @playwright/test@1.64.1
+npm install --save-dev ui-crash-test@next @playwright/test@1.64.1
 npx playwright install chromium
 npx ui-crash-test init
 # Adapt ui-crash.config.ts to your app's actual data, selectors and source files.

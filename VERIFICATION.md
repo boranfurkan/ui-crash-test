@@ -1,5 +1,18 @@
 # Verification
 
+## GitHub Linux CI and Holo Grails — 3 November 2026
+
+The repository is private under [QuechyDev/ui-crash-test](https://github.com/QuechyDev/ui-crash-test), as the user instructed after identifying personal-account billing problems. [Linux CI run 41622292369](https://github.com/QuechyDev/ui-crash-test/actions/runs/41622292369) passed both Node 22.12.0 and Node 24 jobs: clean install, build/typechecking, **25 unit tests / 52 browser tests**, package creation and independent installed SDK/CLI/replay verification. The organization’s Security Guard also passed. [Retained job/step record](examples/github/linux-ci.json). This establishes actual Linux execution; earlier sections describe what was still unverified at their own checkpoints.
+
+The unchanged user-owned Holo Grails app also passes its normal control and all **14 valid profile cases** through the independently installed RC2 SDK. Four separate native Playwright contexts verify containment, trial click, actual save/navigation and rendered saved values. The original working tree remains clean, and 726 compared application/config/public files are byte-identical. [Integration report](HOLO-GRAILS.md), [campaign](examples/holo-grails/report.html), [native saves](examples/holo-grails/independent-verification.json), [copy integrity](examples/holo-grails/source-verification.json).
+
+Separate post-save text inspection also reproduces 23.14px of profile-name clipping at 320px in 3/3 contexts; an investigation-only wrapping override removes it. This is outside the action rule, and is documented separately in HOLO-GRAILS.md. The original app is unchanged.
+
+A [continuous Chromium demo](examples/demo/ui-crash-test-demo.webm) records a real member-reference campaign and exported failing-original → passing-fixed test. [Recording metadata](examples/demo/recording.json) retains its run ID, result and zero page errors. It visibly uses the deliberate reference defect and included fixed variant; no automatic repair is implied.
+
+The app integration remains assisted, with no independent participant or debugging-speed measurement. The private application is not included in the tool repository/CI. Human trial remains `not_started`. Organization rules require a PR and one approval; these protections have not been bypassed. No public deployment, npm publication, outreach or purchased usage occurred.
+
+
 ## Local release candidate 0.2.0-rc.2 — 3 November 2026
 
 **24 unit tests and 52 Chromium tests pass on both Node 22.12.0 and 24.21.0 on macOS.** The minimum-runtime browser driver launched a separate Node 22 Vite server at another loopback port. Typechecking passes under both; the SDK/frontend build passes on Node 24 and the frontend build also passes on Node 22. [Machine-readable matrix](examples/rc2/verification.json), [Node 22 test log](examples/rc2/browser-node22.log), [Node 24 test log](examples/rc2/browser-node24.log).

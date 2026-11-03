@@ -6,6 +6,7 @@ import { compatBaseline, compatScenarios, validateCompat } from '../scenarios/co
 import member from '../scenarios/member-list.ts';
 import cart, { validateCart, cartBaseline } from '../scenarios/cart-preview.ts';
 import todomvc, { validateTodo } from '../scenarios/todomvc-vue.ts';
+import holo from '../scenarios/holo-grails-profile.ts';
 import { inputAt, validateRecipe, type Json, type ScenarioConfig } from '../src/scenario/config.ts';
 import { reduceScenario } from '../src/scenario/reduce.ts';
 import type { ActionFinding } from '../src/core/action-rule.ts';
@@ -117,4 +118,21 @@ test('all retained TodoMVC source and distribution files match the pinned upstre
     const body = await readFile(new URL(file.path, root));
     assert.equal(createHash('sha1').update(`blob ${body.length}\0`).update(body).digest('hex'), file.gitBlob, file.path);
   }
+});
+
+test('the Holo Grails adapter keeps all generated fields within the actual profile limits', () => {
+  assert.deepEqual(holo.validate(holo.baseline), []);
+  assert.deepEqual(holo.cases(42), holo.cases(42));
+  assert.notDeepEqual(holo.cases(42), holo.cases(43));
+  assert.equal(holo.cases(42).length, 14);
+  validateRecipe(holo.recipe);
+  for (const item of holo.cases(42)) {
+    assert.deepEqual(holo.validate(item.input), [], item.name);
+    for (const candidate of holo.candidates(item.input)) {
+      assert.deepEqual(holo.validate(candidate.input), []);
+      assert.equal(candidate.input.width, item.input.width);
+      assert.equal(candidate.input.height, item.input.height);
+    }
+  }
+  for (const input of [{ ...holo.baseline, displayNames: ['A'.repeat(25)] }, { ...holo.baseline, handle: 'a'.repeat(16) }, { ...holo.baseline, bio: 'a'.repeat(161) }]) assert.ok(holo.validate(input).length);
 });

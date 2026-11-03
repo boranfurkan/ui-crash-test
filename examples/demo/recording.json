@@ -1,0 +1,25 @@
+{
+  "runId": "run-20261103t105451687z-3347f8",
+  "createdAt": "2026-11-03T10:55:09.763Z",
+  "sourceHash": "fd2eddd6065670fc",
+  "summary": {
+    "checked": 14,
+    "failed": 5,
+    "passed": 9,
+    "inconclusive": 0,
+    "valid": 14
+  },
+  "regression": {
+    "broken": {
+      "passed": 0,
+      "failed": 1
+    },
+    "fixed": {
+      "passed": 1,
+      "failed": 0
+    },
+    "verified": true
+  },
+  "pageErrors": [],
+  "presentation": "Continuous native Chromium recording of a real campaign and its saved evidence. Deliberate member-list reference defect; supplied fixed variant. No generated or simulated result frames."
+}

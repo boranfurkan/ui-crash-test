@@ -1,0 +1,10 @@
+{
+  "appRevision": "5e9ce9630960fccd94153402f1d2d011fcfdfd4a",
+  "comparedFiles": 726,
+  "changedApplicationFiles": [],
+  "originalWorkingTreeClean": true,
+  "environmentFilesCopied": false,
+  "dependencyInstall": "APFS copy-on-write clone of existing installed dependencies; original files not modified",
+  "runtimeMode": "App built-in mock API/demo session; no real backend or wallet configured",
+  "sourceDistribution": "Application source remains outside the UI Crash Test repository."
+}

@@ -8,6 +8,8 @@
   "description": "Find a small valid input that breaks a UI rule. Keep it as a regression test.",
   "scripts": {
     "compare": "node --import tsx scripts/compare.ts",
+    "verify:holo": "node --import tsx scripts/verify-holo.ts",
+    "record:demo": "node --import tsx scripts/record-demo.ts",
     "controls": "node --import tsx scripts/controls.ts",
     "investigate:cart": "node --import tsx scripts/investigate-cart.ts",
     "scenarios": "node --import tsx scripts/scenarios.ts",

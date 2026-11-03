@@ -1,0 +1,262 @@
+{
+  "createdAt": "2026-11-03T11:02:41.479Z",
+  "browser": "156.0.8078.4",
+  "node": "v24.21.0",
+  "appRevision": "5e9ce9630960fccd94153402f1d2d011fcfdfd4a",
+  "browserPreferences": {
+    "reducedMotion": "reduce",
+    "locale": "en-GB",
+    "colorScheme": "light"
+  },
+  "sources": [
+    {
+      "path": "src/features/profile/profile-editor.tsx",
+      "sha256": "b0cb402f770f6fe4003538edc5c5cbc0b5e1f8ba7977c694aa949ca502ceeff6"
+    },
+    {
+      "path": "src/features/profile/profile-setup-view.tsx",
+      "sha256": "45d530985c1764688a880827df71d7421761f6cb0fa2d6a34af7eade25a5962b"
+    },
+    {
+      "path": "src/lib/domain/profile.ts",
+      "sha256": "e1ee7e231a0a00042fe593613ccd76e713fe107d8d19fb53a384db1330805a0f"
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "sha256": "ead4ee4eadf06bc21cebf3f4e3e108de6d31bdcbc9767f81b5964df640b77131"
+    },
+    {
+      "path": "src/styles/globals.css",
+      "sha256": "07889b16ebc00361a4a263ded51ca2f1a7b0385f82e478e1b3c6285535471f82"
+    }
+  ],
+  "results": [
+    {
+      "input": {
+        "displayNames": [
+          "Alex Morgan"
+        ],
+        "handle": "alex_morgan",
+        "bio": "Vintage holos and the stories behind each grail.",
+        "width": 390,
+        "height": 844
+      },
+      "actualSavedPath": "/u/alex_morgan",
+      "containmentOverflow": 0,
+      "nativeTrialClick": "passed",
+      "actualSave": "passed",
+      "renderedValues": "matched",
+      "profileName": {
+        "status": "passed",
+        "clippedPx": 0,
+        "text": "Alex Morgan",
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "heading": {
+          "left": 35,
+          "right": 355
+        },
+        "boundary": {
+          "left": 12,
+          "right": 378
+        },
+        "rects": [
+          {
+            "left": 35,
+            "right": 304.890625,
+            "top": 222,
+            "bottom": 300
+          }
+        ],
+        "boundaryOverflow": "hidden"
+      },
+      "pageErrors": [],
+      "backendRequests": []
+    },
+    {
+      "input": {
+        "displayNames": [
+          "Alexandria Konstantinou1"
+        ],
+        "handle": "alex_morgan",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 320,
+        "height": 568
+      },
+      "actualSavedPath": "/u/alex_morgan",
+      "containmentOverflow": 0,
+      "nativeTrialClick": "passed",
+      "actualSave": "passed",
+      "renderedValues": "matched",
+      "profileName": {
+        "status": "failed",
+        "clippedPx": 23.140625,
+        "text": "Alexandria Konstantinou1",
+        "scrollWidth": 296,
+        "clientWidth": 250,
+        "heading": {
+          "left": 35,
+          "right": 285
+        },
+        "boundary": {
+          "left": 12,
+          "right": 308
+        },
+        "rects": [
+          {
+            "left": 35,
+            "right": 266.0625,
+            "top": 222,
+            "bottom": 300
+          },
+          {
+            "left": 35,
+            "right": 331.140625,
+            "top": 270.875,
+            "bottom": 348.875
+          }
+        ],
+        "boundaryOverflow": "hidden"
+      },
+      "cssCandidate": {
+        "rule": "main header h1 { overflow-wrap: anywhere; }",
+        "scope": "Investigation-only browser injection; application source remains unchanged.",
+        "finding": {
+          "status": "passed",
+          "clippedPx": 0,
+          "text": "Alexandria Konstantinou1",
+          "scrollWidth": 250,
+          "clientWidth": 250,
+          "heading": {
+            "left": 35,
+            "right": 285
+          },
+          "boundary": {
+            "left": 12,
+            "right": 308
+          },
+          "rects": [
+            {
+              "left": 35,
+              "right": 266.0625,
+              "top": 222,
+              "bottom": 300
+            },
+            {
+              "left": 35,
+              "right": 264.03125,
+              "top": 270.875,
+              "bottom": 348.875
+            },
+            {
+              "left": 35,
+              "right": 102.109375,
+              "top": 319.75,
+              "bottom": 397.75
+            }
+          ],
+          "boundaryOverflow": "hidden"
+        }
+      },
+      "pageErrors": [],
+      "backendRequests": []
+    },
+    {
+      "input": {
+        "displayNames": [
+          "Alexandria Konstantinou1"
+        ],
+        "handle": "alex_morgan",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 320,
+        "height": 568
+      },
+      "actualSavedPath": "/u/alex_morgan",
+      "containmentOverflow": 0,
+      "nativeTrialClick": "passed",
+      "actualSave": "passed",
+      "renderedValues": "matched",
+      "profileName": {
+        "status": "failed",
+        "clippedPx": 23.140625,
+        "text": "Alexandria Konstantinou1",
+        "scrollWidth": 296,
+        "clientWidth": 250,
+        "heading": {
+          "left": 35,
+          "right": 285
+        },
+        "boundary": {
+          "left": 12,
+          "right": 308
+        },
+        "rects": [
+          {
+            "left": 35,
+            "right": 266.0625,
+            "top": 222,
+            "bottom": 300
+          },
+          {
+            "left": 35,
+            "right": 331.140625,
+            "top": 270.875,
+            "bottom": 348.875
+          }
+        ],
+        "boundaryOverflow": "hidden"
+      },
+      "pageErrors": [],
+      "backendRequests": []
+    },
+    {
+      "input": {
+        "displayNames": [
+          "Alexandria Konstantinou1"
+        ],
+        "handle": "alex_morgan",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 320,
+        "height": 568
+      },
+      "actualSavedPath": "/u/alex_morgan",
+      "containmentOverflow": 0,
+      "nativeTrialClick": "passed",
+      "actualSave": "passed",
+      "renderedValues": "matched",
+      "profileName": {
+        "status": "failed",
+        "clippedPx": 23.140625,
+        "text": "Alexandria Konstantinou1",
+        "scrollWidth": 296,
+        "clientWidth": 250,
+        "heading": {
+          "left": 35,
+          "right": 285
+        },
+        "boundary": {
+          "left": 12,
+          "right": 308
+        },
+        "rects": [
+          {
+            "left": 35,
+            "right": 266.0625,
+            "top": 222,
+            "bottom": 300
+          },
+          {
+            "left": 35,
+            "right": 331.140625,
+            "top": 270.875,
+            "bottom": 348.875
+          }
+        ],
+        "boundaryOverflow": "hidden"
+      },
+      "pageErrors": [],
+      "backendRequests": []
+    }
+  ],
+  "scope": "Independent native Playwright checks and actual saves in the unchanged app’s built-in in-memory demo. No UI Crash Test measurement/replay function is used. This is an assisted integration, not a human trial."
+}

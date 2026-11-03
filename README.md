@@ -4,15 +4,19 @@
 
 A Node/TypeScript library and CLI for an explicitly configured app. Supply valid inputs through a real API response or native form, prove the values rendered, check a declared action, reduce a confirmed failure and execute the saved regression. The repository includes a visual dashboard and reproducible fixtures.
 
-**Local release candidate: 0.2.0-rc.2.** Not published to npm. The supplied SDK tarball is separate from this source checkout; both package manifests remain private. See [the review handoff](REVIEW.md) and [SDK guide](SDK.md).
+**Release candidate: 0.2.0-rc.2.** Not published to npm. The supplied SDK tarball is separate from this source checkout; both package manifests remain private. See [the review handoff](REVIEW.md) and [SDK guide](SDK.md).
 
-![A real browser campaign and its reduced case](examples/report-desktop.png)
+[![A real browser campaign](examples/demo/poster.png)](examples/demo/ui-crash-test-demo.webm)
+
+[Watch the continuous real demo](examples/demo/ui-crash-test-demo.webm) · [Linux CI](https://github.com/QuechyDev/ui-crash-test/actions/runs/41622292369) · [Holo Grails integration](HOLO-GRAILS.md)
 
 ## Try the demonstration
 
 Requires Node 22.12+ and npm. Local verification covers Node 22.12.0 and 24.21.0 on macOS with Chromium 156.0.8078.4.
 
 ```sh
+gh repo clone QuechyDev/ui-crash-test
+cd ui-crash-test
 npm ci
 npx playwright install chromium
 npm run dev
@@ -54,6 +58,8 @@ Keep the target app running separately. `init` preserves existing files. `doctor
 
 [SDK.md](SDK.md) includes a complete native-form example, the API-response boundary and library API. [SCENARIOS.md](SCENARIOS.md) describes the repository fixtures and their provenance. You declare a baseline, valid cases, reduction candidates, input boundary, rendered-input proofs, permitted setup, action selector and containing region. The tool does not infer these from arbitrary pages.
 
+The installed SDK also checks the [unchanged Holo Grails profile editor](HOLO-GRAILS.md): its normal control and all 14 valid cases pass. Four independent native Playwright contexts actually save the supplied profiles. The original app remains unchanged; this is assisted integration evidence, not an independent user trial.
+
 ## What a run keeps
 
 Every completed run retains HTML/JSON reports, actual inputs, measurements, browser/runtime information and declared source hashes. Confirmed failures additionally retain screenshots, the reduced input and a replay ZIP containing the actual rule/replay implementation and a Playwright test. The runner executes that exported test and checks its attached finding against the saved failure signature. No-failure runs do not export a pretend failing test.
@@ -69,7 +75,7 @@ The member reference reduces **457 → 170 bytes**; the external cart reduces **
 ## Checks
 
 ```sh
-npm test                    # 24 unit tests
+npm test                    # 25 unit tests
 npm run test:browser         # 52 Chromium tests
 npm run build               # SDK, TypeScript and frontend
 npm run compare             # fixed comparison corpus and raw reports
@@ -77,7 +83,7 @@ npm run pack:sdk             # private local tarball, no publication
 npm run verify:sdk           # isolated consumer: CLI, API, real pass/fail and exported replay
 ```
 
-[VERIFICATION.md](VERIFICATION.md) records local results. GitHub Actions is configured for Linux/Node 22.12 and 24; it has not been executed remotely. Upstream Sass and client-directive build warnings remain.
+[VERIFICATION.md](VERIFICATION.md) records local results. GitHub Actions has passed on Ubuntu with Node 22.12 and 24, including the installed-package and replay checks. The organization’s required security workflow also passed. Upstream Sass and client-directive build warnings remain.
 
 ## Boundaries
 

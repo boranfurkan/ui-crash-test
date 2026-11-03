@@ -1,0 +1,40 @@
+import { chromium, expect } from '@playwright/test';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+
+const url = process.env.UI_CRASH_DEMO_URL ?? 'http://127.0.0.1:4173';
+const directory = resolve('artifacts/demo');
+await mkdir(directory, { recursive: true });
+const browser = await chromium.launch({ headless: true });
+const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, recordVideo: { dir: directory, size: { width: 1440, height: 1000 } } });
+const page = await context.newPage(), errors: string[] = [];
+page.on('pageerror', error => errors.push(error.message));
+const video = page.video()!;
+let result;
+try {
+  await page.goto(url);
+  await page.getByRole('button', { name: 'Fixture lab', exact: true }).click();
+  await expect(page.frameLocator('iframe').locator('[data-ready="true"]')).toBeVisible();
+  await page.waitForTimeout(1500);
+  await page.getByRole('button', { name: 'Worst case', exact: true }).click();
+  await page.waitForTimeout(1800);
+  await page.getByRole('button', { name: /Experiment report/ }).click();
+  const previous = (await (await page.request.get(new URL('/api/report', url).href)).json()).report?.id;
+  await page.getByRole('button', { name: /Run again|Run crash test/ }).click();
+  await expect(page.locator('.running-banner')).toBeVisible();
+  await expect(page.locator('.running-banner')).toHaveCount(0, { timeout: 60000 });
+  await expect(page.locator('.error-banner')).toHaveCount(0);
+  result = (await (await page.request.get(new URL('/api/report', url).href)).json()).report;
+  expect(result.id).not.toBe(previous); expect(result.regression.verified).toBe(true);
+  await page.locator('.evidence-grid').scrollIntoViewIfNeeded(); await page.waitForTimeout(2400);
+  await page.getByRole('button', { name: /Saved case/ }).click(); await page.evaluate(() => scrollTo(0, 0)); await expect(page.locator('.code-panel')).toContainText('a@b.co'); await page.waitForTimeout(1800);
+  await page.getByRole('button', { name: 'Regression', exact: true }).click(); await page.evaluate(() => scrollTo(0, 0)); await expect(page.locator('.code-panel')).toContainText('action-finding'); await page.waitForTimeout(1800);
+  await page.getByRole('button', { name: /Overview/ }).click();
+  await page.getByRole('button', { name: 'Verify fix', exact: true }).click(); await expect(page.locator('.verified-card img')).toHaveAttribute('src', /fixed\.png$/);
+  await page.locator('.evidence-grid').scrollIntoViewIfNeeded(); await page.waitForTimeout(2400);
+  expect(errors).toEqual([]);
+  await context.close();
+  await video.saveAs(resolve(directory, 'ui-crash-test-demo.webm'));
+} finally { await context.close(); await browser.close(); }
+await writeFile(resolve(directory, 'recording.json'), JSON.stringify({ runId: result.id, createdAt: new Date().toISOString(), sourceHash: result.environment.sourceHash, summary: result.summary, regression: result.regression, pageErrors: errors, presentation: 'Continuous native Chromium recording of a real campaign and its saved evidence. Deliberate member-list reference defect; supplied fixed variant. No generated or simulated result frames.' }, null, 2) + '\n');
+console.log(resolve(directory, 'ui-crash-test-demo.webm'));

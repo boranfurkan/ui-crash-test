@@ -1,0 +1,658 @@
+{
+  "schemaVersion": 2,
+  "id": "run-holo-grails-profile-1793702770271-bdb539",
+  "createdAt": "2026-11-03T10:46:11.893Z",
+  "seed": 42,
+  "durationMs": 17921,
+  "appURL": "http://127.0.0.1:4180",
+  "scenario": {
+    "id": "holo-grails-profile",
+    "name": "Holo Grails · profile editor",
+    "description": "With valid profile fields and permitted scrolling, Save profile remains inside the actual form and reachable in the viewport.",
+    "provenance": {
+      "kind": "user-owned-application",
+      "repository": "THE-SEVEN-SE4S/tradingcards-frontend",
+      "appRevision": "5e9ce9630960fccd94153402f1d2d011fcfdfd4a",
+      "mode": "Built-in browser mock API and demo session; no real backend or wallet."
+    }
+  },
+  "environment": {
+    "browser": "156.0.8078.4",
+    "node": "v24.21.0",
+    "sourceHash": "b8696a78d58756a00f9ebeeeae1fb574dee086369d406bb0f196148d36f66617",
+    "sources": [
+      {
+        "path": "/Users/boran/Documents/Codex/2026-11-02/x20-i-wanna-create-something-else/work/holo-ui-consumer/ui-crash.config.ts",
+        "sha256": "1bcb275e0a2917a587ec665dce1c77951abf489b26415b3644eb1cdddc76d975"
+      },
+      {
+        "path": "src/components/ui/button.tsx",
+        "sha256": "ead4ee4eadf06bc21cebf3f4e3e108de6d31bdcbc9767f81b5964df640b77131"
+      },
+      {
+        "path": "src/features/profile/profile-editor.tsx",
+        "sha256": "b0cb402f770f6fe4003538edc5c5cbc0b5e1f8ba7977c694aa949ca502ceeff6"
+      },
+      {
+        "path": "src/features/profile/profile-setup-view.tsx",
+        "sha256": "45d530985c1764688a880827df71d7421761f6cb0fa2d6a34af7eade25a5962b"
+      },
+      {
+        "path": "src/lib/domain/profile.ts",
+        "sha256": "e1ee7e231a0a00042fe593613ccd76e713fe107d8d19fb53a384db1330805a0f"
+      },
+      {
+        "path": "src/styles/globals.css",
+        "sha256": "07889b16ebc00361a4a263ded51ca2f1a7b0385f82e478e1b3c6285535471f82"
+      },
+      {
+        "path": "engine/scenario/config.js",
+        "sha256": "8aae4078fc00078bf48a29e05f482a02b291d02f0eb0dbcce456df83cca1b7bf"
+      },
+      {
+        "path": "engine/scenario/renderer.js",
+        "sha256": "c1fe9a0dfeee33efffc0d105c808679fa84b46eba04b43ad9e4822e945ac8b0f"
+      },
+      {
+        "path": "engine/scenario/replay.js",
+        "sha256": "0a85578546a146bf9769edc2bdc273c73beb1e88df74a8e9a149e5f6332ee748"
+      },
+      {
+        "path": "engine/scenario/reduce.js",
+        "sha256": "d7b01a5214d31d0174c92177a7ab1f8141d2e1302ce824a9ed9d3a99444069d4"
+      },
+      {
+        "path": "engine/scenario/run.js",
+        "sha256": "cadcd791115a9c1cea79bc4a7b9b7ff26ae4afaf052f2be4366f348dbb811614"
+      },
+      {
+        "path": "engine/scenario/export.js",
+        "sha256": "0fd87536c583db1227c8eb58274a6a14ba71737df0ea66252ba7fd303416c73c"
+      },
+      {
+        "path": "engine/scenario/runtime.js",
+        "sha256": "a26db122b28f2fc1ee6d3e5d8c2201d40d7c5e8f4f787e94b0e47253d0394187"
+      },
+      {
+        "path": "engine/core/regression.js",
+        "sha256": "94eb69615b1f11b8efd51b5ef20a24c1caf3d542934801c6c52690447ad68c72"
+      },
+      {
+        "path": "engine/core/action-rule.js",
+        "sha256": "fe9b2f3a1490903335fda196422349ffa8d2e20b819f22eccb820ff39fbb1e7c"
+      }
+    ]
+  },
+  "outcome": "no-failure",
+  "baseline": {
+    "input": {
+      "displayNames": [
+        "Alex Morgan"
+      ],
+      "handle": "alex_morgan",
+      "bio": "Vintage holos and the stories behind each grail.",
+      "width": 390,
+      "height": 844
+    },
+    "finding": {
+      "status": "passed",
+      "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+      "overflowPx": 0,
+      "contained": true,
+      "receivesEvents": true,
+      "reason": "The action is inside its declared region and receives pointer events at its center.",
+      "targetRect": {
+        "x": 12,
+        "y": 393.953125,
+        "width": 366,
+        "height": 56,
+        "right": 378,
+        "bottom": 449.953125
+      },
+      "boundaryRect": {
+        "x": 12,
+        "y": -358.765625,
+        "width": 366,
+        "height": 808.71875,
+        "right": 378,
+        "bottom": 449.953125
+      }
+    }
+  },
+  "discovery": [
+    {
+      "name": "24-character display name and full bio at 320px",
+      "origin": "curated",
+      "input": {
+        "displayNames": [
+          "Alexandria Konstantinou1"
+        ],
+        "handle": "alex_morgan",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 320,
+        "height": 568
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 12,
+          "y": 256.140625,
+          "width": 296,
+          "height": 56,
+          "right": 308,
+          "bottom": 312.140625
+        },
+        "boundaryRect": {
+          "x": 12,
+          "y": -514.765625,
+          "width": 296,
+          "height": 826.90625,
+          "right": 308,
+          "bottom": 312.140625
+        }
+      }
+    },
+    {
+      "name": "Multilingual profile at phone width",
+      "origin": "curated",
+      "input": {
+        "displayNames": [
+          "Zoë Şahin-Wiśniewska"
+        ],
+        "handle": "zoe_sahin",
+        "bio": "Vintage holos and the stories behind each grail.",
+        "width": 360,
+        "height": 844
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 12,
+          "y": 394.140625,
+          "width": 336,
+          "height": 56,
+          "right": 348,
+          "bottom": 450.140625
+        },
+        "boundaryRect": {
+          "x": 12,
+          "y": -376.765625,
+          "width": 336,
+          "height": 826.90625,
+          "right": 348,
+          "bottom": 450.140625
+        }
+      }
+    },
+    {
+      "name": "15-character handle in landscape",
+      "origin": "curated",
+      "input": {
+        "displayNames": [
+          "Alex Morgan"
+        ],
+        "handle": "vintage_grails1",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 640,
+        "height": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 15.359375,
+          "y": 132.015625,
+          "width": 609.28125,
+          "height": 56,
+          "right": 624.640625,
+          "bottom": 188.015625
+        },
+        "boundaryRect": {
+          "x": 15.359375,
+          "y": -590.765625,
+          "width": 609.28125,
+          "height": 778.78125,
+          "right": 624.640625,
+          "bottom": 188.015625
+        }
+      }
+    },
+    {
+      "name": "Empty optional bio on a tablet",
+      "origin": "curated",
+      "input": {
+        "displayNames": [
+          "Alex Morgan"
+        ],
+        "handle": "alex_morgan",
+        "bio": "",
+        "width": 768,
+        "height": 1024
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 82.421875,
+          "y": 920.015625,
+          "width": 603.15625,
+          "height": 56,
+          "right": 685.578125,
+          "bottom": 976.015625
+        },
+        "boundaryRect": {
+          "x": 82.421875,
+          "y": 197.234375,
+          "width": 603.15625,
+          "height": 778.78125,
+          "right": 685.578125,
+          "bottom": 976.015625
+        }
+      }
+    },
+    {
+      "name": "Long profile on a desktop",
+      "origin": "curated",
+      "input": {
+        "displayNames": [
+          "Alexandria Konstantinou1"
+        ],
+        "handle": "alex_morgan",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 1440,
+        "height": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 434.546875,
+          "y": 421.890625,
+          "width": 570.90625,
+          "height": 56,
+          "right": 1005.453125,
+          "bottom": 477.890625
+        },
+        "boundaryRect": {
+          "x": 434.546875,
+          "y": -300.890625,
+          "width": 570.90625,
+          "height": 778.78125,
+          "right": 1005.453125,
+          "bottom": 477.890625
+        }
+      }
+    },
+    {
+      "name": "Short valid profile at constrained height",
+      "origin": "curated",
+      "input": {
+        "displayNames": [
+          "Ada"
+        ],
+        "handle": "ada",
+        "bio": "",
+        "width": 390,
+        "height": 320
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 12,
+          "y": 131.953125,
+          "width": 366,
+          "height": 56,
+          "right": 378,
+          "bottom": 187.953125
+        },
+        "boundaryRect": {
+          "x": 12,
+          "y": -620.765625,
+          "width": 366,
+          "height": 808.71875,
+          "right": 378,
+          "bottom": 187.953125
+        }
+      }
+    },
+    {
+      "name": "Seeded valid profile 1",
+      "origin": "generated",
+      "input": {
+        "displayNames": [
+          "Alexandria Konstantinou1"
+        ],
+        "handle": "vintage_grails1",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 320,
+        "height": 568
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 12,
+          "y": 256.140625,
+          "width": 296,
+          "height": 56,
+          "right": 308,
+          "bottom": 312.140625
+        },
+        "boundaryRect": {
+          "x": 12,
+          "y": -514.765625,
+          "width": 296,
+          "height": 826.90625,
+          "right": 308,
+          "bottom": 312.140625
+        }
+      }
+    },
+    {
+      "name": "Seeded valid profile 2",
+      "origin": "generated",
+      "input": {
+        "displayNames": [
+          "Alexandria Konstantinou1"
+        ],
+        "handle": "ada",
+        "bio": "Vintage holos and the stories behind each grail.",
+        "width": 1440,
+        "height": 1024
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 434.546875,
+          "y": 956.890625,
+          "width": 570.90625,
+          "height": 56,
+          "right": 1005.453125,
+          "bottom": 1012.890625
+        },
+        "boundaryRect": {
+          "x": 434.546875,
+          "y": 234.109375,
+          "width": 570.90625,
+          "height": 778.78125,
+          "right": 1005.453125,
+          "bottom": 1012.890625
+        }
+      }
+    },
+    {
+      "name": "Seeded valid profile 3",
+      "origin": "generated",
+      "input": {
+        "displayNames": [
+          "Alexandria Konstantinou1"
+        ],
+        "handle": "ada",
+        "bio": "Vintage holos and the stories behind each grail.",
+        "width": 768,
+        "height": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 82.421875,
+          "y": 422.015625,
+          "width": 603.15625,
+          "height": 56,
+          "right": 685.578125,
+          "bottom": 478.015625
+        },
+        "boundaryRect": {
+          "x": 82.421875,
+          "y": -300.765625,
+          "width": 603.15625,
+          "height": 778.78125,
+          "right": 685.578125,
+          "bottom": 478.015625
+        }
+      }
+    },
+    {
+      "name": "Seeded valid profile 4",
+      "origin": "generated",
+      "input": {
+        "displayNames": [
+          "Zoë Şahin-Wiśniewska"
+        ],
+        "handle": "ada",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 360,
+        "height": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 12,
+          "y": 422.140625,
+          "width": 336,
+          "height": 56,
+          "right": 348,
+          "bottom": 478.140625
+        },
+        "boundaryRect": {
+          "x": 12,
+          "y": -348.765625,
+          "width": 336,
+          "height": 826.90625,
+          "right": 348,
+          "bottom": 478.140625
+        }
+      }
+    },
+    {
+      "name": "Seeded valid profile 5",
+      "origin": "generated",
+      "input": {
+        "displayNames": [
+          "Zoë Şahin-Wiśniewska"
+        ],
+        "handle": "ada",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 768,
+        "height": 844
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 82.421875,
+          "y": 394.015625,
+          "width": 603.15625,
+          "height": 56,
+          "right": 685.578125,
+          "bottom": 450.015625
+        },
+        "boundaryRect": {
+          "x": 82.421875,
+          "y": -328.765625,
+          "width": 603.15625,
+          "height": 778.78125,
+          "right": 685.578125,
+          "bottom": 450.015625
+        }
+      }
+    },
+    {
+      "name": "Seeded valid profile 6",
+      "origin": "generated",
+      "input": {
+        "displayNames": [
+          "Zoë Şahin-Wiśniewska"
+        ],
+        "handle": "ada",
+        "bio": "Vintage holos and the stories behind each grail.",
+        "width": 360,
+        "height": 1024
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 12,
+          "y": 966.140625,
+          "width": 336,
+          "height": 56,
+          "right": 348,
+          "bottom": 1022.140625
+        },
+        "boundaryRect": {
+          "x": 12,
+          "y": 195.234375,
+          "width": 336,
+          "height": 826.90625,
+          "right": 348,
+          "bottom": 1022.140625
+        }
+      }
+    },
+    {
+      "name": "Seeded valid profile 7",
+      "origin": "generated",
+      "input": {
+        "displayNames": [
+          "Zoë Şahin-Wiśniewska"
+        ],
+        "handle": "ada",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 768,
+        "height": 844
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 82.421875,
+          "y": 394.015625,
+          "width": 603.15625,
+          "height": 56,
+          "right": 685.578125,
+          "bottom": 450.015625
+        },
+        "boundaryRect": {
+          "x": 82.421875,
+          "y": -328.765625,
+          "width": 603.15625,
+          "height": 778.78125,
+          "right": 685.578125,
+          "bottom": 450.015625
+        }
+      }
+    },
+    {
+      "name": "Seeded valid profile 8",
+      "origin": "generated",
+      "input": {
+        "displayNames": [
+          "Alex Morgan"
+        ],
+        "handle": "alex_morgan",
+        "bio": "Collector of vintage Japanese holos, international releases and hard-earned grails. Sharing provenance, grading notes and the story behind every card in the vau",
+        "width": 1440,
+        "height": 900
+      },
+      "finding": {
+        "status": "passed",
+        "signature": "profile-save-reachable|main form button[type=\"submit\"]|main form|passed",
+        "overflowPx": 0,
+        "contained": true,
+        "receivesEvents": true,
+        "reason": "The action is inside its declared region and receives pointer events at its center.",
+        "targetRect": {
+          "x": 434.546875,
+          "y": 421.890625,
+          "width": 570.90625,
+          "height": 56,
+          "right": 1005.453125,
+          "bottom": 477.890625
+        },
+        "boundaryRect": {
+          "x": 434.546875,
+          "y": -300.890625,
+          "width": 570.90625,
+          "height": 778.78125,
+          "right": 1005.453125,
+          "bottom": 477.890625
+        }
+      }
+    }
+  ],
+  "summary": {
+    "checked": 14,
+    "failed": 0,
+    "passed": 14,
+    "inconclusive": 0,
+    "valid": 14
+  },
+  "original": null,
+  "reduced": null,
+  "reduction": null,
+  "confirmation": null,
+  "regression": null,
+  "screenshots": [
+    "baseline.png",
+    "sample.png"
+  ]
+}

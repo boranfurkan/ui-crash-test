@@ -1,4 +1,4 @@
-# Draft launch material — not published
+# Draft launch material — release preview
 
 ## Repository description
 
@@ -27,4 +27,10 @@ Use real output only. Label the intentional reference defect, historical cart an
 
 ## Review before any future publication
 
-Choose a repository name and owner, inspect licenses/source provenance, review the README and trial feedback, and decide whether to publish. No repository URL is invented here. No outreach, release, deployment or registry publication has been performed. The self-guided trial stays prepared for later.
+Choose a repository name and owner, inspect licenses/source provenance, review the README and trial feedback, and decide whether to publish. No repository URL is invented here. No outreach, public release, deployment or registry publication has been performed. The self-guided trial stays prepared for later.
+
+## Recorded demonstration
+
+A continuous native Chromium recording is saved as [ui-crash-test-demo.webm](examples/demo/ui-crash-test-demo.webm), with the actual [run/verification metadata](examples/demo/recording.json). It shows a real reference campaign, reduced fixture, exported test and supplied fixed variant. Re-record locally with `npm run record:demo` while the demo server is running. Presentation pauses make the views readable; the recorded campaign and test outcomes are real.
+
+The private organization repository is [QuechyDev/ui-crash-test](https://github.com/QuechyDev/ui-crash-test). The validation change is in [PR #1](https://github.com/QuechyDev/ui-crash-test/pull/1), subject to the organization’s required review. Public launch and npm publication have not occurred.
